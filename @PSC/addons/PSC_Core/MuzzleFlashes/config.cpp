@@ -12,3 +12,6 @@ class CfgPatches {
 };
 
 #include "Particles.hpp"
+
+// Credits to Toadie2K of NIArms 
+// https://github.com/toadie2k/NIArms
