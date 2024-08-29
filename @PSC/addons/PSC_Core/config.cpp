@@ -1,5 +1,6 @@
 class CfgPatches {
-    class PSC_Core {
+    class PSC_Core 
+	{
 		units[] 			= {};
 		weapons[] 			= {};																								
 		requiredVersion 	= 0.1; // Don't Touch
