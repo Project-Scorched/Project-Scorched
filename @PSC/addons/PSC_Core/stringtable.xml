@@ -1,0 +1,24 @@
+<Project name="PSC">
+    <Package name="Core">
+        <Key ID="STR_PSC_Core_Mod_Name">
+            <English>Project: Scorched</English>
+            <German>Projekt: Versengt</German>
+            <Polish>Projekt: Spalony</Polish>
+            <Portuguese>Queimado: Projeto</Portuguese>
+            <Russian>Proyekt: Vyzhzhennyy</Russian>
+            <Czech>Projekt: Spálený</Czech>
+            <Spanish>Proyecto: Quemado</Spanish>
+            <Italian>Progetto: Bruciato</Italian>
+            <French>Projet: Brûlé</French>
+            <Japanese>プロジェクト: スコーチド</Japanese>
+            <Chinesesimp>项目：烧焦</Chinesesimp>
+            <Chinese>項目：燒焦</Chinese>
+            <Korean>프로젝트: 스코치드</Korean>
+            <Turkish>Proje: Kavrulmuş</Turkish>
+            <Bangla>প্রকল্প: ঝলসে গেছে</Bangla>
+        </Key>
+        <Key ID="STR_PSC_Author">
+            <English>PSC Mod Team<English>
+            </Key>
+    </Package>
+</Project>
