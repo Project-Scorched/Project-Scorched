@@ -18,7 +18,7 @@ class CfgPatches
 		{ 						// Loads all of Arma + CBA
             "cba_main",
             "A3_Data_F_AoW_Loadorder"
-    	};
+    		};
 		addonRootClass = "PSC_Core"; // Subconfigs 
 		author = "$STR_PSC_Author"; // Team name
 		fileName = "PSC_Core.pbo"; // File name
