@@ -2,7 +2,7 @@
 
 class CfgPatches 
 {
-    class PSC_Core 
+	class PSC_Core 
 	{
 		units[] = 
 		{
@@ -16,13 +16,13 @@ class CfgPatches
 		version	= 0.1;
 		requiredAddons[] = 
 		{ 						// Loads all of Arma + CBA
-            "cba_main",
-            "A3_Data_F_AoW_Loadorder"
+           	  "cba_main",
+          	  "A3_Data_F_AoW_Loadorder"
     		};
 		addonRootClass = "PSC_Core"; // Subconfigs 
 		author = "$STR_PSC_Author"; // Team name
 		fileName = "PSC_Core.pbo"; // File name
-    };
+    	};
 };
 
 class CfgMods
