@@ -18,7 +18,13 @@
             <Bangla>প্রকল্প: ঝলসে গেছে</Bangla>
         </Key>
         <Key ID="STR_PSC_Author">
-            <English>PSC Mod Team<English>
+            <English>PSC Mod Team</English>
+        </Key>
+    </Package>
+    <Package name = "Equipment">
+        <Key ID = "STR_PSC_NCR_Trooper_Desert_U">
+            <English>NCR Trooper Desert Uniform</English>
         </Key>
     </Package>
 </Project>
+
