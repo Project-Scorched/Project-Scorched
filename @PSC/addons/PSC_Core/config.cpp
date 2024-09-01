@@ -13,7 +13,7 @@ class CfgPatches
 			
 		};																								
 		requiredVersion = 0.1; // Don't Touch
-		version	= 0.1;
+		version	= PSC_VERSION;
 		requiredAddons[] = 
 		{ 						// Loads all of Arma + CBA
            	  "cba_main",
