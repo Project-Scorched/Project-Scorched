@@ -265,11 +265,5 @@ class CfgVehicles
             "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperBelt_CO.paa",
             "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperGlovesBoots_CO.paa"
         };
-        hiddenSelectionsMaterials[] = 
-        { 
-            "PSC_Equipment\NCR\data\uniforms\NCRTrooperUniform.rvmat",
-            "PSC_Equipment\NCR\data\uniforms\NCRTrooperBelt.rvmat",
-            "PSC_Equipment\NCR\data\uniforms\NCRTrooperGlovesBoots.rvmat"
-        };
     }; 
 };
