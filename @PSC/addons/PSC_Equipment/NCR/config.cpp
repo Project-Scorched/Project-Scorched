@@ -5,7 +5,8 @@ class CfgPatches
     {
         units[] = 
 		{
-            "PSC_NCR_Trooper_Base_UN"
+            "PSC_NCR_Trooper_Base_UN",
+            "PSC_NCR_Trooper_Brown_UN"
 		};
 		weapons[] = 
 		{
@@ -38,50 +39,42 @@ class CfgWeapons
         author = "$STR_PSC_Author";
         displayName = "NCR Trooper Uniform Base (Dev)";
         scope = 0;
-        model = "PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
         //picture = "";
-        hiddenSelections[] = 
-        { 
-            "camoUniform",
-            "camoBelt",
-            "camoGlovesBoots" 
-        };
-        hiddenSelectionsMaterials[] = 
-        {
-            "PSC_Equipment\NCR\data\uniforms\NCRTrooperUniform.rvmat",
-            "PSC_Equipment\NCR\data\uniforms\NCRTrooperBelt.rvmat",
-            "PSC_Equipment\NCR\data\uniforms\NCRTrooperGlovesBoots.rvmat"             
-        };
-        class ItemInfo : UniformItem
+        class ItemInfo: UniformItem
 		{
-			uniformModel = "PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+			uniformModel = "-";
 			uniformClass = "PSC_NCR_Trooper_Base_UN";
-			containerClass = "Supply200";
+			containerClass = "Supply100";
 			mass = 40;
 		};
     };
     class PSC_NCR_Trooper_Brown_U: PSC_NCR_Trooper_Base_U
     {
-        displayName = "$STR_PSC_NCR_Trooper_Desert_U";
+        displayName = "$STR_PSC_NCR_Trooper_Brown_U";
         scope = 2;
-		hiddenSelectionsTextures[] = 
-        { 
-            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperUniform_CO.paa",
-            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperBelt_CO.paa",
-            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperGlovesBoots_CO.paa"
-        };
+        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+        class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "PSC_NCR_Trooper_Brown_UN";
+			containerClass = "Supply100";
+			mass = 40;
+		};
     };
     //Vests
     class ItemCore;
     class ItemInfo;
+    class VestItem;
     class PSC_NCR_Trooper_Base_V: ItemCore
     {
         author = "$STR_PSC_Author";
         displayName = "NCR Trooper Vest Base (DEV)";
 		scope = 0;
 		weaponPoolAvailable = 1;
-		allowedSlots[] = { 901 };			// This means the vest can be put into a backpack.
+		allowedSlots[] = { 901 };
 		//picture = "";
+        uniformModel="\PSC_Equipment\NCR\models\NCR_Trooper_Vest.p3d";
 		model = "\PSC_Equipment\NCR\models\NCR_Trooper_Vest.p3d";
 		hiddenSelections[] = 
         { 
@@ -91,7 +84,7 @@ class CfgWeapons
         {
             "PSC_Equipment\NCR\data\vests\NCRTrooperVest.rvmat"
         };
-        class ItemInfo : ItemInfo
+        class ItemInfo: VestItem
 		{
 			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Vest.p3d";
             hiddenSelections[] = 
@@ -100,7 +93,7 @@ class CfgWeapons
             };
 			containerClass = "Supply40";
 			mass = 15;
-			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3:_Soldier_Protection
+			class HitpointsProtectionInfo 
 			{
 				class Chest
 				{
@@ -115,10 +108,31 @@ class CfgWeapons
     {
         displayName = "$STR_PSC_NCR_Trooper_Brown_V";
         scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
         hiddenSelectionsTextures[] = 
         {
             "PSC_Equipment\NCR\data\vests\brown\NCRTrooperVest_CO.paa"
         };
+        class ItemInfo: VestItem
+		{
+			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Vest.p3d";
+            hiddenSelections[] = 
+            { 
+                "camoVest" 
+            };
+			containerClass = "Supply40";
+			mass = 15;
+			class HitpointsProtectionInfo 
+			{
+				class Chest
+				{
+						hitPointName = "HitChest";
+						armor = 16;
+						passThrough = 0.3;
+				};
+			};
+		};
     };
     // Helmets
 	class HeadgearItem; 
@@ -140,11 +154,12 @@ class CfgWeapons
             "\PSC_Equipment\NCR\data\helmets\NCRTrooperHelmet.rvmat",
             "\PSC_Equipment\NCR\data\helmets\NCRTrooperHelmetGlass.rvmat"
         };
-        class ItemInfo : HeadgearItem
+        class ItemInfo: HeadgearItem
 		{
 			mass = 40;
 			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Helmet.p3d";
-			hiddenSelections[] = 
+			modelSides[] = {1,2};
+            hiddenSelections[] = 
             { 
                 "camoHelmet",
                 "camoHelmetGlass" 
@@ -170,6 +185,25 @@ class CfgWeapons
             "\PSC_Equipment\NCR\data\helmets\brown\NCRTrooperHelmet_co.paa",
             "\PSC_Equipment\NCR\data\helmets\brown\NCRTrooperHelmetGlass_co.paa"
         };
+        class ItemInfo: HeadgearItem
+		{
+			mass = 40;
+			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Helmet.p3d";
+			hiddenSelections[] = 
+            { 
+                "camoHelmet",
+                "camoHelmetGlass" 
+            };
+			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3:_Soldier_Protection
+			{
+				class Head
+				{
+					hitPointName = "HitHead";
+					armor = 6;
+					passThrough = 0.5;
+				};
+			};
+        };
     };
 };
 
@@ -183,10 +217,12 @@ class CfgVehicles
         scope = 0;
         scopeCurator = 0;
         scopeArsenal = 0;
+        identityTypes[] = { "LanguageENG_F","Head_NATO","G_NATO_default" };
         cost = "100000";
         camoflage = 1;
         sensivity = 1;
         threat[] = {1, 0.5, 0.5};
+        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
         uniformClass = "PSC_NCR_Trooper_Base_U";
         hiddenSelections[] = 
         { 
@@ -194,11 +230,17 @@ class CfgVehicles
             "camoBelt",
             "camoGlovesBoots" 
         };
+        hiddenSelectionsMaterials[] = 
+        { 
+            "PSC_Equipment\NCR\data\uniforms\NCRTrooperUniform.rvmat",
+            "PSC_Equipment\NCR\data\uniforms\NCRTrooperBelt.rvmat",
+            "PSC_Equipment\NCR\data\uniforms\NCRTrooperGlovesBoots.rvmat"
+        };
         canDeactivateMines = 0;					// Can this character deactivate mines?
 		engineer = 0;							// Can this character repair vehicles?
 		attendant = 0;							// Can this character heal soldiers?
-		icon = "iconMan";				// If a character has a special role, a special icon shall be used.
-		picture = "pictureMan";				// The same as above, but for the squad picture.
+		//icon = "iconMan";				// If a character has a special role, a special icon shall be used.
+		//picture = "pictureMan";				// The same as above, but for the squad picture.
 		//backpack = "";		// Which backpack the character is wearing.
 		//weapons[] = { "arifle_MX_ACO_pointer_F", "hgun_P07_F", "Throw", "Put" };		// Which weapons the character has.
 		//respawnWeapons[] = { "arifle_MX_ACO_pointer_F", "hgun_P07_F", "Throw", "Put" };	// Which weapons the character respawns with.
@@ -209,4 +251,25 @@ class CfgVehicles
 		//linkedItems[] = { "V_PlateCarrier1_rgr", "H_HelmetB", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "NVGoggles" };		// Which items the character has.
 		//respawnLinkedItems[] = { "V_PlateCarrier1_rgr", "H_HelmetB", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "NVGoggles" };	// Which items the character respawns with.
     };
+    class PSC_NCR_Trooper_Brown_UN: PSC_NCR_Trooper_Base_UN
+    {
+        displayName = "Test";
+        uniformClass = "PSC_NCR_Trooper_Brown_U";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+		hiddenSelectionsTextures[] = 
+        { 
+            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperUniform_CO.paa",
+            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperBelt_CO.paa",
+            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperGlovesBoots_CO.paa"
+        };
+        hiddenSelectionsMaterials[] = 
+        { 
+            "PSC_Equipment\NCR\data\uniforms\NCRTrooperUniform.rvmat",
+            "PSC_Equipment\NCR\data\uniforms\NCRTrooperBelt.rvmat",
+            "PSC_Equipment\NCR\data\uniforms\NCRTrooperGlovesBoots.rvmat"
+        };
+    }; 
 };
