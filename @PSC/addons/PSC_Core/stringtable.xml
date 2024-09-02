@@ -4,7 +4,7 @@
             <English>Project: Scorched</English>
             <German>Projekt: Versengt</German>
             <Polish>Projekt: Spalony</Polish>
-            <Portuguese>Queimado: Projeto</Portuguese>
+            <Portuguese>Projeto: Queimado</Portuguese>
             <Russian>Proyekt: Vyzhzhennyy</Russian>
             <Czech>Projekt: Spálený</Czech>
             <Spanish>Proyecto: Quemado</Spanish>
@@ -22,8 +22,14 @@
         </Key>
     </Package>
     <Package name = "Equipment">
-        <Key ID = "STR_PSC_NCR_Trooper_Desert_U">
-            <English>NCR Trooper Desert Uniform</English>
+        <Key ID = "STR_PSC_NCR_Trooper_Brown_U">
+            <English>NCR Trooper Uniform (Brown)</English>
+        </Key>
+        <Key ID = "STR_PSC_NCR_Trooper_Brown_H">
+            <English>NCR Trooper Helmet (Brown)</English>
+        </Key>
+        <Key ID = "STR_PSC_NCR_Trooper_Brown_V">
+            <English>NCR Trooper Vest (Brown)</English>
         </Key>
     </Package>
 </Project>
