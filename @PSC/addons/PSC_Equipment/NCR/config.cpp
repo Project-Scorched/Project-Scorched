@@ -192,7 +192,7 @@ class CfgWeapons
 			hiddenSelections[] = 
             { 
                 "camoHelmet",
-                "camoHelmetGlass" 
+                "camoHelmetGlass"
             };
 			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3:_Soldier_Protection
 			{
@@ -213,7 +213,7 @@ class CfgVehicles
     class PSC_NCR_Trooper_Base_UN: B_Soldier_base_F
     {
         author = "$STR_PSC_Author";
-        displayName = "NCR Trooper Base (Dev)";
+        displayName = "$PSC_NCR_Trooper_Base_UN";
         scope = 0;
         scopeCurator = 0;
         scopeArsenal = 0;
@@ -229,12 +229,6 @@ class CfgVehicles
             "camoUniform",
             "camoBelt",
             "camoGlovesBoots" 
-        };
-        hiddenSelectionsMaterials[] = 
-        { 
-            "PSC_Equipment\NCR\data\uniforms\NCRTrooperUniform.rvmat",
-            "PSC_Equipment\NCR\data\uniforms\NCRTrooperBelt.rvmat",
-            "PSC_Equipment\NCR\data\uniforms\NCRTrooperGlovesBoots.rvmat"
         };
         canDeactivateMines = 0;					// Can this character deactivate mines?
 		engineer = 0;							// Can this character repair vehicles?
@@ -253,7 +247,6 @@ class CfgVehicles
     };
     class PSC_NCR_Trooper_Brown_UN: PSC_NCR_Trooper_Base_UN
     {
-        displayName = "Test";
         uniformClass = "PSC_NCR_Trooper_Brown_U";
         scope = 2;
         scopeCurator = 2;
