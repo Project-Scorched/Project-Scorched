@@ -239,7 +239,7 @@ class cfgVehicles
 			description="MK1 Turret (UNMANNED)";
 		};
 		reloadMagazineSound[] = {"PSC_Vehicles\Statics\sounds\fallout_turret_reload_1.ogg",10,1,50};
-		model="ballistic_turret_auto\turret";
+		model="PSC_Vehicles\statics\Models\turret.p3d";
 		editorSubcategory="EdSubcat_Turrets";
 		picture="\A3\Static_f_gamma\data\ui\gear_StaticTurret_MG_CA.paa";
 		UiPicture="\A3\Static_f_gamma\data\ui\gear_StaticTurret_MG_CA.paa";
@@ -261,9 +261,9 @@ class cfgVehicles
 			tex[]={};
 			mat[]=
 			{
-				"PSC_Vehicles\Statics\textures\turret_move.rvmat",
-				"PSC_Vehicles\Statics\textures\turret_move_damage.rvmat",
-				"PSC_Vehicles\Statics\textures\turret_move_destruct.rvmat"
+				"PSC_Vehicles\Statics\Data\Ballistic_Turret_move.rvmat",
+				"PSC_Vehicles\Statics\Data\turret_move_damage.rvmat",
+				"PSC_Vehicles\Statics\Data\turret_move_destruct.rvmat"
 			};
 		};
 		class Hitpoints: HitPoints
@@ -406,7 +406,7 @@ class Extended_Init_EventHandlers
 	{
 		class ballistic_turret_auto_init 
 		{
-			init = "[_this select 0] call fallout_fnc_turretInit";
+			init = "[_this select 0] call PSC_fnc_turretInit";
 		};
     };
 };
@@ -414,7 +414,7 @@ class Extended_Init_EventHandlers
 class CfgFunctions 
 {
 	
-    class fallout
+    class PSC
     {
 		
         class functions 

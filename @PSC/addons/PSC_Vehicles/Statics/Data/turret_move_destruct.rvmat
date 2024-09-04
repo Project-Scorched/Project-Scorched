@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="fallout_turret_auto\textures\turret_move_nohq.paa";
+	texture="PSC_Vehicles\Statics\Data\Base\Ballistic_Turret_move_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -44,7 +44,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="fallout_turret_auto\textures\turret_move_as.paa";
+	texture="PSC_Vehicles\Statics\Data\Base\Ballistic_Turret_move_as.paa";
 	uvSource="tex";
 	class uvTransform
 	{
