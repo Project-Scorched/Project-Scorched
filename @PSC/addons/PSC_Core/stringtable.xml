@@ -4,7 +4,7 @@
             <English>Project: Scorched</English>
             <German>Projekt: Versengt</German>
             <Polish>Projekt: Spalony</Polish>
-            <Portuguese>Queimado: Projeto</Portuguese>
+            <Portuguese>Projeto: Queimado</Portuguese>
             <Russian>Proyekt: Vyzhzhennyy</Russian>
             <Czech>Projekt: Spálený</Czech>
             <Spanish>Proyecto: Quemado</Spanish>
@@ -18,7 +18,21 @@
             <Bangla>প্রকল্প: ঝলসে গেছে</Bangla>
         </Key>
         <Key ID="STR_PSC_Author">
-            <English>PSC Mod Team<English>
+            <English>PSC Mod Team</English>
         </Key>
     </Package>
+    <Package name = "Equipment">
+        <Key ID = "STR_PSC_NCR_Trooper_Brown_U">
+            <English>NCR Trooper Uniform (Brown)</English>
+        </Key>
+        <Key ID = "STR_PSC_NCR_Trooper_Brown_H">
+            <English>NCR Trooper Helmet (Brown)</English>
+        </Key>
+        <Key ID = "STR_PSC_NCR_Trooper_Brown_V">
+            <English>NCR Trooper Vest (Brown)</English>
+        </Key>
+        </Key ID = "STR_PSC_NCR_Trooper_Base_UN">
+            <English>NCR Trooper</English>
+    </Package>
 </Project>
+
