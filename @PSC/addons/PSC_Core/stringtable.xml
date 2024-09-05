@@ -31,7 +31,7 @@
         <Key ID = "STR_PSC_NCR_Trooper_Brown_V">
             <English>NCR Trooper Vest (Brown)</English>
         </Key>
-        </Key ID = "PSC_NCR_Trooper_Base_UN">
+        </Key ID = "STR_PSC_NCR_Trooper_Base_UN">
             <English>NCR Trooper</English>
     </Package>
 </Project>
