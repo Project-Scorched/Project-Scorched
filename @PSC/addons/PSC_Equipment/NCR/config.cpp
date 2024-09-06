@@ -1,7 +1,7 @@
 
 class CfgPatches
 {
-    class PSC_NCR
+    class PSC_NCR_Equipment
     {
         units[] = 
 		{
