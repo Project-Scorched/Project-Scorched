@@ -1,6 +1,6 @@
 class CfgPatches
 {
-    class PSC_Factions
+    class PSC_Factions 
     {
         requiredAddons[] = 
         {
@@ -19,3 +19,21 @@ class CfgPatches
 		fileName = "PSC_Factions.pbo"; 
     };
 };
+
+
+class CfgFactionClasses {
+	class PSC_Robots_F {
+		displayName = "$STR_PSC_Robots";
+		author = "$STR_PSC_Author";
+		icon = "";
+		priority = 3;
+	};
+};
+class CfgEditorSubcategories
+{
+	class PSC_EdSucat_Robots
+	{
+		displayName="$STR_PSC_Robots";
+	};
+};
+

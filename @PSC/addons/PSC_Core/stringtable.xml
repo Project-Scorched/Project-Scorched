@@ -34,5 +34,10 @@
         </Key ID = "STR_PSC_NCR_Trooper_Base_UN">
             <English>NCR Trooper</English>
     </Package>
+    <Package name = "Factions">
+        <Key ID = "STR_PSC_Robots">
+            <English>Robots<English/>
+        </Key>
+    </Package>
 </Project>
 

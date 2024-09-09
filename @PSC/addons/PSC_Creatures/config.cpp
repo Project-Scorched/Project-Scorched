@@ -1,6 +1,6 @@
 class CfgPatches
 {
-    class PSC_Factions
+    class PSC_Creatures
     {
         requiredAddons[] = 
         {
@@ -15,7 +15,7 @@ class CfgPatches
 
         };
         author = "$STR_PSC_Author";
-        addonRootClass = "PSC_Factions"; // Subconfigs
-		fileName = "PSC_Factions.pbo"; 
+        addonRootClass = "PSC_Creatures"; // Subconfigs
+		fileName = "PSC_Creatures.pbo"; 
     };
 };
