@@ -4,7 +4,7 @@ class CfgPatches
     {
         requiredAddons[] = 
         {
-
+			
         };
         units[] = 
         {
@@ -1844,13 +1844,1119 @@ class CfgSounds
 
 
 
-
+class WeaponFireGun;
+class WeaponCloudsGun;
+class WeaponFireMGun;
+class WeaponCloudsMGun;
+class Mode_SemiAuto;
+class Mode_Burst;
+class Mode_FullAuto;
+class SlotInfo;
+class MuzzleSlot;
+class CowsSlot;
+class PointerSlot;
+class UnderBarrelSlot;
 class CfgWeapons 
 {
+	class ItemCore;	// External class reference
+	class UniformItem;	// External class reference
+	class Uniform_Base;	// External class reference
+	class HeadgearItem;	// External class reference
+	class Vest_Camo_Base;	// External class reference
+	class VestItem;	// External class reference
 
+	class Securitron_Uniform: Uniform_Base
+	{
+		displayname="Securitron";
+		model = "WBK_AM_CustomSkelCreatures\models\AM_Securitron.p3d";
+		scope=1;
+		picture="";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		class ItemInfo: UniformItem
+		{
+			containerclass="Supply200";
+			mass=30;
+			uniformclass="Securitron_Uniform";
+			uniformmodel="-";
+		};
+	};
+	class Protectron_Uniform: Uniform_Base
+	{
+		displayname="Protectron";
+		model = "PSC_Creatures\robots\models\PSC_Protectron.p3d";
+		scope=1;
+		picture="";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		class ItemInfo: UniformItem
+		{
+			containerclass="Supply200";
+			mass=30;
+			uniformclass="Protectron_Uniform";
+			uniformmodel="-";
+		};
+	};
 };
 
 class CfgVehicles
 {
+	class B_Soldier_base_F;	// External class reference
+	class WBK_C_ExportClass : B_Soldier_base_F {
+		identityTypes[] = {"empty_Face"};
+	};
+	class WBK_Securitron_1 : WBK_C_ExportClass {
+		side = 1;
+		editorSubcategory = "WBK_Robots_Securitrons";
+		faction = "WBK_AM_ROBOTS";
+		WBK_LootableCreature = ["AM_metalJunk","AM_metal_wire","30Rnd_10mm_HP_Mag","AM_cartridges_10"];
+		WBK_Securitron_CanUseRockets = false;
+		WBK_Securitron_CanUseGrenades = true;
+		WBK_Securitron_CanUseMainWeapons = true;
+		WBK_Securitron_IsMainWeaponLaser = false;
+		WBK_Securitron_Faces = ["sterben_top\am_items\npc\robots\data\copsec.paa","WBK_AM_CustomSkelCreatures\textures\copsec_angry.paa"];
+		WBK_Robot_Health = 250;
+		WBK_RobotVoiceovers = [["Securitron_attack_1","Securitron_attack_2","Securitron_attack_3","Securitron_attack_4","Securitron_attack_5","Securitron_attack_6","Securitron_attack_7","Securitron_attack_8","Securitron_attack_9","Securitron_attack_10"],["Securitron_melee_1","Securitron_melee_2"],["Securitron_grenade_1","Securitron_grenade_2"],["Securitron_hit_1","Securitron_hit_2","Securitron_hit_3"],["Securitron_allyDown_1","Securitron_allyDown_2"],["Securitron_death_1","Securitron_death_2","Securitron_death_3"]];
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"sterben_top\am_items\npc\robots\data\copsec.paa","sterben_top\am_items\npc\robots\data\securitron1.paa"};
+		_generalMacro = "WBK_Securitron_1";
+		canBleed = 0;
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		gestures = "CfgGestures_WBK_Securitron";
+		class SoundEnvironExt {		
+			generic[] = {
+			 {"idle2", {"\WBK_AM_CustomSkelCreatures\sounds\idle2.ogg", 3, 1, 25}},
+			 {"idle3", {"\WBK_AM_CustomSkelCreatures\sounds\idle3.ogg", 3, 1, 25}},
+			 {"death", {"\WBK_AM_CustomSkelCreatures\sounds\death_1.ogg", 2, 1, 100}},
+			 {"death", {"\WBK_AM_CustomSkelCreatures\sounds\death_2.ogg", 2, 1, 100}},
+             {"run", {"\WBK_AM_CustomSkelCreatures\sounds\tire_1.ogg", 1, 1, 30}},
+             {"run", {"\WBK_AM_CustomSkelCreatures\sounds\tire_2.ogg", 1, 1, 30}}
+			};
+		};
+		class SoundEquipment {	
+		    soldier[] = {
+			 {"idle2", {"\WBK_AM_CustomSkelCreatures\sounds\idle2.ogg", 3, 1, 25}},
+			 {"idle3", {"\WBK_AM_CustomSkelCreatures\sounds\idle3.ogg", 3, 1, 25}},
+			 {"death", {"\WBK_AM_CustomSkelCreatures\sounds\death_1.ogg", 2, 1, 100}},
+			 {"death", {"\WBK_AM_CustomSkelCreatures\sounds\death_2.ogg", 2, 1, 100}},
+             {"run", {"\WBK_AM_CustomSkelCreatures\sounds\tire_1.ogg", 1, 1, 30}},
+             {"run", {"\WBK_AM_CustomSkelCreatures\sounds\tire_2.ogg", 1, 1, 30}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+			breath1[] = {};
+			breath2[] = {};
+			breath3[] = {};
+			breath4[] = {};
+			breath5[] = {};
+			breath6[] = {};
+			breath7[] = {};
+			breath8[] = {};
+			breath9[] = {};
+			breath10[] = {};
+			breath11[] = {};
+			breath12[] = {};
+			breath13[] = {};
+			breath14[] = {};
+			breath15[] = {};
+			breath16[] = {};
+			breath17[] = {};
+			breath18[] = {};
+		};
+		class SoundBreathAiming
+		{
+			breath[] = {};
+			breath1[] = {};
+			breath2[] = {};
+			breath3[] = {};
+			breath4[] = {};
+			breath5[] = {};
+			breath6[] = {};
+			breath7[] = {};
+			breath8[] = {};
+			breath9[] = {};
+			breath10[] = {};
+			breath11[] = {};
+			breath12[] = {};
+			breath13[] = {};
+			breath14[] = {};
+			breath15[] = {};
+			breath16[] = {};
+			breath17[] = {};
+			breath18[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+			breath1[] = {};
+			breath2[] = {};
+			breath3[] = {};
+			breath4[] = {};
+			breath5[] = {};
+			breath6[] = {};
+			breath7[] = {};
+			breath8[] = {};
+			breath9[] = {};
+			breath10[] = {};
+			breath11[] = {};
+			breath12[] = {};
+			breath13[] = {};
+			breath14[] = {};
+			breath15[] = {};
+			breath16[] = {};
+			breath17[] = {};
+			breath18[] = {};
+		};
+		class SoundInjured
+		{
+			person_moan1[] = {};
+			person_moan2[] = {};
+			person_moan3[] = {};
+			person_moan4[] = {};
+			person_moan5[] = {};
+			person_moan6[] = {};
+			person_moan7[] = {};
+			person_moan8[] = {};
+			person_moan9[] = {};
+			person_moan10[] = {};
+			person_moan11[] = {};
+			person_moan12[] = {};
+			person_moan13[] = {};
+			person_moan14[] = {};
+			person_moan15[] = {};
+			person_moan16[] = {};
+			person_moan17[] = {};
+			person_moan18[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+			breath1[] = {};
+			breath2[] = {};
+			breath3[] = {};
+			breath4[] = {};
+			breath5[] = {};
+			breath6[] = {};
+			breath7[] = {};
+			breath8[] = {};
+			breath9[] = {};
+			breath10[] = {};
+			breath11[] = {};
+			breath12[] = {};
+			breath13[] = {};
+			breath14[] = {};
+			breath15[] = {};
+			breath16[] = {};
+			breath17[] = {};
+			breath18[] = {};
+		};
+		class SoundRecovered
+		{
+			Person1[] = {};
+			Person2[] = {};
+			Person3[] = {};
+			Person4[] = {};
+			Person5[] = {};
+			Person6[] = {};
+			Person7[] = {};
+			Person8[] = {};
+			Person9[] = {};
+			Person10[] = {};
+			Person11[] = {};
+			Person12[] = {};
+			Person13[] = {};
+			Person14[] = {};
+			Person15[] = {};
+			Person16[] = {};
+			Person17[] = {};
+			Person18[] = {};
+		};
+		class SoundBreathAutomatic
+		{
+			breath[] = {};
+			breath0[] = {};
+		};
+		
+		class SoundBreathInjured
+		{
+			Person1[] = {};
+			Person2[] = {};
+			Person3[] = {};
+			Person4[] = {};
+			Person5[] = {};
+			Person6[] = {};
+			Person7[] = {};
+			Person8[] = {};
+			Person9[] = {};
+			Person10[] = {};
+			Person11[] = {};
+			Person12[] = {};
+			Person13[] = {};
+			Person14[] = {};
+			Person15[] = {};
+			Person16[] = {};
+			Person17[] = {};
+			Person18[] = {};
+		};
+		class SoundBurning
+		{
+			Person1[] = {};
+			Person2[] = {};
+			Person3[] = {};
+			Person4[] = {};
+			Person5[] = {};
+			Person6[] = {};
+			Person7[] = {};
+			Person8[] = {};
+			Person9[] = {};
+			Person10[] = {};
+			Person11[] = {};
+			Person12[] = {};
+			Person13[] = {};
+			Person14[] = {};
+			Person15[] = {};
+			Person16[] = {};
+			Person17[] = {};
+			Person18[] = {};
+		};
+		class SoundBreathSwimming
+		{
+			breathSwimming1[] = {};
+		};
+		class SoundHitScream
+		{
+			Person1[] = {};
+			Person2[] = {};
+			Person3[] = {};
+			Person4[] = {};
+			Person5[] = {};
+			Person6[] = {};
+			Person7[] = {};
+			Person8[] = {};
+			Person9[] = {};
+			Person10[] = {};
+			Person11[] = {};
+			Person12[] = {};
+			Person13[] = {};
+			Person14[] = {};
+			Person15[] = {};
+			Person16[] = {};
+			Person17[] = {};
+			Person18[] = {};
+		};
+        items[] = {};
+		uniformClass = "Securitron_Uniform";
+		nakedUniform = "Securitron_Uniform";
+		vehicleclass = "Men";
+		displayName = "Securitron (Mark I)";
+		moves = "CfgMoves_WBK_Securitron";
+		model = "WBK_AM_CustomSkelCreatures\models\AM_Securitron.p3d";
+		armor = 7;
+		scope = 2;
+		canCarryBackPack = 1;
+		canDeactivateMines = 0;
+		engineer = 0;
+		attendant = 1;
+		class Character {
+			radius = 200;
+			detectionRadius = 500;
+			chaseDistance = 51;
+			coverRadius = 50;
+			escapeRadius = 200;
+			damage = 0.4;
+			damageHitPoints[] = {{"HitLeftLeg", 0.4}, {"HitRightLeg", 0.4}, {"HitBody", 0.7}};
+			armor = 7;
+			attackDistances[] = {2, 3};
+			allowWalk = 1;
+			aggressive = 1;
+			secrecy = 0.4;
+			curious = 1;
+			cowardice = 0;
+			societal = 0;
+			tactful = 1;
+			courage = 1;
+			friendly[] = {};
+			
+			class Sounds {
+				idle[] = {};
+				attack[] = {};
+				hit[] = {};
+				other[] = {};
+			};
+			
+			class Animations {
+				attack_1[] = {};
+				attack_2[] = {};
+				attack_3[] = {};
+				agry[] = {};
+				eat[] = {""};
+			};
+			
+			class HitPoints {
+				class HitFace {
+					armor = 1;
+					material = -1;
+					name = "bip01_head";
+					passThrough = 0.1;
+					radius = 0.08;
+					explosionShielding = 0.1;
+					minimalHit = 0.01;
+				};
+				
+				class HitNeck : HitFace {
+					armor = 1;
+					material = -1;
+					name = "bip01_neck";
+					passThrough = 0.1;
+					radius = 0.1;
+					explosionShielding = 0.5;
+					minimalHit = 0.01;
+				};
+				
+				class HitHead : HitNeck {
+					armor = 1;
+					material = -1;
+					name = "bip01_head";
+					passThrough = 0.1;
+					radius = 0.2;
+					explosionShielding = 0.5;
+					minimalHit = 0.01;
+					depends = "HitFace max HitNeck";
+				};
+				
+				class HitPelvis {
+					armor = 1;
+					material = -1;
+					name = "bip01_pelvis";
+					passThrough = 0.1;
+					radius = 0.2;
+					explosionShielding = 1;
+					visual = "injury_body";
+					minimalHit = 0.01;
+				};
+				
+				class HitAbdomen : HitPelvis {
+					armor = 1;
+					material = -1;
+					name = "bip01_spine1";
+					passThrough = 0.1;
+					radius = 0.15;
+					explosionShielding = 1;
+					visual = "injury_body";
+					minimalHit = 0.01;
+				};
+				
+				class HitDiaphragm : HitAbdomen {
+					armor = 1;
+					material = -1;
+					name = "bip01_spine2";
+					passThrough = 0.1;
+					radius = 0.15;
+					explosionShielding = 6;
+					visual = "injury_body";
+					minimalHit = 0.01;
+				};
+				
+				class HitChest : HitDiaphragm {
+					armor = 1;
+					material = -1;
+					name = "bip01_spine3";
+					passThrough = 0.1;
+					radius = 0.15;
+					explosionShielding = 6;
+					visual = "injury_body";
+					minimalHit = 0.01;
+				};
+				
+				class HitBody : HitChest {
+					armor = 6500;
+					material = -1;
+					name = "Body";
+					passThrough = 0.1;
+					radius = 0.16;
+					explosionShielding = 6;
+					visual = "injury_body";
+					minimalHit = 0.01;
+					depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+				};
+				
+				class HitArms {
+					armor = 1;
+					material = -1;
+					name = "arms";
+					passThrough = 1;
+					radius = 0.1;
+					explosionShielding = 1;
+					visual = "injury_hands";
+					minimalHit = 0.01;
+				};
+				
+				class HitHands : HitArms {
+					armor = 1;
+					material = -1;
+					name = "hands";
+					passThrough = 1;
+					radius = 0.1;
+					explosionShielding = 1;
+					visual = "injury_hands";
+					minimalHit = 0.01;
+					depends = "HitArms";
+				};
+				
+				class HitLegs {
+					armor = 1;
+					material = -1;
+					name = "legs";
+					passThrough = 1;
+					radius = 0.12;
+					explosionShielding = 1;
+					visual = "injury_legs";
+					minimalHit = 0.01;
+				};
+			};
+			armorStructural = 0.4;
+			explosionShielding = 0.04;
+			minTotalDamageThreshold = 0.001;
+			impactDamageMultiplier = 0.5;
+		};
+		weapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+		};
+		respawnweapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		respawnMagazines[]=
+		{
+		};
+		linkedItems[]=
+		{
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		RespawnlinkedItems[]=
+		{
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+	};
+	class WBK_Securitron_2 : WBK_Securitron_1 {
+		WBK_Securitron_CanUseRockets = true;
+		WBK_Securitron_CanUseGrenades = false;
+		WBK_Securitron_CanUseMainWeapons = true;
+		WBK_Securitron_IsMainWeaponLaser = true;
+		WBK_LootableCreature = ["AM_metalJunk","AM_metal_wire","24Rnd_MicroFusionCell_Mag","AM_DrainedSEC"];
+		WBK_Robot_Health = 260;
+		WBK_Securitron_Faces = ["sterben_top\am_items\npc\robots\data\soldiersec.paa","WBK_AM_CustomSkelCreatures\textures\soldiersec_angry.paa"];
+		hiddenSelectionsTextures[] = {"sterben_top\am_items\npc\robots\data\soldiersec.paa","sterben_top\am_items\npc\robots\data\securitron1.paa"};
+		_generalMacro = "WBK_Securitron_2";
+		displayName = "Securitron (Mark II)";
+	};
+	class WBK_Securitron_Victor : WBK_Securitron_1 {
+		WBK_Securitron_Faces = ["sterben_top\am_items\npc\robots\data\victorsec.paa","WBK_AM_CustomSkelCreatures\textures\victorsec_angry.paa"];
+		WBK_Robot_Health = 5000;
+		WBK_RobotVoiceovers = [["Securitron_Victor_attack_1","Securitron_Victor_attack_2","Securitron_Victor_attack_3","Securitron_Victor_attack_4","Securitron_Victor_attack_5","Securitron_Victor_attack_6","Securitron_Victor_attack_7","Securitron_Victor_attack_8","Securitron_Victor_attack_9"],["Securitron_Victor_attack_6","Securitron_Victor_attack_7"],["Securitron_Victor_grenade_1","Securitron_Victor_grenade_2"],["Securitron_Victor_grenade_1","Securitron_Victor_grenade_2"],["Securitron_Victor_attack_6","Securitron_Victor_attack_7"],["Securitron_death_1","Securitron_death_2","Securitron_death_3"]];
+		hiddenSelectionsTextures[] = {"sterben_top\am_items\npc\robots\data\victorsec.paa","sterben_top\am_items\npc\robots\data\securitron1.paa"};
+		_generalMacro = "WBK_Securitron_Victor";
+		displayName = "Securitron (Victor)";
+	};
+	class WBK_Securitron_3 : WBK_Securitron_1 {
+		WBK_Securitron_CanUseRockets = true;
+		WBK_Securitron_CanUseGrenades = true;
+		WBK_Securitron_CanUseMainWeapons = true;
+		WBK_Securitron_IsMainWeaponLaser = true;
+		WBK_LootableCreature = ["AM_metalJunk","AM_metal_wire","24Rnd_MicroFusionCell_Mag","AM_DrainedSEC","30Rnd_10mm_HP_Mag","AM_cartridges_10"];
+		WBK_Robot_Health = 350;
+		WBK_RobotVoiceovers = [["Securitron_Berserk_noise_1","Securitron_Berserk_noise_2","Securitron_Berserk_noise_3","Securitron_Berserk_noise_4","Securitron_Berserk_noise_5"],["Securitron_Berserk_noise_1","Securitron_Berserk_noise_2","Securitron_Berserk_noise_3","Securitron_Berserk_noise_4","Securitron_Berserk_noise_5"],["Securitron_Berserk_noise_1","Securitron_Berserk_noise_2","Securitron_Berserk_noise_3","Securitron_Berserk_noise_4","Securitron_Berserk_noise_5"],["Securitron_Berserk_hit_1","Securitron_Berserk_hit_2"],["Securitron_Berserk_noise_1","Securitron_Berserk_noise_2","Securitron_Berserk_noise_3","Securitron_Berserk_noise_4","Securitron_Berserk_noise_5"],["Securitron_Berserk_death_1","Securitron_Berserk_death_2"]];
+		WBK_Securitron_Faces = ["WBK_AM_CustomSkelCreatures\textures\Beserksecuritron.paa","WBK_AM_CustomSkelCreatures\textures\Beserksecuritron_angry.paa"];
+		hiddenSelectionsTextures[] = {"WBK_AM_CustomSkelCreatures\textures\Beserksecuritron.paa","sterben_top\am_items\npc\robots\data\securitron1.paa"};
+		_generalMacro = "WBK_Securitron_3";
+		displayName = "Securitron (Berserk)";
+	};
+	class WBK_Securitron_4 : WBK_Securitron_1 {
+		WBK_Securitron_CanUseRockets = false;
+		WBK_Securitron_CanUseGrenades = false;
+		WBK_Securitron_CanUseMainWeapons = true;
+		WBK_Securitron_IsMainWeaponLaser = false;
+		WBK_RobotVoiceovers = [["Securitron_YesMan_Attack_1","Securitron_YesMan_Attack_2","Securitron_YesMan_Attack_3"],["Securitron_YesMan_Attack_1","Securitron_YesMan_Attack_2","Securitron_YesMan_Attack_3"],["Securitron_YesMan_Attack_1","Securitron_YesMan_Attack_2","Securitron_YesMan_Attack_3"],["Securitron_YesMan_Hit_1","Securitron_YesMan_Hit_2"],["Securitron_YesMan_Hit_2","Securitron_YesMan_Hit_1"],["Securitron_YesMan_death_1","Securitron_YesMan_death_2"]];
+		WBK_Securitron_Faces = ["sterben_top\am_items\npc\robots\data\YesManSec.paa","WBK_AM_CustomSkelCreatures\textures\YesManSec_angry.paa"];
+		hiddenSelectionsTextures[] = {"sterben_top\am_items\npc\robots\data\YesManSec.paa","sterben_top\am_items\npc\robots\data\securitron1.paa"};
+		_generalMacro = "WBK_Securitron_4";
+		displayName = "Securitron (YesMan)";
+	};
+	class WBK_Securitron_1_O : WBK_Securitron_1 {
+		_generalMacro = "WBK_Securitron_1_O";
+		side = 0;
+	};
+	class WBK_Securitron_2_O : WBK_Securitron_2 {
+		_generalMacro = "WBK_Securitron_2_O";
+		side = 0;
+	};
+	class WBK_Securitron_3_O : WBK_Securitron_3 {
+		_generalMacro = "WBK_Securitron_3_O";
+		side = 0;
+	};
+	class WBK_Securitron_4_O : WBK_Securitron_4 {
+		_generalMacro = "WBK_Securitron_4_O";
+		side = 0;
+	};
+	class WBK_Securitron_Victor_O : WBK_Securitron_Victor {
+		_generalMacro = "WBK_Securitron_Victor_O";
+		side = 0;
+	};
+	
+	class WBK_Securitron_1_I : WBK_Securitron_1 {
+		_generalMacro = "WBK_Securitron_1_I";
+		side = 2;
+	};
+	class WBK_Securitron_2_I : WBK_Securitron_2 {
+		_generalMacro = "WBK_Securitron_2_I";
+		side = 2;
+	};
+	class WBK_Securitron_3_I : WBK_Securitron_3 {
+		_generalMacro = "WBK_Securitron_3_I";
+		side = 2;
+	};
+	class WBK_Securitron_4_I : WBK_Securitron_4 {
+		_generalMacro = "WBK_Securitron_4_I";
+		side = 2;
+	};
+	class WBK_Securitron_Victor_I : WBK_Securitron_Victor {
+		_generalMacro = "WBK_Securitron_Victor_I";
+		side = 2;
+	};
+	
+	
+	class WBK_Securitron_1_C : WBK_Securitron_1 {
+		_generalMacro = "WBK_Securitron_1_C";
+		side = 3;
+	};
+	class WBK_Securitron_2_C : WBK_Securitron_2 {
+		_generalMacro = "WBK_Securitron_2_C";
+		side = 3;
+	};
+	class WBK_Securitron_3_C : WBK_Securitron_3 {
+		_generalMacro = "WBK_Securitron_3_C";
+		side = 3;
+	};
+	class WBK_Securitron_4_C : WBK_Securitron_4 {
+		_generalMacro = "WBK_Securitron_4_C";
+		side = 3;
+	};
+	class WBK_Securitron_Victor_C : WBK_Securitron_Victor {
+		_generalMacro = "WBK_Securitron_Victor_C";
+		side = 3;
+	};
+	
+	class WBK_Protectron_1 : WBK_C_ExportClass {
+		side = 1;
+		editorSubcategory = "WBK_Robots_Protectrons";
+		faction = "WBK_AM_ROBOTS";
+		WBK_Robot_Health = 120;
+		WBK_LootableCreature = ["AM_metalJunk","AM_metal_wire","24Rnd_MicroFusionCell_Mag","AM_DrainedSEC"];
+		WBK_RobotVoiceovers = [["Protectron_attack_1","Protectron_attack_2","Protectron_attack_3","Protectron_attack_4","Protectron_attack_5","Protectron_attack_6","Protectron_attack_7","Protectron_attack_8","Protectron_attack_9","Protectron_attack_10"],["Protectron_death_1","Protectron_death_2","Protectron_death_3","Protectron_death_4"]];
+		hiddenSelections[] = {"camo1","camo2"};
+		hiddenSelectionsTextures[] = {"sterben_top\am_items_2\npc\protectron\protectron_blue.paa","sterben_top\am_items_2\npc\protectron\protectronglass_on.paa"};
+		_generalMacro = "WBK_Protectron_1";
+		canBleed = 0;
+		impactEffectsBlood = "ImpactMetal";
+		impactEffectsNoBlood = "ImpactPlastic";
+		gestures = "CfgGestures_WBK_Protectron";
+		moves = "CfgMoves_WBK_Protectron";
+		class SoundEnvironExt {		
+			generic[] = {
+             {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_l01.wav", 2, 1, 40}},
+			 {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_l02.wav", 2, 1, 40}},
+			 {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_l03.wav", 2, 1, 40}},
+			 {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_r01.wav", 2, 1, 40}},
+			 {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_r02.wav", 2, 1, 40}},
+             {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_r03.wav", 2, 1, 40}}
+			};
+		};
+		class SoundEquipment {	
+		    soldier[] = {
+             {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_l01.wav", 2, 1, 40}},
+			 {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_l02.wav", 2, 1, 40}},
+			 {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_l03.wav", 2, 1, 40}},
+			 {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_r01.wav", 2, 1, 40}},
+			 {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_r02.wav", 2, 1, 40}},
+             {"run", {"\WBK_AM_CustomSkelCreatures\sounds\protectron\protectron_foot_r03.wav", 2, 1, 40}}
+			};
+		};
+		class SoundBreath
+		{
+			breath[] = {};
+			breath1[] = {};
+			breath2[] = {};
+			breath3[] = {};
+			breath4[] = {};
+			breath5[] = {};
+			breath6[] = {};
+			breath7[] = {};
+			breath8[] = {};
+			breath9[] = {};
+			breath10[] = {};
+			breath11[] = {};
+			breath12[] = {};
+			breath13[] = {};
+			breath14[] = {};
+			breath15[] = {};
+			breath16[] = {};
+			breath17[] = {};
+			breath18[] = {};
+		};
+		class SoundBreathAiming
+		{
+			breath[] = {};
+			breath1[] = {};
+			breath2[] = {};
+			breath3[] = {};
+			breath4[] = {};
+			breath5[] = {};
+			breath6[] = {};
+			breath7[] = {};
+			breath8[] = {};
+			breath9[] = {};
+			breath10[] = {};
+			breath11[] = {};
+			breath12[] = {};
+			breath13[] = {};
+			breath14[] = {};
+			breath15[] = {};
+			breath16[] = {};
+			breath17[] = {};
+			breath18[] = {};
+		};
+		class SoundDrown
+		{
+			breath[] = {};
+			breath1[] = {};
+			breath2[] = {};
+			breath3[] = {};
+			breath4[] = {};
+			breath5[] = {};
+			breath6[] = {};
+			breath7[] = {};
+			breath8[] = {};
+			breath9[] = {};
+			breath10[] = {};
+			breath11[] = {};
+			breath12[] = {};
+			breath13[] = {};
+			breath14[] = {};
+			breath15[] = {};
+			breath16[] = {};
+			breath17[] = {};
+			breath18[] = {};
+		};
+		class SoundInjured
+		{
+			person_moan1[] = {};
+			person_moan2[] = {};
+			person_moan3[] = {};
+			person_moan4[] = {};
+			person_moan5[] = {};
+			person_moan6[] = {};
+			person_moan7[] = {};
+			person_moan8[] = {};
+			person_moan9[] = {};
+			person_moan10[] = {};
+			person_moan11[] = {};
+			person_moan12[] = {};
+			person_moan13[] = {};
+			person_moan14[] = {};
+			person_moan15[] = {};
+			person_moan16[] = {};
+			person_moan17[] = {};
+			person_moan18[] = {};
+		};
+		class SoundBleeding
+		{
+			breath[] = {};
+		};
+		class SoundChoke
+		{
+			breath[] = {};
+			breath1[] = {};
+			breath2[] = {};
+			breath3[] = {};
+			breath4[] = {};
+			breath5[] = {};
+			breath6[] = {};
+			breath7[] = {};
+			breath8[] = {};
+			breath9[] = {};
+			breath10[] = {};
+			breath11[] = {};
+			breath12[] = {};
+			breath13[] = {};
+			breath14[] = {};
+			breath15[] = {};
+			breath16[] = {};
+			breath17[] = {};
+			breath18[] = {};
+		};
+		class SoundRecovered
+		{
+			Person1[] = {};
+			Person2[] = {};
+			Person3[] = {};
+			Person4[] = {};
+			Person5[] = {};
+			Person6[] = {};
+			Person7[] = {};
+			Person8[] = {};
+			Person9[] = {};
+			Person10[] = {};
+			Person11[] = {};
+			Person12[] = {};
+			Person13[] = {};
+			Person14[] = {};
+			Person15[] = {};
+			Person16[] = {};
+			Person17[] = {};
+			Person18[] = {};
+		};
+		class SoundBreathAutomatic
+		{
+			breath[] = {};
+			breath0[] = {};
+		};
+		
+		class SoundBreathInjured
+		{
+			Person1[] = {};
+			Person2[] = {};
+			Person3[] = {};
+			Person4[] = {};
+			Person5[] = {};
+			Person6[] = {};
+			Person7[] = {};
+			Person8[] = {};
+			Person9[] = {};
+			Person10[] = {};
+			Person11[] = {};
+			Person12[] = {};
+			Person13[] = {};
+			Person14[] = {};
+			Person15[] = {};
+			Person16[] = {};
+			Person17[] = {};
+			Person18[] = {};
+		};
+		class SoundBurning
+		{
+			Person1[] = {};
+			Person2[] = {};
+			Person3[] = {};
+			Person4[] = {};
+			Person5[] = {};
+			Person6[] = {};
+			Person7[] = {};
+			Person8[] = {};
+			Person9[] = {};
+			Person10[] = {};
+			Person11[] = {};
+			Person12[] = {};
+			Person13[] = {};
+			Person14[] = {};
+			Person15[] = {};
+			Person16[] = {};
+			Person17[] = {};
+			Person18[] = {};
+		};
+		class SoundBreathSwimming
+		{
+			breathSwimming1[] = {};
+		};
+		class SoundHitScream
+		{
+			Person1[] = {};
+			Person2[] = {};
+			Person3[] = {};
+			Person4[] = {};
+			Person5[] = {};
+			Person6[] = {};
+			Person7[] = {};
+			Person8[] = {};
+			Person9[] = {};
+			Person10[] = {};
+			Person11[] = {};
+			Person12[] = {};
+			Person13[] = {};
+			Person14[] = {};
+			Person15[] = {};
+			Person16[] = {};
+			Person17[] = {};
+			Person18[] = {};
+		};
+        items[] = {};
+		uniformClass = "Protectron_Uniform";
+		nakedUniform = "Protectron_Uniform";
+		vehicleclass = "Men";
+		displayName = "Protectron";
+		model = "WBK_AM_CustomSkelCreatures\models\AM_Protectron.p3d";
+		armor = 7;
+		scope = 2;
+		canCarryBackPack = 1;
+		canDeactivateMines = 0;
+		engineer = 0;
+		attendant = 1;
+		class Character {
+			radius = 200;
+			detectionRadius = 500;
+			chaseDistance = 51;
+			coverRadius = 50;
+			escapeRadius = 200;
+			damage = 0.4;
+			damageHitPoints[] = {{"HitLeftLeg", 0.4}, {"HitRightLeg", 0.4}, {"HitBody", 0.7}};
+			armor = 7;
+			attackDistances[] = {2, 3};
+			allowWalk = 1;
+			aggressive = 1;
+			secrecy = 0.4;
+			curious = 1;
+			cowardice = 0;
+			societal = 0;
+			tactful = 1;
+			courage = 1;
+			friendly[] = {};
+			
+			class Sounds {
+				idle[] = {};
+				attack[] = {};
+				hit[] = {};
+				other[] = {};
+			};
+			
+			class Animations {
+				attack_1[] = {};
+				attack_2[] = {};
+				attack_3[] = {};
+				agry[] = {};
+				eat[] = {""};
+			};
+			
+			class HitPoints {
+				class HitFace {
+					armor = 1;
+					material = -1;
+					name = "bip01_head";
+					passThrough = 0.1;
+					radius = 0.08;
+					explosionShielding = 0.1;
+					minimalHit = 0.01;
+				};
+				
+				class HitNeck : HitFace {
+					armor = 1;
+					material = -1;
+					name = "bip01_neck";
+					passThrough = 0.1;
+					radius = 0.1;
+					explosionShielding = 0.5;
+					minimalHit = 0.01;
+				};
+				
+				class HitHead : HitNeck {
+					armor = 1;
+					material = -1;
+					name = "bip01_head";
+					passThrough = 0.1;
+					radius = 0.2;
+					explosionShielding = 0.5;
+					minimalHit = 0.01;
+					depends = "HitFace max HitNeck";
+				};
+				
+				class HitPelvis {
+					armor = 1;
+					material = -1;
+					name = "bip01_pelvis";
+					passThrough = 0.1;
+					radius = 0.2;
+					explosionShielding = 1;
+					visual = "injury_body";
+					minimalHit = 0.01;
+				};
+				
+				class HitAbdomen : HitPelvis {
+					armor = 1;
+					material = -1;
+					name = "bip01_spine1";
+					passThrough = 0.1;
+					radius = 0.15;
+					explosionShielding = 1;
+					visual = "injury_body";
+					minimalHit = 0.01;
+				};
+				
+				class HitDiaphragm : HitAbdomen {
+					armor = 1;
+					material = -1;
+					name = "bip01_spine2";
+					passThrough = 0.1;
+					radius = 0.15;
+					explosionShielding = 6;
+					visual = "injury_body";
+					minimalHit = 0.01;
+				};
+				
+				class HitChest : HitDiaphragm {
+					armor = 1;
+					material = -1;
+					name = "bip01_spine3";
+					passThrough = 0.1;
+					radius = 0.15;
+					explosionShielding = 6;
+					visual = "injury_body";
+					minimalHit = 0.01;
+				};
+				
+				class HitBody : HitChest {
+					armor = 6500;
+					material = -1;
+					name = "Body";
+					passThrough = 0.1;
+					radius = 0.16;
+					explosionShielding = 6;
+					visual = "injury_body";
+					minimalHit = 0.01;
+					depends = "HitPelvis max HitAbdomen max HitDiaphragm max HitChest";
+				};
+				
+				class HitArms {
+					armor = 1;
+					material = -1;
+					name = "arms";
+					passThrough = 1;
+					radius = 0.1;
+					explosionShielding = 1;
+					visual = "injury_hands";
+					minimalHit = 0.01;
+				};
+				
+				class HitHands : HitArms {
+					armor = 1;
+					material = -1;
+					name = "hands";
+					passThrough = 1;
+					radius = 0.1;
+					explosionShielding = 1;
+					visual = "injury_hands";
+					minimalHit = 0.01;
+					depends = "HitArms";
+				};
+				
+				class HitLegs {
+					armor = 1;
+					material = -1;
+					name = "legs";
+					passThrough = 1;
+					radius = 0.12;
+					explosionShielding = 1;
+					visual = "injury_legs";
+					minimalHit = 0.01;
+				};
+			};
+			armorStructural = 0.4;
+			explosionShielding = 0.04;
+			minTotalDamageThreshold = 0.001;
+			impactDamageMultiplier = 0.5;
+		};
+		weapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		magazines[]=
+		{
+		};
+		respawnweapons[]=
+		{
+			"Throw",
+			"Put"
+		};
+		respawnMagazines[]=
+		{
+		};
+		linkedItems[]=
+		{
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+		RespawnlinkedItems[]=
+		{
+			"ItemGPS",
+			"ItemMap",
+			"ItemCompass",
+			"ItemWatch",
+			"ItemRadio"
+		};
+	};
+	class WBK_Protectron_1_O : WBK_Protectron_1 {
+		_generalMacro = "WBK_Protectron_1_O";
+		side = 0;
+	};
+	class WBK_Protectron_1_I : WBK_Protectron_1 {
+		_generalMacro = "WBK_Protectron_1_I";
+		side = 2;
+	};
+	class WBK_Protectron_1_C : WBK_Protectron_1 {
+		_generalMacro = "WBK_Protectron_1_C";
+		side = 3;
+	};
+};
 
+class Extended_InitPost_EventHandlers {
+	class WBK_Securitron_1 {
+        class AI_Securitron_Init {
+            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WBK_AM_CustomSkelCreatures\AI\Securitron_AI.sqf"";};";
+        };
+    };
+	class WBK_Protectron_1 {
+        class AI_Protectron_Init {
+            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WBK_AM_CustomSkelCreatures\AI\Protectron_AI.sqf"";};";
+        };
+    };
+	class WBK_Deathclaw_1 {
+        class AI_Deathclaw_Init {
+            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WBK_AM_CustomSkelCreatures\AI\AI_Deathclaw.sqf"";};";
+        };
+    };
+	class WBK_Radroach_1 {
+        class AI_Radroach_Init {
+            init = "_unit = _this select 0; if (local _unit) then {_unit execVM ""\WBK_AM_CustomSkelCreatures\AI\AI_Radroach.sqf"";};";
+        };
+    };
+};
+
+class Extended_PostInit_EventHandlers 
+{
+    class AM_CustomCreature_PostInit 
+	{
+        init="call compile preprocessFileLineNumbers '\WBK_AM_CustomSkelCreatures\AI\XEH_postInit.sqf'";
+    };
 };
