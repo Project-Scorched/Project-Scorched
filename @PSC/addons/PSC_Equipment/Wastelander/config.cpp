@@ -55,7 +55,7 @@ class CfgWeapons
     };
 };
 
-class CfgWeapons
+class CfgVehicles
 {
     class B_Soldier_base_F;
     class PSC_Wastelander_Tanker_Base_UN: B_Soldier_base_F
@@ -102,7 +102,7 @@ class CfgWeapons
 		hiddenSelectionsTextures[] = 
         { 
             "PSC_Equipment\Wastelander\data\uniforms\green\TankerUpper_CO.paa",
-            "PSC_Equipment\NCR\data\uniforms\green\TankerLower_CO.paa"
+            "PSC_Equipment\Wastelander\data\uniforms\green\TankerLower_CO.paa"
         };
     };
 };
