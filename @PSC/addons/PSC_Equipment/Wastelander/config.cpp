@@ -43,7 +43,7 @@ class CfgWeapons
     };
     class PSC_Wastelander_Tanker_U: PSC_Wastelander_Tanker_Base_U
     {
-        displayName = "STR_PSC_Wastelander_Tanker_U";
+        displayName = "$STR_PSC_Wastelander_Tanker_U";
         scope = 2; 
         class ItemInfo: UniformItem
         {
