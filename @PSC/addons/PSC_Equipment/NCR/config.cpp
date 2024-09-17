@@ -62,6 +62,32 @@ class CfgWeapons
 			mass = 40;
 		};
     };
+    class PSC_NCR_Trooper_Snow_U: PSC_NCR_Trooper_Base_U
+    {
+        displayName = "$STR_PSC_NCR_Trooper_Snow_U";
+        scope = 2;
+        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+        class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "PSC_NCR_Trooper_Snow_UN";
+			containerClass = "Supply100";
+			mass = 40;
+		};
+    };
+    class PSC_NCR_Trooper_Woodland_U: PSC_NCR_Trooper_Base_U
+    {
+        displayName = "$STR_PSC_NCR_Trooper_Woodland_U";
+        scope = 2;
+        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+        class ItemInfo: UniformItem
+		{
+			uniformModel = "-";
+			uniformClass = "PSC_NCR_Trooper_Woodland_UN";
+			containerClass = "Supply100";
+			mass = 40;
+		};
+    };
     //Vests
     class ItemCore;
     class ItemInfo;
@@ -113,6 +139,36 @@ class CfgWeapons
         hiddenSelectionsTextures[] = 
         {
             "PSC_Equipment\NCR\data\vests\brown\NCRTrooperVest_CO.paa"
+        };
+        class ItemInfo: VestItem
+		{
+			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Vest.p3d";
+            hiddenSelections[] = 
+            { 
+                "camoVest" 
+            };
+			containerClass = "Supply40";
+			mass = 15;
+			class HitpointsProtectionInfo 
+			{
+				class Chest
+				{
+						hitPointName = "HitChest";
+						armor = 16;
+						passThrough = 0.3;
+				};
+			};
+		};
+    };
+    class PSC_NCR_Trooper_Snow_V: PSC_NCR_Trooper_Base_V
+    {
+        displayName = "$STR_PSC_NCR_Trooper_Snow_V";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        hiddenSelectionsTextures[] = 
+        {
+            "PSC_Equipment\NCR\data\vests\snow\NCRTrooperVest_CO.paa"
         };
         class ItemInfo: VestItem
 		{
@@ -205,6 +261,34 @@ class CfgWeapons
 			};
         };
     };
+
+    class PSC_NCR_Trooper_Snow_H: PSC_NCR_Trooper_Base_H
+    {
+        displayName = "$STR_PSC_NCR_Trooper_Snow_H";
+        scope = 2;
+        hiddenSelectionsTextures[] = 
+        {
+            "\PSC_Equipment\NCR\data\helmets\snow\NCRTrooperHelmet_co.paa"
+        };
+        class ItemInfo: HeadgearItem
+		{
+			mass = 40;
+			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Helmet.p3d";
+			hiddenSelections[] = 
+            { 
+                "camoHelmet"
+            };
+			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3:_Soldier_Protection
+			{
+				class Head
+				{
+					hitPointName = "HitHead";
+					armor = 6;
+					passThrough = 0.5;
+				};
+			};
+        };
+    };
 };
 
 class CfgVehicles
@@ -213,7 +297,7 @@ class CfgVehicles
     class PSC_NCR_Trooper_Base_UN: B_Soldier_base_F
     {
         author = "$STR_PSC_Author";
-        displayName = "$PSC_NCR_Trooper_Base_UN";
+        displayName = "NCR Trooper (Base)";
         scope = 0;
         scopeCurator = 0;
         scopeArsenal = 0;
@@ -247,7 +331,7 @@ class CfgVehicles
     };
     class PSC_NCR_Trooper_Brown_UN: PSC_NCR_Trooper_Base_UN
     {
-        uniformClass = "PSC_NCR_Trooper_Brown_U";
+        uniformClass = "$STR_PSC_NCR_Trooper_Brown_UN";
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
@@ -255,6 +339,34 @@ class CfgVehicles
 		hiddenSelectionsTextures[] = 
         { 
             "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperUniform_CO.paa",
+            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperBelt_CO.paa",
+            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperGlovesBoots_CO.paa"
+        };
+    }; 
+    class PSC_NCR_Trooper_Snow_UN: PSC_NCR_Trooper_Base_UN
+    {
+        uniformClass = "$STR_PSC_NCR_Trooper_Snow_UN";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+		hiddenSelectionsTextures[] = 
+        { 
+            "PSC_Equipment\NCR\data\uniforms\snow\NCRTrooperUniform_CO.paa",
+            "PSC_Equipment\NCR\data\uniforms\snow\NCRTrooperBelt_CO.paa",
+            "PSC_Equipment\NCR\data\uniforms\snow\NCRTrooperGlovesBoots_CO.paa"
+        };
+    }; 
+    class PSC_NCR_Trooper_Woodland_UN: PSC_NCR_Trooper_Base_UN
+    {
+        uniformClass = "$STR_PSC_NCR_Trooper_Woodland_UN";
+        scope = 2;
+        scopeCurator = 2;
+        scopeArsenal = 2;
+        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+		hiddenSelectionsTextures[] = 
+        { 
+            "PSC_Equipment\NCR\data\uniforms\woodland\NCRTrooperUniform_CO.paa",
             "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperBelt_CO.paa",
             "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperGlovesBoots_CO.paa"
         };
