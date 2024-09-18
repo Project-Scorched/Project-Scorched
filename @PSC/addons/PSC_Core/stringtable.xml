@@ -34,5 +34,9 @@
         </Key ID = "STR_PSC_NCR_Trooper_Base_UN">
             <English>NCR Trooper</English>
     </Package>
+    <Package name = "Weapons">
+        <Key ID = "STR_PSC_556_ServiceRifle_M">
+            <English>20rnd Service Rifle Mag (5.56)</English>
+        </Key>
 </Project>
 

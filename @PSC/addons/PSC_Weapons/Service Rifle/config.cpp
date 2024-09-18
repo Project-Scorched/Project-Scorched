@@ -8,7 +8,7 @@ class CfgPatches
         };
         weapons[] = 
         {
-
+			"PSC_Rifle_Base_W"
         };
         units[] =
         {
@@ -19,77 +19,52 @@ class CfgPatches
     };
 };
 
-class Mode_SemiAuto
-{
-	sounds[] = {"StandardSound","SilencedSound"};
-	displayName = "$STR_DN_MODE_SEMIAUTO";
-	textureType = "semi";
-	recoil = "recoil_single_primary_3outof10";
-	recoilProne = "recoil_single_primary_prone_3outof10";
-	aiDispersionCoefY = 1.7;
-	aiDispersionCoefX = 1.4;
-	soundBurst = 0;
-	requiredOpticType = -1;
-	aiRateOfFire = 2.0;
-	aiRateOfFireDispersion = 1;
-	aiRateOfFireDistance = 500;
-};
-class Mode_Burst: Mode_SemiAuto
-{
-	displayName = "$STR_DN_MODE_BURST";
-	textureType = "burst";
-	recoil = "recoil_auto_primary_3outof10";
-	recoilProne = "recoil_auto_primary_prone_3outof10";
-	aiDispersionCoefY = 2.4;
-	aiDispersionCoefX = 1.9;
-	soundBurst = 0;
-};
-class Mode_FullAuto: Mode_SemiAuto
-{
-	displayName = "$STR_DN_MODE_FULLAUTO";
-	textureType = "fullAuto";
-	recoil = "recoil_auto_primary_3outof10";
-	recoilProne = "recoil_auto_primary_prone_3outof10";
-	aiDispersionCoefY = 3.0;
-	aiDispersionCoefX = 2.0;
-	soundBurst = 0;
-};
 
+class Mode_SemiAuto;
+class Mode_Burst;
+class Mode_FullAuto;
+class MuzzleSlot;
+class SlotInfo;
+class CowsSlot;
+class PointerSlot;
+class CowsSlot_Rail;
+class CowsSlot_Rail_Pistol;
+class CowsSlot_Pistol;
+class CowsSlot_MSBS65;
+class CowsSlot_Dovetail;
+class CowsSlot_Dovetail_RPG;
+class MuzzleSlot_45ACP;
+class MuzzleSlot_9mm;
+class MuzzleSlot_65;
+class MuzzleSlot_65MG;
+class MuzzleSlot_556;
+class MuzzleSlot_762;
+class MuzzleSlot_338;
+class MuzzleSlot_93;
+class MuzzleSlot_57;
+class MuzzleSlot_58;
+class MuzzleSlot_545R;
+class MuzzleSlot_762R;
+class UnderBarrelSlot_rail;
+class PointerSlot_Rail;
+class PointerSlot_Pistol;
+class PointerSlot_Launcher;
 class CfgWeapons
 {
-    class PSC_NCR_ServiceRifle_W
-    {
-        
-    };
-	class arifle_MX_Base_F;
-	class hahatesting: arifle_MX_Base_F
+	class rifle;
+	class Rifle_Base_F: Rifle
 	{
-		author = "JJfjofjw";
-		_generalMacro = "hahatesting";
-		baseWeapon = "hahatesting";
-		scope = 2;
-		displayName = "Hello World";
-		model = "\A3\Weapons_F\Rifles\MX\MXC_F.p3d";
-		reloadAction = "GestureReloadMXCompact";
-		picture = "\A3\weapons_F\Rifles\MX\data\UI\gear_mx_cqc_X_CA.paa";
-		UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
-		handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F\Rifles\MX\data\Anim\MX_cqc.rtm"};
-		inertia = 0.4;
-		aimTransitionSpeed = 1.2;
-		dexterity = 1.6;
-		initSpeed = 420;
-		recoil = "recoil_mxc";
-		maxZeroing = 800;
-		class ItemInfo
-		{
-			priority = 1;
-		};
-		descriptionShort = "$STR_A3_CfgWeapons_arifle_XMX1";
-		aiDispersionCoefY = 6.0;
-		aiDispersionCoefX = 4.0;
-		magazines[]=
-		{
-			"PSC_FusionCell_M"
-		};
+		class WeaponsSlotsInfo;
 	};
+
+    class PSC_Rifle_Base_W:	Rifle_Base_F
+    {
+      	author =  "$STR_PSC_Author";
+		displayName = "Rifle Base";
+		scope = 0;
+		magazines[] = 
+		{
+			""
+		}
+    };
 };

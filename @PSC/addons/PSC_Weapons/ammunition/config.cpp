@@ -26,6 +26,7 @@ class CfgLights
 	{
 		color[]={1,0,0,1};
 		ambient[]={1,0,0,0};
+		dayLight = 1;
 		diffuse[]={0.1,0,0};
 		brightness=10;
 		intensity=4000;
@@ -45,12 +46,12 @@ class PSC_Laser_Red
 {
 	class PSC_Laser_Red_Eff
 	{
-		simulation="light";
+		simulation="particles";
 		type="PSC_LaserRed";
 		position[]={0,0,0};
 		intensity=0;
 		interval=1;
-		lifeTime=6;
+		lifeTime=2;
 	};
 };
 
@@ -404,8 +405,8 @@ class CfgAmmo
 		tracerStartTime = -1;
 		muzzleEffect = "";
 		waterEffectOffset = 0.8;
-		flaresize=5;
-		effectflare="FlareShell";
+		//flaresize=5;
+		//effectflare="FlareShell";
 		effectFly = "PSC_Laser_Red";
 		aiAmmoUsageFlags = "64 + 128 + 256";
 		soundImpactDefault1[] = {"A3\Sounds_F\weapons\Grenades\Grenade_Roll",2.5118864,1,200};
@@ -731,11 +732,19 @@ class CfgAmmo
 		suppressionRadiusHit = 8;
 		aiAmmoUsageFlags = 64;
 	};
-	class PSC_Bullet_556_FMJ
+	class PSC_Bullet_556_FMJ: PSC_Bullet_556
 	{
 
 	};
-	class PSC_Bullet_556_AP
+	class PSC_Bullet_556_AP: PSC_Bullet_556
+	{
+
+	};
+	class PSC_Bullet_556_Match: PSC_Bullet_556
+	{
+
+	};
+	class PSC_Bullet_556_Surplus: PSC_Bullet_556
 	{
 
 	};
@@ -747,13 +756,13 @@ class CfgAmmo
 		model = "PSC_Weapons\ammunition\models\laser.p3d";
 		indirectHitRange = 0;
 		cost = 1;
-		typicalSpeed = 20;
+		typicalSpeed = 50000;
 		airFriction = 0;
 		waterFriction = 0;
 		caliber = 0.869565;
 		tracerScale = 1;
 		tracerStartTime = 0;
-		tracerEndTime = 5;
+		tracerEndTime = 2;
 		audibleFire = 35;
 		initTime=0;
 		dangerRadiusBulletClose = 8;
@@ -774,13 +783,38 @@ class CfgMagazines
 		scope=0;
 		displayName="Fusion Cell (Dev)";
 		ammo="PSC_Laser_Base";
+		model = "PSC_Weapons\ammunition\models\FusionCell.p3d";
 		count=30;
         mass=10;
-		initspeed=20;
+		initspeed=50000;
 		tracersEvery=1;
-		lastRoundsTracer=16;
+		lastRoundsTracer=50;
 		descriptionShort="Standard Fusion Cell";
 	};
+	class PSC_556_Core_ServiceRifle_M: CA_Magazine
+	{
+		//picture="";
+        author="#STR_PSC_Author";
+		scope=0;
+		displayName="Service Rifle Mag (5.56) (Dev)";
+		ammo="PSC_Laser_Base";
+		model = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d"
+		count=20;
+        mass = 10;
+		initspeed=920;
+		tracersEvery=0;
+		descriptionShort="20rnd Mag 5.56";
+	};
+	class STR_PSC_556_ServiceRifle_M: PSC_556_Core_ServiceRifle_M
+	{
+		author = "$STR_PSC_Author";
+		scope = 2;
+		displayName = "20rnd Service Rifle Mag (5.56)";
+		count = 20;
+		mass = 10;
+	};
+
+
 	class PSC_FusionCell_M: PSC_FusionCellCore_M
 	{
 		author = "$STR_PSC_Author";
