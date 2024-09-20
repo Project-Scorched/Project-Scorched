@@ -805,11 +805,11 @@ class CfgMagazines
 		tracersEvery=0;
 		descriptionShort="20rnd Mag 5.56";
 	};
-	class STR_PSC_556_ServiceRifle_M: PSC_556_Core_ServiceRifle_M
+	class PSC_556_ServiceRifle_M: PSC_556_Core_ServiceRifle_M
 	{
 		author = "$STR_PSC_Author";
 		scope = 2;
-		displayName = "20rnd Service Rifle Mag (5.56)";
+		displayName = "STR_PSC_556_ServiceRifle_M";
 		count = 20;
 		mass = 10;
 	};
