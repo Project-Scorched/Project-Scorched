@@ -132,14 +132,43 @@ class CfgWeapons
 		};
     };
 
-	class PSC_ServiceRifle_Base_W:PSC_Rifle_Base_W
+	class PSC_ServiceRifle_Base_W: PSC_Rifle_Base_W
 	{
-		displayName = "Service Rifle";
+		displayName = "Service Rifle (Wood)";
 		model = "PSC_Weapons\Service_Rifle\ServiceRifle.p3d";
 		scope = 2;
-		descriptionShort = "NCR Produced Service Rifle";
-
+		descriptionShort = "Gun Runner Produced .223 Rifle";
+		hiddenSelections[] = 
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\PSC_Weapons\Service_Rifle\data\ServiceRifle_co.paa"
+		};
+		hiddenSelectionsMaterials[] = 
+		{
+			"\PSC_Weapons\Service_Rifle\data\ServiceRifle.rvmat"
+		};
 	};
+	class PSC_ServiceRifle_Polymer: PSC_ServiceRifle_Base_W
+	{	
+		displayName = "Service Rifle (Polymer)";
+		scope = 2;
+		descriptionShort = "NCR Produced Service Rifle";
+		hiddenSelections[] = 
+		{
+			"camo"
+		};
+		hiddenSelectionsTextures[]=
+		{
+			"\PSC_Weapons\Service_Rifle\data\polymer\ServiceRifle_co.paa"
+		};
+		hiddenSelectionsMaterials[] = 
+		{
+			"\PSC_Weapons\Service_Rifle\data\polymer\ServiceRifle.rvmat"
+		};
+	}
 };
 
 
