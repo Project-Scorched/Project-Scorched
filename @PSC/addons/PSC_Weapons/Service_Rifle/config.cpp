@@ -68,7 +68,7 @@ class CfgWeapons
 		};
         magazineReloadSwitchPhase = 0.4;
         reloadAction = "GestureReloadMk20";
-        recoil = "recoil_mk20"
+        recoil = "recoil_mk20";
         maxZeroing = 800;
         class WeaponSlotsInfo
         {
@@ -131,5 +131,17 @@ class CfgWeapons
 			aiRateOfFire = 1e-06;
 		};
     };
+
+	class PSC_ServiceRifle_Base_W:PSC_Rifle_Base_W
+	{
+		displayName = "Service Rifle";
+		model = "PSC_Weapons\Service_Rifle\ServiceRifle.p3d";
+		scope = 2;
+		descriptionShort = "NCR Produced Service Rifle";
+
+	};
 };
+
+
+
 //This is my first comment lol

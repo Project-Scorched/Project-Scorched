@@ -783,7 +783,7 @@ class CfgMagazines
 		scope=0;
 		displayName="Fusion Cell (Dev)";
 		ammo="PSC_Laser_Base";
-		model = "PSC_Weapons\ammunition\models\FusionCell.p3d";
+		//model = "PSC_Weapons\ammunition\models\FusionCell.p3d";
 		count=30;
         mass=10;
 		initspeed=50000;
@@ -798,7 +798,7 @@ class CfgMagazines
 		scope=0;
 		displayName="Service Rifle Mag (5.56) (Dev)";
 		ammo="PSC_Laser_Base";
-		model = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d"
+		model = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
 		count=20;
         mass = 10;
 		initspeed=920;
