@@ -8,7 +8,8 @@ class CfgPatches
         };
         weapons[] = 
         {
-			"PSC_Rifle_Base_W"
+			"PSC_Rifle_Base_W",
+			"PSC_ServiceRifle_Polymer"
         };
         units[] =
         {
@@ -122,7 +123,7 @@ class CfgWeapons
 			dispersion = 0.00116;
 			recoil = "recoil_auto_mk20";
 			recoilProne = "recoil_auto_prone_mk20";
-			minRange = 2;
+			minRange = 0;
 			minRangeProbab = 0.9;
 			midRange = 15;
 			midRangeProbab = 0.7;
@@ -155,7 +156,6 @@ class CfgWeapons
 	{	
 		displayName = "Service Rifle (Polymer)";
 		scope = 2;
-		descriptionShort = "NCR Produced Service Rifle";
 		hiddenSelections[] = 
 		{
 			"camo"
@@ -170,7 +170,3 @@ class CfgWeapons
 		};
 	};
 };
-
-
-
-//This is my first comment lol
