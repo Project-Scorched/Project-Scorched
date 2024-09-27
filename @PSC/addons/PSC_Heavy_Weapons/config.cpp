@@ -25,8 +25,8 @@ class CfgPatches
 			Gatling_Laser//Fallout 3 (Slung/Laser)
 			Heavy_Incinerator // Fallout 3 (Slung/Splash)
 			Minigun //Fallout 3 (Slung/Normal)
-			Missile Launcher //Fallout 3 (Shoulderfire/Splash)
-			Rock-It_Launcher //Follout 3 (Shoulderfire/Grenade)
+			Missile_Launcher //Fallout 3 (Shoulderfire/Splash)
+			Rock-It_Launcher //Follout 3 (Slung/Grenade)
 			Tesla_Cannon //Fallout 3 (Shoulderfire/Laser)
 			
 			
@@ -42,4 +42,32 @@ class CfgPatches
 		author = "$STR_PSC_Author"; // Team name
 		fileName = "PSC_Heavy_Weapons.pbo"; // File name
     };
+};
+		// Start of class modifiers
+define Heavy.Equipped bool //Setting if a Heavy Weapon is equipped and modifying move speed
+While (Heavy.Equipped == True)
+{
+	Set.BaseMovement.Speed = 0.66
+};
+class Shoulderfire //Defining Shoulder Fired (Rocket Animation) Weapons
+{
+	weapons()
+	{
+	Experimental_MIRV //Bouncing Betty on Ammunition
+	Fat_Man //Really big Explosion
+	Missile_Launcher //Standard Rocket Launcher
+	Tesla_Cannon //Heavy Laser (Laser Ammunition == White?
+	};
+};
+class Slung //Defining Slung (Support Animations) Weapons
+{
+	weapons()
+	{
+		Drone_Cannon //Timed/Impact Splash
+		Flamethrower //Uses Flame Projector Animation
+		Gatling_Laser //Laser Bullet Animation
+		Heavy_Incinerator //Firebomb/Grenade/Splash effect
+		Minigun //Standard SAW?
+		Rock-It_Launcher //Non-Explosive Arc Trajectory
+	};
 };

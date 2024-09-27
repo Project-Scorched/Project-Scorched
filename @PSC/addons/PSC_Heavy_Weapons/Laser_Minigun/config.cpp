@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-    class PSC_Laser_Minigun
+    class PSC_Gatling_Laser
     {
         requiredAddons[] = 
         {
@@ -21,7 +21,7 @@ class CfgPatches
     };
 };
 
-
+class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
 class MuzzleSlot;
@@ -104,8 +104,8 @@ class CfgHeavy_Weapons
 			class SilencedSound: BaseSoundModeType{};
 			reloadTime = 0.20;
 			dispersion = 0.00116;
-			recoil = "recoil_auto_mk20";
-			recoilProne = "recoil_auto_prone_mk20";//Remove Prone from minigun style heavy weapons?
+			recoil = "recoil_temp";
+			recoilProne = "recoil_temp";//Remove Prone from minigun style heavy weapons?
 			minRange = 2;
 			minRangeProbab = 0.9;
 			midRange = 15;
@@ -116,10 +116,10 @@ class CfgHeavy_Weapons
 		};
     };
 
-	class PSC_LaserMinigun_Base_W: PSC_Minigun_Base_W
+	class PSC_Gatling_Laser_Base_W: PSC_Minigun_Base_W
 	{
 		displayName = "Laser Minigun";
-		model = "PSC_Weapons\Laser_Minigun\LaserMinigun.p3d";
+		model = "PSC_Weapons\Gatling_Laser\Gatling_Laser.p3d";
 		scope = 2;
 		descriptionShort = "Short Description Here";//Need to Add Short Description
 		hiddenSelections[] = 
@@ -128,14 +128,14 @@ class CfgHeavy_Weapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\PSC_Weapons\Laser_Minigun\data\LaserMinigun_co.paa"
+			"\PSC_Weapons\Gatling_Laser\data\Gatling_Laser_co.paa"
 		};
 		hiddenSelectionsMaterials[] = 
 		{
-			"\PSC_Weapons\Laser_Minigun\data\LaserMinigun.rvmat"
+			"\PSC_Weapons\Gatling_Laser\data\Gatling_Laser.rvmat"
 		};
 	};
-	class PSC_LaserMinigun_Accurate: PSC_Minigun_Base_W
+	class PSC_Gatling_Laser_Accurate: PSC_Minigun_Base_W
 	{	
 		displayName = "Accurate Laser Minigun";
 		scope = 2;
@@ -146,11 +146,11 @@ class CfgHeavy_Weapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\PSC_Weapons\Laser_Minigun\data\polymer\LaserMinigun_co.paa"
+			"\PSC_Weapons\Gatling_Laser\data\polymer\Gatling_Laser_co.paa"
 		};
 		hiddenSelectionsMaterials[] = 
 		{
-			"\PSC_Weapons\Laser_Minigun\data\polymer\LaserMinigun.rvmat"
+			"\PSC_Weapons\Gatling_Laser\data\polymer\Gatling_Laser.rvmat"
 		};
 	}
 };
