@@ -10,7 +10,7 @@ Need: Heavy Melee Weapon Mode (Not a Priority)
 */
 class CfgPatches 
 {
-	class PSC_Weapons
+	class PSC_Heavy_Weapons
 	{
 		units[] = 
 		{
@@ -18,6 +18,17 @@ class CfgPatches
 		};
 		weapons[] = 
 		{
+			Drone_Cannon //Fallout 3 (Slung/Contact/Grenade)
+			Experimental_MIRV //Fallout 3 (Shoulderfire/BouncingBetty?)
+			Fat_Man //Fallout 3 (Shoulderfire/Splash)
+			Flamethrower //Fallout 3 (Slung/Flamer)
+			Gatling_Laser//Fallout 3 (Slung/Laser)
+			Heavy_Incinerator // Fallout 3 (Slung/Splash)
+			Minigun //Fallout 3 (Slung/Normal)
+			Missile Launcher //Fallout 3 (Shoulderfire/Splash)
+			Rock-It_Launcher //Follout 3 (Shoulderfire/Grenade)
+			Tesla_Cannon //Fallout 3 (Shoulderfire/Laser)
+			
 			
 		};																								
 		requiredVersion = 0.1; // Don't Touch
