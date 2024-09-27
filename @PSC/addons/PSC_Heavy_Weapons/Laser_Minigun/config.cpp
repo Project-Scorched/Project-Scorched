@@ -60,25 +60,23 @@ class CfgHeavy_Weapons
 
     class PSC_Minigun_Base:	Minigun_Base
     {
+		access = 3;
+		afMax = 0;
+		aiDispersionCoefx = 6;
+		aiDispersionCoefy = 6;
+		aimTransitionalSpeed = 1.2
+		aiRateOfFire = 0.5;
+		aiRateOfFireDispersion = 0;
+		aiRateOfFireDistance = 500;
+		ammo = " ";
+		artilleryCharge = 1;
+		artilleryDisperson = 1;
       	author =  "$STR_PSC_Author";
-		displayName = "Minigun_Base";
-		scope = 0;
-		magazines[] = 
-		{
-			"PSC_762_Minigun_Base"
-		};
-        magazineReloadSwitchPhase = 0.4;
-        reloadAction = "GestureReloadtemp";
-        recoil = "recoil_mk20";
-        maxZeroing = 800;
-        class WeaponSlotsInfo
-        {
-
-        };
-        distanceZoomMin = 300;
-        distanceZoomMax = 300;
-        descriptionShort = "";
-        handAnim[] = {"OFP2_ManSkeleton","\A3\Weapons_F_beta\rifles\mk20\data\Anim\mk20.rtm"};
+		autoFire = 1;
+		autoReload = 0;
+		backgroundReload = 0;
+		ballistiCoomputer = o;
+		baseWeapon = "PSC_Minigun_Base";
 		bullet1[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_762_Metal_01",0.4466836,1,15};
 		bullet2[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_762_Metal_02",0.4466836,1,15};
 		bullet3[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_762_Metal_03",0.4466836,1,15};
@@ -91,11 +89,123 @@ class CfgHeavy_Weapons
 		bullet10[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_762_Grass_02",0.4466836,1,15};
 		bullet11[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_762_Grass_03",0.4466836,1,15};
 		bullet12[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_762_Grass_04",0.4466836,1,15};
+		burst = 1;
+		canDrop = 1;
+		canLock = 0;
+		canShootInWater = 0;
+		cartridgePOS = "nabojnicestart";
+		cardridgeVel = "nabojniceend";
+		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\ ",0.25118864,1,5);
+		cmImmunity = 0;
+		count = 0;
+		cursor = "mg";
+		cursoraim = "CursorAim"
+		cursorAimOn = " ";
+		cursorSize = 1;
+		deployedPivot = " ";
+		descriptionShort "Minigun - 7.62mm";//This can be changed to whatever we want it to be.
+		detectRange = 0;
+		dexterity = 1.7;
+		discreteDistance[] = (100,200,300,400,500,600);
+		descreteDistanceInitIndex = 1;
+		dispersion = 0.00029;
+	displayName = "Minigun";
+		distanceZoomMax = 200;
+		distanceZoomMin = 200;
+		drySound[] = " "; //Add Sounds
+		emptySound[] = (" ",1,1);
+		enableAttack = 1
+		ffCount = 3;
+		ffFrequency = 11;
+		ffMagnitude = 0;
+		fireAnims[] = (); //Fire Animation
+		fireLightAmbient[] = (0,0,0);
+		fireLightDiffuse[] = (0.937,0.631,03259);
+		fireLightDuration = 0.05;
+		fireLightIntensity = 0.2;
+		fireSpreadAngle = 3;
+		flash = "gunfire";
+		flashSize = 0.5;
+		forceOptics = 0;
+	handAnim[] - ("OFP2_ManSkeleton"," ");//need animation
+	hiddenSelections[] = ("camo");
+	hiddenSelectionsTextires[] = ();
+		hiddenUnderwaterSelections[] = ();
+		hiddenUnderwaterSelectionsTextures[] = ();
+		htMax = 600;
+		htMin = 1;
+	inertia = 0.7;
+		initSpeed = 0;
+		irDistance = 0;
+		irDotIntensity = 0.001;
+		laser = 0
+		lockAckquire = 1;
+		lockedTargetSound[] = (" ", 0.000316228,6);
+		lockingTargetSound[] = (" ", 0.000316228,6);
+	magazineReloadSwitchPhase = 0.4;
+		magazineReloadTime = 0;
+	magazines[] = 
+		{
+			"PSC_762_Minigun_Base"
+		};
+		maxLeadSpeed = 23;
+		maxRange = 500;
+		maxRangeProbab = 0.4;
+		maxRecoilSway = 0.008;
+	maxZeroing = 800;
+		memoryPointCamera = "eye";
+		mFact = 1;
+		mfMax = 0;
+		midRange = 150;
+		midRangeProbab = 0.58;
+		minRange = 1;
+		minRangeProbab = 0.3;
+	model = " "; //Minigun Model
+		modelMagazine = " ";
+		modelOptics = " ";
+		modelSpecial = " ";
+	modes[]; ("FullAuto", "Single", "close". "short", "medium", "faroptic1")
+		multiplier = 1;
+		muzzleEnd = "konec hlavne";
+		muzzlePos = "Usti hlavne";
+		muzzles[] = ("this");
+	nameSound = "Mgun";
+		optics = 0;
+		opticsDisablePeripheralVision = 0.67;
+		opticsFlare = 0;
+		opticsID = 0;
+		opticsPPEffects[] = {};
+		opticsZoomInit = 0.75;
+		opticsZoomMax = 1.25;
+		opticsZoomMin = 0.25
+	picture = " "; //Weapon Picture
+		primary = 10;
+	recoil = "recoil_minigun";
+		recoilProne = " ";
+	reloadAction = "GestureReloadtemp";
+		reloadMagazineSound[] = (" "); //Soundbite
+		reloadSound[] = (" "); //Soundbite
+		reloadTime = 0.5;
+	scope = 2;
+		selectFireAnim = "zasleh";
+		showAimCursorInternal = 1;
+		showEmpty = 1;
+		shownUnderwaterSelections[] = {};
+		showSwitchAction = 0;
+		simulation = "Weapon";
+		sound[] = {" "};
+		soundBegin[] = ("sound",1)
+		soundBeginWater[] = ("sound", 1)
+	
+		
+    class WeaponSlotsInfo
+        {
+
+        };
 		soundBullet[] = {"bullet1",0.087,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.093,"bullet6",0.093,"bullet7",0.073,"bullet8",0.073,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
 		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
-		drySound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\dry_Mk20",0.31622776,1,10};
-		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\",1.0,1,10};
-		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\",0.25118864,1,5};
+		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\ ",1.0,1,10};
+
 		class FullAuto: Mode_FullAuto
 		{
 			sounds[] = {"StandardSound"};
