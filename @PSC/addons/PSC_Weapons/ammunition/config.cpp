@@ -797,7 +797,7 @@ class CfgMagazines
         author="#STR_PSC_Author";
 		scope=0;
 		displayName="Service Rifle Mag (5.56) (Dev)";
-		ammo="PSC_Laser_Base";
+		ammo="PSC_Bullet_556";
 		model = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
 		count=20;
         mass = 10;
@@ -809,7 +809,7 @@ class CfgMagazines
 	{
 		author = "$STR_PSC_Author";
 		scope = 2;
-		displayName = "STR_PSC_556_ServiceRifle_M";
+		displayName = "$STR_PSC_556_ServiceRifle_M";
 		count = 20;
 		mass = 10;
 	};

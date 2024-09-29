@@ -67,8 +67,12 @@ class CfgWeapons
 		{
 			"PSC_556_ServiceRifle_M"
 		};
+		magazineWell[] =
+		{
+			"PSC_556_ServiceRifle_M"
+		};
         magazineReloadSwitchPhase = 0.4;
-        reloadAction = "GestureReloadMk20";
+        reloadAction = "PSC_GestureReloadServiceRifle";
         recoil = "recoil_mk20";
         maxZeroing = 800;
         class WeaponSlotsInfo
@@ -168,5 +172,32 @@ class CfgWeapons
 		{
 			"\PSC_Weapons\Service_Rifle\data\polymer\ServiceRiflePolymer.rvmat"
 		};
+	};
+};
+
+class CfgMovesBasic
+{
+	class DefaultDie;
+	class ManActions
+	{
+		PSC_GestureReloadServiceRifle = "PSC_GestureReloadServiceRifle";
+	};
+};
+
+class CfgGesturesMale
+{
+	class Default;
+	class PSC_GestureReloadServiceRifle : Default 
+	{
+		file = "PSC_Weapons\Service_Rifle\data\animations\servicerflerelaod.rtm";
+		speed = -(92/30);
+		looped = false;
+		mask = "handsWeapon";
+		headBobStrength = 0.3;
+		headBobMode = 2;
+		rightHandIKCurve[] = { 0, 1, 1, 1 };
+		leftHandIKBeg = true;
+		leftHandIKEnd = true;
+		leftHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
 	};
 };
