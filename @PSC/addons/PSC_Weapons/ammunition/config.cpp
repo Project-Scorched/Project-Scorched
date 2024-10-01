@@ -824,3 +824,14 @@ class CfgMagazines
 		count = 50;
 	};
 };
+
+class CfgMagazineWells
+{
+	class PSC_ServiceRifle_MW
+	{
+		PSC_ServiceRifle_Magazines[] = 
+		{
+			"PSC_556_ServiceRifle_M"
+		};
+	};
+};

@@ -69,15 +69,29 @@ class CfgWeapons
 		};
 		magazineWell[] =
 		{
-			"PSC_556_ServiceRifle_M"
+			"PSC_ServiceRifle_MW"
 		};
         magazineReloadSwitchPhase = 0.4;
         reloadAction = "PSC_GestureReloadServiceRifle";
         recoil = "recoil_mk20";
         maxZeroing = 800;
+		selectionFireAnim = "muzzleFlash";
         class WeaponSlotsInfo
         {
+			class MuzzleSlot : SlotInfo
+			{
+				// targetProxy
+				linkProxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
 
+				// display name
+				displayName = "Muzzle Slot";
+
+				// class names with items supported by weapon
+				compatibleItems[] = {}; // moved to each weapon
+			};
+			class CowsSlot : CowsSlot {};
+			class PointerSlot : PointerSlot {};
+			//allowedSlots[] = { 901 }; // you simply cannot put this into your pants
         };
         distanceZoomMin = 300;
         distanceZoomMax = 300;
@@ -182,22 +196,46 @@ class CfgMovesBasic
 	{
 		PSC_GestureReloadServiceRifle = "PSC_GestureReloadServiceRifle";
 	};
+	class Actions
+	{
+		class RifleBaseStandActions;
+		class RifleAdjustProneBaseActions;
+
+		class NoActions : ManActions 
+		{
+			PSC_GestureReloadServiceRifle[] = { "PSC_GestureReloadServiceRifle", "Gesture" };
+		};
+	};	
 };
 
 class CfgGesturesMale
 {
 	class Default;
-	class PSC_GestureReloadServiceRifle : Default 
+	class GestureReloadBase;;
+	class States
 	{
-		file = "PSC_Weapons\Service_Rifle\data\animations\servicerflerelaod.rtm";
-		speed = -(92/30);
-		looped = false;
-		mask = "handsWeapon";
-		headBobStrength = 0.3;
-		headBobMode = 2;
-		rightHandIKCurve[] = { 0, 1, 1, 1 };
-		leftHandIKBeg = true;
-		leftHandIKEnd = true;
-		leftHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
+		class PSC_GestureReloadServiceRifle : Default 
+		{
+			file = "PSC_Weapons\Service_Rifle\data\animations\servicerflerelaod.rtm";
+			speed = -(92/30);
+			looped = false;
+			mask = "handsWeapon";
+			headBobStrength = 0.3;
+			headBobMode = 2;
+			rightHandIKBeg = true;
+			rightHandIKEnd = true;
+			rightHandIKCurve[] = { 0, 1, 1, 1 };
+			leftHandIKBeg = true;
+			leftHandIKEnd = true;
+			leftHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
+		};
+		class PSC_GestureReloadServiceRifle_Context : PSC_GestureReloadServiceRifle {
+			mask = "NIA_handsWeapon_context_Toadie";
+		};
 	};
+	class BlendAnims // thank you niarms - bone context
+	{
+		NIA_handsWeapon_context_Toadie[] = { "head",1,"neck1",1,"neck",1,"weapon",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"Spine",0.1,"Spine1",0.3,"Spine2",0.5,"Spine3",1 };
+	};
+
 };
