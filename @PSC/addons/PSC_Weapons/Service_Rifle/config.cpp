@@ -114,6 +114,10 @@ class CfgWeapons
 		drySound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\dry_Mk20",0.31622776,1,10};
 		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\reload_Mk20",1.0,1,10};
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\firemode_Mk20",0.25118864,1,5};
+		cartridgePos = "cartridge_start";
+		cartridgeVel = "cartridge_end";
+		muzzleEnd="muzzle";
+		muzzlePos = "barrel_start";
 		class Single: Mode_SemiAuto
 		{
 			sounds[] = {"StandardSound","SilencedSound"};
@@ -214,22 +218,22 @@ class CfgGesturesMale
 	class GestureReloadBase;;
 	class States
 	{
-		class PSC_GestureReloadServiceRifle : Default 
+		class PSC_GestureReloadServiceRifle: Default 
 		{
 			file = "PSC_Weapons\Service_Rifle\data\animations\servicerflerelaod.rtm";
-			speed = -(92/30);
+			speed = .3;
 			looped = false;
 			mask = "handsWeapon";
 			headBobStrength = 0.3;
 			headBobMode = 2;
 			rightHandIKBeg = true;
 			rightHandIKEnd = true;
-			rightHandIKCurve[] = { 0, 1, 1, 1 };
+			rightHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
 			leftHandIKBeg = true;
 			leftHandIKEnd = true;
 			leftHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
 		};
-		class PSC_GestureReloadServiceRifle_Context : PSC_GestureReloadServiceRifle {
+		class PSC_GestureReloadServiceRifle_Context: PSC_GestureReloadServiceRifle {
 			mask = "NIA_handsWeapon_context_Toadie";
 		};
 	};

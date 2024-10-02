@@ -798,7 +798,9 @@ class CfgMagazines
 		scope=0;
 		displayName="Service Rifle Mag (5.56) (Dev)";
 		ammo="PSC_Bullet_556";
-		model = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
+		//model = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
+		modelSpecial = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
+		modelSpecialIsProxy = 1;
 		count=20;
         mass = 10;
 		initspeed=920;
