@@ -105,7 +105,7 @@ class CfgHeavy_Weapons
 		deployedPivot = " ";
 		descriptionShort "Minigun - 7.62mm";//This can be changed to whatever we want it to be.
 		detectRange = 0;
-		dexterity = 1.7;
+		dexterity = 0.8;
 		discreteDistance[] = (100,200,300,400,500,600);
 		descreteDistanceInitIndex = 1;
 		dispersion = 0.00029;
@@ -226,9 +226,9 @@ class CfgHeavy_Weapons
 		};
     };
 
-	class PSC_Gatling_Laser_Base_W: PSC_Shoulder_MG_W
+	class PSC_Shoulder_MG_Base_W: PSC_Shoulder_MG_W
 	{
-		displayName = "Laser Minigun";
+		displayName = "Shoulder Mounted MG";
 		model = "PSC_Weapons\Gatling_Laser\Gatling_Laser.p3d";
 		scope = 2;
 		descriptionShort = "Short Description Here";//Need to Add Short Description

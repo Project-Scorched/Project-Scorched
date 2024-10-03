@@ -2,7 +2,7 @@
 
 class CfgPatches
 {
-    class PSC_Gatling_Laser
+    class PSC_Shoulder_MG
     {
         requiredAddons[] = 
         {
@@ -50,7 +50,7 @@ class UnderBarrelSlot_rail;
 class PointerSlot_Rail;
 class PointerSlot_Pistol;
 class PointerSlot_Launcher;
-class CfgHeavy_Weapons
+class CfgWeapons
 {
 	class Minigun;
 	class Mmigun_Base: Minigun
