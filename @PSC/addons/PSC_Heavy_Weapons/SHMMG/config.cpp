@@ -10,7 +10,7 @@ class CfgPatches
         };
         weapons[] = 
         {
-			"PSC_Minigun_Base_W"
+			"PSC_Shoulder_MG_W"
         };
         units[] =
         {
@@ -58,7 +58,7 @@ class CfgHeavy_Weapons
 		class WeaponsSlotsInfo;
 	};
 
-    class PSC_Minigun_Base:	Minigun_Base
+    class PSC_Shoulder_MG:	Minigun_Base
     {
 		access = 3;
 		afMax = 0;
@@ -76,7 +76,7 @@ class CfgHeavy_Weapons
 		autoReload = 0;
 		backgroundReload = 0;
 		ballistiCoomputer = o;
-		baseWeapon = "PSC_Minigun_Base";
+		baseWeapon = "PSC_Shoulder_MG";
 		bullet1[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_762_Metal_01",0.4466836,1,15};
 		bullet2[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_762_Metal_02",0.4466836,1,15};
 		bullet3[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_762_Metal_03",0.4466836,1,15};
@@ -226,7 +226,7 @@ class CfgHeavy_Weapons
 		};
     };
 
-	class PSC_Gatling_Laser_Base_W: PSC_Minigun_Base_W
+	class PSC_Gatling_Laser_Base_W: PSC_Shoulder_MG_W
 	{
 		displayName = "Laser Minigun";
 		model = "PSC_Weapons\Gatling_Laser\Gatling_Laser.p3d";
@@ -245,7 +245,7 @@ class CfgHeavy_Weapons
 			"\PSC_Weapons\Gatling_Laser\data\Gatling_Laser.rvmat"
 		};
 	};
-	class PSC_Gatling_Laser_Accurate: PSC_Minigun_Base_W
+	class PSC_Gatling_Laser_Accurate: PSC_Shoulder_MG_W
 	{	
 		displayName = "Accurate Laser Minigun";
 		scope = 2;
