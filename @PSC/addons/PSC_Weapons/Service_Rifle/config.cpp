@@ -96,7 +96,7 @@ class CfgWeapons
         distanceZoomMin = 300;
         distanceZoomMax = 300;
         descriptionShort = "";
-        handAnim[] = {"OFP2_ManSkeleton","PSC_Weapons\Service_Rifle\data\animations\serviceriflehold.rtm"};
+        handAnim[] = {"OFP2_ManSkeleton","PSC_Weapons\Service_Rifle\data\animations\servicerifleholdtest.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_01",0.4466836,1,15};
 		bullet2[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_02",0.4466836,1,15};
 		bullet3[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_03",0.4466836,1,15};
@@ -114,10 +114,10 @@ class CfgWeapons
 		drySound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\dry_Mk20",0.31622776,1,10};
 		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\reload_Mk20",1.0,1,10};
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\firemode_Mk20",0.25118864,1,5};
-		cartridgePos = "cartridge_start";
-		cartridgeVel = "cartridge_end";
-		muzzleEnd="muzzle";
-		muzzlePos = "barrel_start";
+		cartridgePos = "Nabojnicestart";
+		cartridgeVel = "Nabojnicesend";
+		muzzleEnd="konec hlavne";
+		muzzlePos = "usti hlavne";
 		class Single: Mode_SemiAuto
 		{
 			sounds[] = {"StandardSound","SilencedSound"};
@@ -220,7 +220,7 @@ class CfgGesturesMale
 	{
 		class PSC_GestureReloadServiceRifle: Default 
 		{
-			file = "PSC_Weapons\Service_Rifle\data\animations\servicerflerelaod.rtm";
+			file = "PSC_Weapons\Service_Rifle\data\animations\serviceriflereload.rtm";
 			speed = .3;
 			looped = false;
 			mask = "handsWeapon";
