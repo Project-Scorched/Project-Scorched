@@ -836,4 +836,11 @@ class CfgMagazineWells
 			"PSC_556_ServiceRifle_M"
 		};
 	};
+	class PSC_AER9_MW
+	{
+		PSC_AER9_Magazines[] = 
+		{
+			"PSC_FusionCell_M"
+		};
+	};
 };
