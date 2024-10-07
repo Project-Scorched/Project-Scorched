@@ -75,7 +75,7 @@ class CfgWeapons
         reloadAction = "PSC_GestureReloadServiceRifle";
         recoil = "recoil_mk20";
         maxZeroing = 800;
-		selectionFireAnim = "muzzleFlash";
+		selectionFireAnim = "zasleh";
         class WeaponSlotsInfo
         {
 			class MuzzleSlot : SlotInfo
