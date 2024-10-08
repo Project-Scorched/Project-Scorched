@@ -1,21 +1,24 @@
-// Copied and Starting Conversion from Service Rifle
-
 class CfgPatches
 {
-    class PSC_Shoulder_MG
+    class PSC_Minigun
     {
         requiredAddons[] = 
         {
-			"A3_Heavy_Weapons_F" //A3 Weapons Config.
+			"A3_Weapons_F" //A3 Weapons Config.
+        };
+		requiredversion = 0.1
+        units[] =
+        {
+
         };
         weapons[] = 
         {
 			"PSC_Minigun_Base_W"
         };
-        units[] =
-        {
-
-        };
+		magazines[] = 
+		{
+			
+		};
         author = "$STR_PSC_Author";
 		addonRootClass = "PSC_Heavy_Weapons"; // Subconfigs
     };
@@ -58,7 +61,7 @@ class CfgWeapons
 		class WeaponsSlotsInfo;
 	};
 
-    class PSC_Minigun_Base:	Minigun_Base
+    class Minigun
     {
 		access = 3;
 		afMax = 0;
@@ -196,33 +199,297 @@ class CfgWeapons
 		sound[] = {" "};
 		soundBegin[] = ("sound",1)
 		soundBeginWater[] = ("sound", 1)
-	
-		
-    class WeaponSlotsInfo
-        {
-
-        };
-		soundBullet[] = {"bullet1",0.087,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.093,"bullet6",0.093,"bullet7",0.073,"bullet8",0.073,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
-		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
-		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\ ",1.0,1,10};
-
-		class FullAuto: Mode_FullAuto
+		sound[] = {};
+		soundbegin[] = {"sound", 1};
+		soundbeginwater[] = {"sound", 1};
+		soundbullet[] = 
 		{
-			sounds[] = {"StandardSound"};
-			class BaseSoundModeType{};
-			class StandardSound: BaseSoundModeType{};
-			class SilencedSound: BaseSoundModeType{};
-			reloadTime = 0.20;
-			dispersion = 0.00116;
-			recoil = "recoil_temp";
-			recoilProne = "recoil_temp";//Remove Prone from minigun style heavy weapons?
-			minRange = 2;
-			minRangeProbab = 0.9;
-			midRange = 15;
-			midRangeProbab = 0.7;
-			maxRange = 30;
-			maxRangeProbab = 0.1;
-			aiRateOfFire = 1e-06;
+			"bullet1", 0.083, 
+			"bullet2", 0.083, 
+			"bullet3", 0.083, 
+			"bullet4", 0.083, 
+			"bullet5", 0.083, 
+			"bullet6", 0.083, 
+			"bullet7", 0.083, 
+			"bullet8", 0.083, 
+			"bullet9", 0.083, 
+			"bullet10", 0.083, 
+			"bullet11", 0.083, 
+			"bullet12", 0.083
 		};
-    };
+		soundburst = 1;
+		soundclosure[] = {"sound", 1};
+		soundcontinuous = 0;
+		soundend[] = {"sound", 1};
+		soundloop[] = {"sound", 1};
+		swaydecayspeed = 2;
+		tbody = 100;
+		texturetype = "default";
+		type = 1;
+		uipicture = "TBD";
+		useaction = 0;
+		useactiontitle = "";
+		useasbinocular = 0;
+		usemodeloptics = 1;
+		value = 4;
+		weaponinfotype = "RscWeaponZeroing";
+		weaponlockdelay = 0;
+		weaponlocksystem = 0;
+		weaponpoolavailable = 1;
+		weaponsoundeffect = "";
+		weight = 0;
+		class GunClouds {
+			access = 0;
+			cloudletaccy = 0;
+			cloudletalpha = 0.3;
+			cloudletanimperiod = 1;
+			cloudletcolor[] = {1, 1, 1, 0};
+			cloudletduration = 0.05;
+			cloudletfadein = 0;
+			cloudletfadeout = 0.1;
+			cloudletgrowup = 0.05;
+			cloudletmaxyspeed = 100;
+			cloudletminyspeed = -100;
+			cloudletshape = "cloudletClouds";
+			cloudletsize = 1;
+			deltat = 0;
+			initt = 0;
+			interval = -0.02;
+			size = 0.3;
+			sourcesize = 0.02;
+			timetolive = 0;
+			class Table {
+				class T0 {
+					color[] = {1, 1, 1, 0};
+					maxt = 0;
+				};
+			};
+		};
+class WeaponSlotsInfo {
+			allowedslots[] = {901};
+			mass = 4;
+			class MuzzleSlot {
+				access = 1;
+				compatibleitems[] = {"muzzle_snds_L"};
+				displayname = "Muzzle Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\MUZZLE";
+				scope = 0;
+			};
+			class CowsSlot {
+				access = 1;
+				compatibleitems[] = {"optic_Arco", "optic_aco", "optic_ACO_grn", "optic_hamr", "optic_Holosight"};
+				displayname = "Optics Slot";
+				linkproxy = "\A3\data_f\proxies\weapon_slots\TOP";
+				scope = 2;
+			};
+			class PointerSlot {};
+		};	
+                class ItemInfo
+                {
+                        priority = 1;
+                        RMBhint = "XMX";
+                        onHoverText = "TODO XMX DSS";
+                };
+
+
+		class GunParticles {
+			class FirstEffect {
+				directionname = "Konec hlavne";
+				effectname = "RifleAssaultCloud";
+				positionname = "Usti hlavne";
+			};
+		};
+		class Single: Mode_SemiAuto {
+			aidispersioncoefx = 1.4;
+			aidispersioncoefy = 1.7;
+			airateoffire = 2;
+			airateoffiredistance = 500;
+			artillerycharge = 1;
+			artillerydispersion = 1;
+			autofire = 0;
+            begin1[] = {"PSC_Minigun\sound\UMPfiring1.wav", 1.0, 1, 1200};
+            begin2[] = {"PSC_Minigun\sound\UMPfiring2.wav", 1.0, 1, 1200};
+			burst = 1;
+			canshootinwater = 0;
+			closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2.wav", 3.16228, 1, 500};
+			closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3.wav", 3.16228, 1, 500};
+			dispersion = 0.00093;
+			displayname = "Semi";
+			ffcount = 1;
+			fffrequency = 11;
+			ffmagnitude = 0.5;
+			flash = "gunfire";
+			flashsize = 0.1;
+			maxrange = 500;
+			maxrangeprobab = 0.2;
+			midrange = 250;
+			midrangeprobab = 0.7;
+			minrange = 2;
+			minrangeprobab = 0.3;
+			multiplier = 1;
+			recoil = "recoil_single_trg";
+			recoilprone = "recoil_single_prone_trg";
+			reloadtime = 0.065;
+			requiredoptictype = -1;
+			showtoplayer = 1;
+			sound[] = {"", 10, 1};
+			soundbegin[] = {"begin1", 0.333, "begin2", 0.333};
+			soundbeginwater[] = {"sound", 1};
+			soundburst = 0;
+			soundclosure[] = {"closure1", 0.5, "closure2", 0.5};
+			soundcontinuous = 0;
+			soundend[] = {};
+			soundloop[] = {};
+			texturetype = "semi";
+			useaction = 0;
+			useactiontitle = "";
+			weaponsoundeffect = "DefaultMG"
+		};
+		class Burst: Mode_Burst {
+			aidispersioncoefx = 2;
+			aidispersioncoefy = 3;
+			airateoffire = "1e-006";
+			airateoffiredistance = 500;
+			artillerycharge = 1;
+			artillerydispersion = 1;
+			autofire = 0;
+            begin1[] = {"PSC_Minigun\sound\UMPfiring1.wav", 1.0, 1, 1200};
+            begin2[] = {"PSC_Minigun\sound\UMPfiring2.wav", 1.0, 1, 1200};
+			burst = 2;
+			canshootinwater = 0;
+			closure1[] = {"A3\sounds_f\weapons\closure\closure_rifle_2.wav", 3.16228, 1, 500};
+			closure2[] = {"A3\sounds_f\weapons\closure\closure_rifle_3.wav", 3.16228, 1, 500};
+			dispersion = 0.00093;
+			displayname = "Burst";
+			ffcount = 1;
+			fffrequency = 11;
+			ffmagnitude = 0.5;
+			flash = "gunfire";
+			flashsize = 0.1;
+			maxrange = 30;
+			maxrangeprobab = 0.05;
+			midrange = 15;
+			midrangeprobab = 0.7;
+			minrange = 0;
+			minrangeprobab = 0.9;
+			multiplier = 1;
+			recoil = "recoil_auto_trg";
+			recoilprone = "recoil_auto_prone_trg";
+			reloadtime = 0.07;
+			requiredoptictype = -1;
+			showtoplayer = 1;
+			sound[] = {"", 10, 1};
+			soundbegin[] = {"begin1", 0.333, "begin2", 0.333};
+			soundbeginwater[] = {"sound", 1};
+			soundburst = 0;
+			soundclosure[] = {"closure1", 0.5, "closure2", 0.5};
+			soundcontinuous = 0;
+			soundend[] = {"sound", 1};
+			soundloop[] = {};
+			texturetype = "burst";
+			useaction = 0;
+			useactiontitle = "";
+			weaponsoundeffect = "DefaultRifle";
+		};
+		
+	};
+	class PSC_Minigun : PSC_Minigun_base {
+		scope = 2;
+	};
+	class PSC_Minigun_Avenger : PSC_Minigun 
+	{
+		scope = 2;
+		model = "PSC_Minigun";
+		class LinkedItems {
+			class LinkedItemsOptic {
+				item = "optic_Holosight";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsMuzzle {
+				item = "muzzle_snds_L";
+				slot = "MuzzleSlot";
+			};
+		};
+	};
+	class PSC_Minigun_Vindicator : PSC_Minigun 
+	{
+		scope = 2;
+		model = "PSC_Minigun";
+		class LinkedItems {
+			class LinkedItemsOptic {
+				item = "optic_Holosight";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsMuzzle {
+				item = "muzzle_snds_L";
+				slot = "MuzzleSlot";
+			};
+		};
+	};
+	class PSC_Minigun_Gauss : PSC_Minigun 
+	{
+		scope = 2;
+		model = "PSC_Minigun";
+		class LinkedItems {
+			class LinkedItemsOptic {
+				item = "optic_Holosight";
+				slot = "CowsSlot";
+			};
+			class LinkedItemsMuzzle {
+				item = "muzzle_snds_L";
+				slot = "MuzzleSlot";
+			};
+		};
+	};
 };
+
+
+class CfgMagazines {
+	/*external*/ class 30Rnd_556x45_Stanag;
+	class tb_30Rnd_556x45_B_Stanag : 30Rnd_556x45_Stanag {
+		ammo = "TB_556x45_Ball";
+		count = 30;
+		descriptionshort = "Caliber: 45 ACP UMP Mag<br />Rounds: 30<br />Used in: HK UMP-45";
+		displayname = "45 ACP 30rnd UMP Mag (Ball)";
+		initspeed = 930;
+		lastroundstracer = 0;
+		picture = "\PSC_Minigun\UI\gear_hkump45_mag_ca";
+		model = "PSC_Minigun\hkump_mag";
+		scope = 2;
+		tracersevery = 0;
+	};
+	class tb_30Rnd_556x45_T_Stanag : tb_30Rnd_556x45_B_Stanag {
+		ammo = "TB_556x45_Tracer";
+		descriptionshort = "Caliber: 45 ACP UMP Mag<br />Rounds: 30<br />Used in: HK UMP-45";
+		displayname = "45 ACP 30rnd UMP Mag (Tracer)";
+		lastroundstracer = 0;
+		scope = 2;
+		tracersevery = 1;
+	};
+};
+class CfgAmmo {
+	/*external*/ class B_556x45_Ball;
+	class TB_556x45_Ball : B_556x45_Ball {
+		airfriction = -0.001425;
+		caliber = 0.5;
+		cost = 1;
+		deflecting = 20;
+		hit = 8;
+		indirecthit = 0;
+		indirecthitrange = 0;
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		nvgonly = 1;
+		tracerendtime = 1;
+		tracerscale = 1;
+		tracerstarttime = 0.05;
+	};
+	class TB_556x45_Tracer : TB_556x45_Ball {
+		airfriction = -0.001425;
+		caliber = 0.4;
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_red";
+		nvgonly = 0;
+		tracerendtime = 1.4;
+		tracerscale = 1;
+		tracerstarttime = 0.06;
+	};
+};		
