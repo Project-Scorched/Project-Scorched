@@ -89,8 +89,8 @@ class CfgWeapons
 				// class names with items supported by weapon
 				compatibleItems[] = {}; // moved to each weapon
 			};
-			class CowsSlot : CowsSlot {};
-			class PointerSlot : PointerSlot {};
+			//class CowsSlot : CowsSlot {};
+			//class PointerSlot : PointerSlot {};
 			//allowedSlots[] = { 901 }; // you simply cannot put this into your pants
         };
         distanceZoomMin = 300;
@@ -121,9 +121,29 @@ class CfgWeapons
 		class Single: Mode_SemiAuto
 		{
 			sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType{};
-			class StandardSound: BaseSoundModeType{};
-			class SilencedSound: BaseSoundModeType{};
+			class BaseSoundModeType // this base class has base definitions that both standard and silenced sounds will inherit (sound of closure stays the same no matter what muzzle accessory is used)
+			{
+				weaponSoundEffect = "DefaultRifle";
+
+				closure1[] = { "A3\sounds_f\weapons\closure\closure_rifle_2", db-12, 1, 10 };
+				closure2[] = { "A3\sounds_f\weapons\closure\closure_rifle_3", db-12, 1, 10 };
+				soundClosure[] = { closure1, 0.5, closure2, 0.5 };
+			};
+
+			class StandardSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 0, according to sounds[]
+			{
+				begin1[] = { "PSC_Weapons\Service_Rifle\sounds\Service_Rifle_Shot1", db0, 1, 500 };
+				begin2[] = { "PSC_Weapons\Service_Rifle\sounds\Service_Rifle_Shot2", db0, 1, 500 };
+				begin3[] = { "PSC_Weapons\Service_Rifle\sounds\Service_Rifle_Shot3", db0, 1, 500 };
+				soundBegin[] = { begin1, 0.33, begin2, 0.33, begin3, 0.34 };
+			};
+
+			class SilencedSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 1, according to sounds[]
+			{
+				begin1[] = { "A3\sounds_f\weapons\silenced\silent-07", db-1, 1, 200 };
+				begin2[] = { "A3\sounds_f\weapons\silenced\silent-08", db-1, 1, 200 };
+				soundBegin[] = { begin1, 0.5, begin2, 0.5 };
+			};
 			reloadTime = 0.07;
 			dispersion = 0.00116;
 			recoil = "recoil_single_mk20";
@@ -215,7 +235,7 @@ class CfgMovesBasic
 class CfgGesturesMale
 {
 	class Default;
-	class GestureReloadBase;;
+	class GestureReloadBase;
 	class States
 	{
 		class PSC_GestureReloadServiceRifle: Default 
