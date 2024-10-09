@@ -253,7 +253,8 @@ class CfgGesturesMale
 			leftHandIKEnd = true;
 			leftHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
 		};
-		class PSC_GestureReloadServiceRifle_Context: PSC_GestureReloadServiceRifle {
+		class PSC_GestureReloadServiceRifle_Context: PSC_GestureReloadServiceRifle 
+		{
 			mask = "NIA_handsWeapon_context_Toadie";
 		};
 	};
