@@ -50,6 +50,15 @@ class UnderBarrelSlot_rail;
 class PointerSlot_Rail;
 class PointerSlot_Pistol;
 class PointerSlot_Launcher;
+class CfgRecoils
+{
+	class PSC_Rifle_Base_Recoil
+	{
+		muzzleOuter[] = {0.15,0.6,0.3,0.2};
+		kickBack[] = {0.01,0.03};
+		temporary = 0.01;
+	};
+};
 class CfgWeapons
 {
 	class rifle;
@@ -73,7 +82,7 @@ class CfgWeapons
 		};
         magazineReloadSwitchPhase = 0.4;
         reloadAction = "PSC_GestureReloadServiceRifle";
-        recoil = "recoil_mk20";
+        recoil = "PSC_Rifle_Base_Recoil";
         maxZeroing = 800;
 		selectionFireAnim = "zasleh";
         class WeaponSlotsInfo
@@ -132,10 +141,12 @@ class CfgWeapons
 
 			class StandardSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 0, according to sounds[]
 			{
+				/*
 				begin1[] = { "PSC_Weapons\Service_Rifle\sounds\Service_Rifle_Shot1", db0, 1, 500 };
 				begin2[] = { "PSC_Weapons\Service_Rifle\sounds\Service_Rifle_Shot2", db0, 1, 500 };
 				begin3[] = { "PSC_Weapons\Service_Rifle\sounds\Service_Rifle_Shot3", db0, 1, 500 };
-				soundBegin[] = { begin1, 0.33, begin2, 0.33, begin3, 0.34 };
+				*/
+				soundBegin[] = { begin1, 0.33, begin2, 0.33, begin3, 0.34 };		
 			};
 
 			class SilencedSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 1, according to sounds[]
@@ -146,8 +157,8 @@ class CfgWeapons
 			};
 			reloadTime = 0.07;
 			dispersion = 0.00116;
-			recoil = "recoil_single_mk20";
-			recoilProne = "recoil_single_prone_mk20";
+			recoil = "PSC_Rifle_Base_Recoil";
+			recoilProne = "PSC_Rifle_Base_Recoil";
 			minRange = 2;
 			minRangeProbab = 0.5;
 			midRange = 150;
