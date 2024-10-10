@@ -193,7 +193,7 @@ class CfgWeapons
 	class PSC_ServiceRifle_Base_W: PSC_Rifle_Base_W
 	{
 		displayName = "Service Rifle (Wood)";
-		model = "PSC_Weapons\ServiceRifle\ServiceRifle.p3d";
+		model = "PSC_Weapons\ServiceRifle\PSC_ServiceRifle.p3d";
 		scope = 2;
 		descriptionShort = "Gun Runner Produced .223 Rifle";
 		picture = "\PSC_Weapons\ServiceRifle\Data\Icon\ServiceRifleWoodIcon_ca.paa";
