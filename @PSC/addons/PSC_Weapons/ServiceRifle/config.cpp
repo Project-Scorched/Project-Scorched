@@ -259,15 +259,15 @@ class CfgGesturesMale
 		{
 			file = "PSC_Weapons\ServiceRifle\data\animations\serviceriflereload.rtm";
 			speed = .3;
-			looped = 0;
+			looped = false;
 			mask = "handsWeapon";
 			headBobStrength = 0.3;
 			headBobMode = 2;
-			rightHandIKBeg = 1;
-			rightHandIKEnd = 1;
+			rightHandIKBeg = true;
+			rightHandIKEnd = true;
 			rightHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
-			leftHandIKBeg = 1;
-			leftHandIKEnd = 1;
+			leftHandIKBeg = true;
+			leftHandIKEnd = true;
 			leftHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
 		};
 		class PSC_GestureReloadServiceRifle_Context: PSC_GestureReloadServiceRifle 
