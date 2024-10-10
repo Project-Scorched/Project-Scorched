@@ -20,7 +20,6 @@ class CfgPatches
     };
 };
 
-
 class Mode_SemiAuto;
 class Mode_Burst;
 class Mode_FullAuto;
@@ -215,7 +214,7 @@ class CfgMovesBasic
 class CfgGesturesMale
 {
 	class Default;
-	class GestureReloadBase;;
+	class GestureReloadBase;
 	class States
 	{
 		class PSC_GestureReloadServiceRifle: Default 
