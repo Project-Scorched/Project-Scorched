@@ -59,9 +59,10 @@ class CfgRecoils
 		temporary = 0.01;
 	};
 };
+
 class CfgWeapons
 {
-	class rifle;
+	class Rifle;
 	class Rifle_Base_F: Rifle
 	{
 		class WeaponsSlotsInfo;
@@ -193,7 +194,7 @@ class CfgWeapons
 	class PSC_ServiceRifle_Base_W: PSC_Rifle_Base_W
 	{
 		displayName = "Service Rifle (Wood)";
-		model = "PSC_Weapons\ServiceRifle\PSC_ServiceRifle.p3d";
+		model = "PSC_Weapons\ServiceRifle\data\model\PSC_ServiceRifle.p3d";
 		scope = 2;
 		descriptionShort = "Gun Runner Produced .223 Rifle";
 		picture = "\PSC_Weapons\ServiceRifle\Data\Icon\ServiceRifleWoodIcon_ca.paa";
@@ -210,7 +211,7 @@ class CfgWeapons
 			"\PSC_Weapons\ServiceRifle\data\ServiceRifle.rvmat"
 		};
 	};
-	class PSC_ServiceRifle_Base_P: PSC_ServiceRifle_Base_W
+	class PSC_ServiceRifle_Polymer_W: PSC_ServiceRifle_Base_W
 	{	
 		displayName = "Service Rifle (Polymer)";
 		scope = 2;
@@ -258,15 +259,15 @@ class CfgGesturesMale
 		{
 			file = "PSC_Weapons\ServiceRifle\data\animations\serviceriflereload.rtm";
 			speed = .3;
-			looped = false;
+			looped = 0;
 			mask = "handsWeapon";
 			headBobStrength = 0.3;
 			headBobMode = 2;
-			rightHandIKBeg = true;
-			rightHandIKEnd = true;
+			rightHandIKBeg = 1;
+			rightHandIKEnd = 1;
 			rightHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
-			leftHandIKBeg = true;
-			leftHandIKEnd = true;
+			leftHandIKBeg = 1;
+			leftHandIKEnd = 1;
 			leftHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
 		};
 		class PSC_GestureReloadServiceRifle_Context: PSC_GestureReloadServiceRifle 

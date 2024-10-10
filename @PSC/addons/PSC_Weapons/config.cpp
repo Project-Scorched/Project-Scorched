@@ -15,7 +15,8 @@ class CfgPatches
 		requiredAddons[] = 
 		{ 						// Loads all of Arma + CBA
            	  "cba_main",
-          	  "A3_Data_F_AoW_Loadorder"
+          	  "A3_Data_F_AoW_Loadorder",
+			  "PSC_Core"
     	};
 		addonRootClass = "PSC_Weapons"; // Subconfigs
 		author = "$STR_PSC_Author"; // Team name
