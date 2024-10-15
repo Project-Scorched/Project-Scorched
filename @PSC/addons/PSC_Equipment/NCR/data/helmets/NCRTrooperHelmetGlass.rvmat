@@ -42,16 +42,16 @@ class Stage3
 		pos[] = {0, 0, 0};
 	};
 };
-class Stage4
+class Stage4 
 {
-	texture = "PSC_Equipment\NCR\data\helmets\NCRTrooperHelmetGlass_AS.paa";
+	texture = "#(argb,8,8,3)color(1,1,1,1,AS)";
 	uvSource = "tex";
-	class uvTransform
+	class uvTransform 
 	{
-		aside[] = {1, 0, 0};
-		up[] = {0, 1, 0};
-		dir[] = {0, 0, 1};
-		pos[] = {0, 0, 1};
+		aside[] = { 1, 0, 0 };
+		up[] = { 0, 1, 0 };
+		dir[] = { 0, 0, 1 };
+		pos[] = { 0, 0, 1 };
 	};
 };
 class Stage5

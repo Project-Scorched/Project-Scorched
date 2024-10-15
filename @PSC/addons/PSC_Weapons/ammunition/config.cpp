@@ -814,6 +814,7 @@ class CfgMagazines
 		displayName = "$STR_PSC_556_ServiceRifle_M";
 		count = 20;
 		mass = 10;
+		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
 
 

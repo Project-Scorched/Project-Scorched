@@ -40,7 +40,6 @@ class CfgWeapons
         displayName = "NCR Trooper Uniform Base (Dev)";
         scope = 0;
         model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
-        //picture = "";
         class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
@@ -54,6 +53,7 @@ class CfgWeapons
         displayName = "$STR_PSC_NCR_Trooper_Brown_U";
         scope = 2;
         model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+        picture = "\PSC_Equipment\NCR\data\icon\NCRUniformBrownIcon_ca.paa";
         class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
@@ -67,6 +67,7 @@ class CfgWeapons
         displayName = "$STR_PSC_NCR_Trooper_Snow_U";
         scope = 2;
         model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+        picture = "\PSC_Equipment\NCR\data\icon\NCRUniformSnowIcon_ca.paa";
         class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
@@ -80,6 +81,7 @@ class CfgWeapons
         displayName = "$STR_PSC_NCR_Trooper_Woodland_U";
         scope = 2;
         model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+        picture = "\PSC_Equipment\NCR\data\icon\NCRUniformWoodlandIcon_ca.paa";
         class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
@@ -136,9 +138,10 @@ class CfgWeapons
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
+        picture = "\PSC_Equipment\NCR\data\icon\NCRVestBrownIcon_ca.paa";
         hiddenSelectionsTextures[] = 
         {
-            "PSC_Equipment\NCR\data\vests\brown\NCRTrooperVest_CO.paa"
+            "PSC_Equipment\NCR\data\vests\brown\NCRTrooperVest_co.paa"
         };
         class ItemInfo: VestItem
 		{
@@ -166,6 +169,7 @@ class CfgWeapons
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
+        picture = "\PSC_Equipment\NCR\data\icon\NCRVestSnowIcon_ca.paa";
         hiddenSelectionsTextures[] = 
         {
             "PSC_Equipment\NCR\data\vests\snow\NCRTrooperVest_CO.paa"
@@ -198,7 +202,6 @@ class CfgWeapons
         displayName = "NCR Trooper Helmet Base (DEV)";
         scope = 0;
         weaponPoolAvailable = 1;
-        //picture = "\A3\characters_f\Data\UI\icon_H_helmet_plain_ca.paa";
 		model = "\PSC_Equipment\NCR\models\NCR_Trooper_Helmet.p3d";
         hiddenSelections[] = 
         {
@@ -236,10 +239,11 @@ class CfgWeapons
     {
         displayName = "$STR_PSC_NCR_Trooper_Brown_H";
         scope = 2;
+        picture = "\PSC_Equipment\NCR\data\icon\NCRHelmetBrownIcon_ca.paa";
         hiddenSelectionsTextures[] = 
         {
             "\PSC_Equipment\NCR\data\helmets\brown\NCRTrooperHelmet_co.paa",
-            "\PSC_Equipment\NCR\data\helmets\brown\NCRTrooperHelmetGlass_co.paa"
+            "\PSC_Equipment\NCR\data\helmets\brown\NCRTrooperHelmetGlass_ca.paa"
         };
         class ItemInfo: HeadgearItem
 		{
@@ -266,6 +270,7 @@ class CfgWeapons
     {
         displayName = "$STR_PSC_NCR_Trooper_Snow_H";
         scope = 2;
+        picture = "\PSC_Equipment\NCR\data\icon\NCRHelmetSnowIcon_ca.paa";
         hiddenSelectionsTextures[] = 
         {
             "\PSC_Equipment\NCR\data\helmets\snow\NCRTrooperHelmet_co.paa"
