@@ -101,7 +101,7 @@ class CfgWeapons
 				displayName = "Muzzle Slot";
 
 				// class names with items supported by weapon
-				compatibleItems[] = {}; // moved to each weapon
+				//compatibleItems[] = {}; // moved to each weapon
 			};
 			//class CowsSlot : CowsSlot {};
 			//class PointerSlot : PointerSlot {};
@@ -146,11 +146,11 @@ class CfgWeapons
 
 			class StandardSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 0, according to sounds[]
 			{
-				/*
-				begin1[] = { "PSC_Weapons\ServiceRifle\sounds\ServiceRifle_Shot1", db0, 1, 500 };
-				begin2[] = { "PSC_Weapons\ServiceRifle\sounds\ServiceRifle_Shot2", db0, 1, 500 };
-				begin3[] = { "PSC_Weapons\ServiceRifle\sounds\ServiceRifle_Shot3", db0, 1, 500 };
-				*/
+				
+				begin1[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot1", db0, 1, 500 };
+				begin2[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot2", db0, 1, 500 };
+				begin3[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot3", db0, 1, 500 };
+				
 				soundBegin[] = { begin1, 0.33, begin2, 0.33, begin3, 0.34 };		
 			};
 
