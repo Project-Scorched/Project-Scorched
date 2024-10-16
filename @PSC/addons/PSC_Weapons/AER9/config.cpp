@@ -65,7 +65,7 @@ class CfgWeapons
 			"PSC_AER9_MW"
 		};
         magazineReloadSwitchPhase = 0.4;
-        reloadAction = "PSC_GestureReloadServiceRifle";
+        reloadAction = "PSC_GestureReloadAER9";
         recoil = "recoil_mk20";
         maxZeroing = 800;
 		selectionFireAnim = "zasleh";
@@ -89,7 +89,7 @@ class CfgWeapons
         distanceZoomMin = 300;
         distanceZoomMax = 300;
         descriptionShort = "";
-        handAnim[] = {"OFP2_ManSkeleton","PSC_Weapons\Service_Rifle\data\animations\servicerifleholdtest.rtm"};
+        handAnim[] = {"OFP2_ManSkeleton","PSC_Weapons\AER9\data\animations\AER9HandAnim.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_01",0.4466836,1,15};
 		bullet2[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_02",0.4466836,1,15};
 		bullet3[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_03",0.4466836,1,15};
@@ -150,7 +150,7 @@ class CfgWeapons
 	class PSC_AER9_Base_W: PSC_Rifle_Base_W
 	{
 		displayName = "AER9 (Base)";
-		model = "PSC_Weapons\AER9\AER9.p3d";
+		model = "PSC_Weapons\AER9\PSC_AER9.p3d";
 		scope = 2;
 		descriptionShort = "Fusion Powered Laser Rifle";
 		hiddenSelections[] = 
@@ -159,11 +159,11 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\PSC_Weapons\Service_Rifle\data\ServiceRifle_co.paa" // To Be Replaced By AER9
+			"PSC_Weapons\AER9\data\AER9_co.paa" // To Be Replaced By AER9
 		};
 		hiddenSelectionsMaterials[] = 
 		{
-			"\PSC_Weapons\Service_Rifle\data\ServiceRifle.rvmat" // To Be Replaced By AER9
+			"PSC_Weapons\AER9\data\AER9.rvmat" // To Be Replaced By AER9
 		};
 	};
 
@@ -175,9 +175,9 @@ class CfgGesturesMale
 	class GestureReloadBase;
 	class States
 	{
-		class PSC_GestureReloadServiceRifle: Default 
+		class PSC_GestureReloadAER9: Default 
 		{
-			file = "PSC_Weapons\Service_Rifle\data\animations\serviceriflereload.rtm";
+			file = "PSC_Weapons\ServiceRifle\data\animations\serviceriflereload.rtm";
 			speed = .3;
 			looped = false;
 			mask = "handsWeapon";
@@ -190,7 +190,7 @@ class CfgGesturesMale
 			leftHandIKEnd = true;
 			leftHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
 		};
-		class PSC_GestureReloadServiceRifle_Context: PSC_GestureReloadServiceRifle {
+		class PSC_GestureReloadAER9_Context: PSC_GestureReloadAER9 {
 			mask = "NIA_handsWeapon_context_Toadie";
 		};
 	};
