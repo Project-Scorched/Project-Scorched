@@ -67,15 +67,15 @@ class CfgSoundShaders
 	{
 		rangeCurve[] = {{0,0.2},{50,1},{300,0},{1800,0}};
 		range = 1800;
-		volume = 0.9;
+		volume = 1;
 		samples[] = {{"PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot_Mid_1.wss",1},{"PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot_Mid_2.wss",1},{"PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot_Mid_3.wss",1}};
 	};
 
 	class PSC_Soundshader_ServiceRifle_Far : PSC_Soundshader_ServiceRifle_near
 	{
 		range = 1800;
-		rangeCurve[] = {{0,0},{50,0},{300,1},{1800,1},{2400,0}};
-		volume = 0.5;
+		rangeCurve[] = {{0,0},{50,0},{300,1},{1800,1}};
+		volume = 0.8;
 	};
 };
 
