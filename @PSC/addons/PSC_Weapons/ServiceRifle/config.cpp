@@ -147,9 +147,9 @@ class CfgWeapons
 			class StandardSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 0, according to sounds[]
 			{
 				
-				begin1[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot1", db0, 1, 500 };
-				begin2[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot2", db0, 1, 500 };
-				begin3[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot3", db0, 1, 500 };
+				begin1[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot1", db0, 1.5, 500 };
+				begin2[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot2", db0, 1.5, 500 };
+				begin3[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot3", db0, 1.5, 500 };
 				
 				soundBegin[] = { begin1, 0.33, begin2, 0.33, begin3, 0.34 };		
 			};
