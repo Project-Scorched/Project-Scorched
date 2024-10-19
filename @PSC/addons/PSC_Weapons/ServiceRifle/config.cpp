@@ -193,7 +193,7 @@ class CfgWeapons
 
 	class PSC_ServiceRifle_Base_W: PSC_Rifle_Base_W
 	{
-		displayName = "Service Rifle (Wood)";
+		displayName = "$STR_PSC_ServiceRifle_Wood";
 		model = "PSC_Weapons\ServiceRifle\data\model\PSC_ServiceRifle.p3d";
 		scope = 2;
 		descriptionShort = "Gun Runner Produced .223 Rifle";
@@ -213,7 +213,7 @@ class CfgWeapons
 	};
 	class PSC_ServiceRifle_Polymer_W: PSC_ServiceRifle_Base_W
 	{	
-		displayName = "Service Rifle (Polymer)";
+		displayName = "$STR_PSC_ServiceRifle_Polymer";
 		scope = 2;
 		hiddenSelections[] = 
 		{

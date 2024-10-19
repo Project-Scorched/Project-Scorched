@@ -821,7 +821,7 @@ class CfgMagazines
 	class PSC_FusionCell_M: PSC_FusionCellCore_M
 	{
 		author = "$STR_PSC_Author";
-		displayName = "Fusion Cell";
+		displayName = "$STR_PSC_Fusion_Cell";
 		ammo = "PSC_Laser_556";
 		scope = 2;
 		count = 50;
