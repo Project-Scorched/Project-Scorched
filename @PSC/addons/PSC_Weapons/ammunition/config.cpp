@@ -800,7 +800,7 @@ class CfgMagazines
 		ammo="PSC_Bullet_556";
 		//model = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
 		modelSpecial = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
-		modelSpecialIsProxy = 1;
+		modelSpecialIsProxy = 1; //req for proxy in mag well
 		count=20;
         mass = 10;
 		initspeed=920;
