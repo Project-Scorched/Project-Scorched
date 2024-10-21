@@ -4,7 +4,8 @@ class CfgPatches
     {
         requiredAddons[] = 
         {
-			"A3_Weapons_F" //A3 Weapons Config.
+			"A3_Weapons_F",
+			"A3_Sounds_F_Exp"
         };
         weapons[] = 
         {
@@ -50,6 +51,46 @@ class UnderBarrelSlot_rail;
 class PointerSlot_Rail;
 class PointerSlot_Pistol;
 class PointerSlot_Launcher;
+
+class CfgSoundShaders
+{
+	class PSC_Soundshader_ServiceRifle_Near
+	{
+		volume = 1;
+		frequency = 1;
+		range = 50;
+		rangeCurve = "closeShotCurve";
+		samples[] = {{"PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot_Close_1.wss",1},{"PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot_Close_2.wss",1},{"PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot_Close_3.wss",1}};
+	};
+
+	class PSC_Soundshader_ServiceRifle_Mid : PSC_Soundshader_ServiceRifle_near
+	{
+		rangeCurve[] = {{0,0.2},{50,1},{300,0},{1800,0}};
+		range = 1800;
+		volume = 1;
+		samples[] = {{"PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot_Mid_1.wss",1},{"PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot_Mid_2.wss",1},{"PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot_Mid_3.wss",1}};
+	};
+
+	class PSC_Soundshader_ServiceRifle_Far : PSC_Soundshader_ServiceRifle_near
+	{
+		range = 1800;
+		rangeCurve[] = {{0,0},{50,0},{300,1},{1800,1}};
+		volume = 0.8;
+	};
+};
+
+class CfgSoundSets
+{
+	class SPAR01_Shot_SoundSet;
+
+	class PSC_Soundset_ServiceRifle_Shot : SPAR01_Shot_SoundSet
+	{
+		soundShaders[] = {"SPAR01_Closure_SoundShader","PSC_Soundshader_ServiceRifle_Near","PSC_Soundshader_ServiceRifle_Mid","PSC_Soundshader_ServiceRifle_Far"};
+		volumeFactor = 3.5;
+	};
+};
+
+
 class CfgRecoils
 {
 	class PSC_Rifle_Base_Recoil
@@ -124,7 +165,7 @@ class CfgWeapons
 		bullet11[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_03",0.4466836,1,15};
 		bullet12[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_04",0.4466836,1,15};
 		soundBullet[] = {"bullet1",0.087,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.093,"bullet6",0.093,"bullet7",0.073,"bullet8",0.073,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
-		modes[] = {"Single","FullAuto","single_medium_optics1","single_far_optics2"};
+		modes[] = {"Single","FullAuto"};
 		drySound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\dry_Mk20",0.31622776,1,10};
 		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\reload_Mk20",1.0,1,10};
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\firemode_Mk20",0.25118864,1,5};
@@ -135,30 +176,21 @@ class CfgWeapons
 		class Single: Mode_SemiAuto
 		{
 			sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType // this base class has base definitions that both standard and silenced sounds will inherit (sound of closure stays the same no matter what muzzle accessory is used)
+			class BaseSoundModeType
 			{
-				weaponSoundEffect = "DefaultRifle";
-
-				closure1[] = { "A3\sounds_f\weapons\closure\closure_rifle_2", db-12, 1, 10 };
-				closure2[] = { "A3\sounds_f\weapons\closure\closure_rifle_3", db-12, 1, 10 };
-				soundClosure[] = { closure1, 0.5, closure2, 0.5 };
+				closure1[] = {};
+				closure2[] = {};
+				soundClosure[] = {};
+				weaponSoundEffect = "";
 			};
-
-			class StandardSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 0, according to sounds[]
+			class StandardSound: BaseSoundModeType
 			{
-				
-				begin1[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot1", db0, 1.5, 500 };
-				begin2[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot2", db0, 1.5, 500 };
-				begin3[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot3", db0, 1.5, 500 };
-				
-				soundBegin[] = { begin1, 0.33, begin2, 0.33, begin3, 0.34 };		
+				soundSetShot[] = {"PSC_Soundset_ServiceRifle_Shot","SPAR01_tail_SoundSet","SPAR02_InteriorTail_SoundSet"};
 			};
 
 			class SilencedSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 1, according to sounds[]
 			{
-				begin1[] = { "A3\sounds_f\weapons\silenced\silent-07", db-1, 1, 200 };
-				begin2[] = { "A3\sounds_f\weapons\silenced\silent-08", db-1, 1, 200 };
-				soundBegin[] = { begin1, 0.5, begin2, 0.5 };
+				soundSetShot[] = {"SPAR02_silencerInteriorTail_SoundSet","SPAR02_silencerInteriorTail_SoundSet","SPAR02_silencerInteriorTail_SoundSet"};
 			};
 			reloadTime = 0.07;
 			dispersion = 0.00116;
@@ -173,10 +205,22 @@ class CfgWeapons
 		};
 		class FullAuto: Mode_FullAuto
 		{
-			sounds[] = {"StandardSound","SilencedSound"};
-			class BaseSoundModeType{};
-			class StandardSound: BaseSoundModeType{};
-			class SilencedSound: BaseSoundModeType{};
+			class BaseSoundModeType
+			{
+				closure1[] = {};
+				closure2[] = {};
+				soundClosure[] = {};
+				weaponSoundEffect = "";
+			};
+			class StandardSound: BaseSoundModeType
+			{
+				soundSetShot[] = {"PSC_Soundset_ServiceRifle_Shot","SPAR01_tail_SoundSet","SPAR02_InteriorTail_SoundSet"};
+			};
+
+			class SilencedSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 1, according to sounds[]
+			{
+				soundSetShot[] = {"SPAR02_silencerInteriorTail_SoundSet","SPAR02_silencerInteriorTail_SoundSet","SPAR02_silencerInteriorTail_SoundSet"};
+			};
 			reloadTime = 0.07;
 			dispersion = 0.00116;
 			recoil = "recoil_auto_mk20";
@@ -197,7 +241,7 @@ class CfgWeapons
 		model = "PSC_Weapons\ServiceRifle\data\model\PSC_ServiceRifle.p3d";
 		scope = 2;
 		descriptionShort = "Gun Runner Produced .223 Rifle";
-		picture = "\PSC_Weapons\ServiceRifle\Data\Icon\ServiceRifleWoodIcon_ca.paa";
+		picture = "\PSC_Weapons\ServiceRifle\data\Icon\ServiceRifleWoodIcon_ca.paa";
 		hiddenSelections[] = 
 		{
 			"camo"
