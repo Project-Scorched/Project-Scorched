@@ -110,7 +110,7 @@ class CfgWeapons
         distanceZoomMin = 300;
         distanceZoomMax = 300;
         descriptionShort = "";
-        handAnim[] = {"OFP2_ManSkeleton","PSC_Weapons\ServiceRifle\data\animations\servicerifleholdtest.rtm"};
+        handAnim[] = {"OFP2_ManSkeleton","PSC_Weapons\ServiceRifle\data\animations\serviceriflehold.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_01",0.4466836,1,15};
 		bullet2[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_02",0.4466836,1,15};
 		bullet3[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_03",0.4466836,1,15};
