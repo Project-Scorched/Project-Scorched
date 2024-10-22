@@ -103,12 +103,12 @@ class CfgWeapons
 		bullet11[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_03",0.4466836,1,15};
 		bullet12[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_04",0.4466836,1,15};
 		soundBullet[] = {"bullet1",0.087,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.093,"bullet6",0.093,"bullet7",0.073,"bullet8",0.073,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
-		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
+		modes[] = {"Single","FullAuto"};
 		drySound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\dry_Mk20",0.31622776,1,10};
 		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\reload_Mk20",1.0,1,10};
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\firemode_Mk20",0.25118864,1,5};
-		cartridgePos = "Nabojnicestart";
-		cartridgeVel = "Nabojnicesend";
+		//cartridgePos = "Nabojnicestart";
+		//cartridgeVel = "Nabojnicesend";
 		muzzleEnd="konec hlavne";
 		muzzlePos = "usti hlavne";
 		class Single: Mode_SemiAuto

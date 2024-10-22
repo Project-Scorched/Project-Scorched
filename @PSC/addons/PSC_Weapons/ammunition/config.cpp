@@ -394,7 +394,7 @@ class CfgAmmo
 		hit = 8;
 		indirectHit = 0;
 		indirectHitRange = 0;
-		model = "PSC_Weapons\ammunition\models\laser.p3d";
+		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d";
 		caliber = 1;
 		brightness= 1000;
 		cartridge = "FxCartridge_556";
@@ -753,7 +753,7 @@ class CfgAmmo
 		airLock = 1;
 		hit = 9;
 		indirectHit = 0;
-		model = "PSC_Weapons\ammunition\models\laser.p3d";
+		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d";
 		indirectHitRange = 0;
 		cost = 1;
 		typicalSpeed = 50000;
@@ -783,7 +783,8 @@ class CfgMagazines
 		scope=0;
 		displayName="Fusion Cell (Dev)";
 		ammo="PSC_Laser_Base";
-		//model = "PSC_Weapons\ammunition\models\FusionCell.p3d";
+		modelSpecial = "PSC_Weapons\ammunition\models\PSC_MicrofusionCell.p3d";
+		modelSpecialIsProxy = 1;
 		count=30;
         mass=10;
 		initspeed=50000;
