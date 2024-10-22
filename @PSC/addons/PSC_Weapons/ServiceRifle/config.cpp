@@ -109,7 +109,7 @@ class CfgWeapons
         distanceZoomMin = 300;
         distanceZoomMax = 300;
         descriptionShort = "";
-        handAnim[] = {"OFP2_ManSkeleton","PSC_Weapons\ServiceRifle\data\animations\servicerifleholdtest.rtm"};
+        handAnim[] = {"OFP2_ManSkeleton","PSC_Weapons\ServiceRifle\data\animations\serviceriflehold.rtm"};
 		bullet1[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_01",0.4466836,1,15};
 		bullet2[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_02",0.4466836,1,15};
 		bullet3[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Metal_03",0.4466836,1,15};
@@ -123,7 +123,7 @@ class CfgWeapons
 		bullet11[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_03",0.4466836,1,15};
 		bullet12[] = {"A3\sounds_f\weapons\shells\5_56\Shellcase_556_Grass_04",0.4466836,1,15};
 		soundBullet[] = {"bullet1",0.087,"bullet2",0.083,"bullet3",0.083,"bullet4",0.083,"bullet5",0.093,"bullet6",0.093,"bullet7",0.073,"bullet8",0.073,"bullet9",0.083,"bullet10",0.083,"bullet11",0.083,"bullet12",0.083};
-		modes[] = {"Single","FullAuto","fullauto_medium","single_medium_optics1","single_far_optics2"};
+		modes[] = {"Single","FullAuto","single_medium_optics1","single_far_optics2"};
 		drySound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\dry_Mk20",0.31622776,1,10};
 		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\reload_Mk20",1.0,1,10};
 		changeFiremodeSound[] = {"A3\Sounds_F\arsenal\weapons\Rifles\Mk20\firemode_Mk20",0.25118864,1,5};
@@ -146,9 +146,9 @@ class CfgWeapons
 			class StandardSound : BaseSoundModeType // Sounds inside this class are used when soundTypeIndex = 0, according to sounds[]
 			{
 				
-				begin1[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot1", db0, 1, 500 };
-				begin2[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot2", db0, 1, 500 };
-				begin3[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot3", db0, 1, 500 };
+				begin1[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot1", db0, 1.5, 500 };
+				begin2[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot2", db0, 1.5, 500 };
+				begin3[] = { "PSC_Weapons\ServiceRifle\data\sounds\ServiceRifle_Shot3", db0, 1.5, 500 };
 				
 				soundBegin[] = { begin1, 0.33, begin2, 0.33, begin3, 0.34 };		
 			};
@@ -192,7 +192,7 @@ class CfgWeapons
 
 	class PSC_ServiceRifle_Base_W: PSC_Rifle_Base_W
 	{
-		displayName = "Service Rifle (Wood)";
+		displayName = "$STR_PSC_ServiceRifle_Wood";
 		model = "PSC_Weapons\ServiceRifle\data\model\PSC_ServiceRifle.p3d";
 		scope = 2;
 		descriptionShort = "Gun Runner Produced .223 Rifle";
@@ -212,7 +212,7 @@ class CfgWeapons
 	};
 	class PSC_ServiceRifle_Polymer_W: PSC_ServiceRifle_Base_W
 	{	
-		displayName = "Service Rifle (Polymer)";
+		displayName = "$STR_PSC_ServiceRifle_Polymer";
 		scope = 2;
 		hiddenSelections[] = 
 		{

@@ -57,5 +57,14 @@
         <Key ID = "STR_PSC_556_ServiceRifle_M">
             <English>20rnd Service Rifle Mag (5.56)</English>
         </Key>
+        <Key ID = "STR_PSC_ServiceRifle_Wood">
+            <English>Service Rifle (Wood)</English>
+        </Key>
+        <Key ID = "STR_PSC_ServiceRifle_Polymer">
+            <English>Service Rifle (Polymer)</English>
+        </Key>
+        <Key ID = "STR_PSC_Fusion_Cell">
+            <English>Fusion Cell</English>
+        </Key>
 </Project>
 

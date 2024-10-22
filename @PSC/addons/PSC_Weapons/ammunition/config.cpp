@@ -800,7 +800,7 @@ class CfgMagazines
 		ammo="PSC_Bullet_556";
 		//model = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
 		modelSpecial = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
-		modelSpecialIsProxy = 1;
+		modelSpecialIsProxy = 1; //req for proxy in mag well
 		count=20;
         mass = 10;
 		initspeed=920;
@@ -821,7 +821,7 @@ class CfgMagazines
 	class PSC_FusionCell_M: PSC_FusionCellCore_M
 	{
 		author = "$STR_PSC_Author";
-		displayName = "Fusion Cell";
+		displayName = "$STR_PSC_Fusion_Cell";
 		ammo = "PSC_Laser_556";
 		scope = 2;
 		count = 50;
