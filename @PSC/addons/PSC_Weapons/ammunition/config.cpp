@@ -819,7 +819,7 @@ class CfgMagazines
 		modelSpecialIsProxy = 1;
 		count=30;
         mass=10;
-		initspeed=50000;
+		initspeed=1000;
 		tracersEvery=1;
 		lastRoundsTracer=50;
 		descriptionShort="Standard Fusion Cell";
