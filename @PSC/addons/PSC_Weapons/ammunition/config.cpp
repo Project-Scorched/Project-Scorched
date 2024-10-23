@@ -721,10 +721,6 @@ class CfgAmmo
 		airFriction = -0.0012;
 		waterFriction = -0.3;
 		caliber = 0.869565;
-		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
-		tracerScale = 1;
-		tracerStartTime = 0.05;
-		tracerEndTime = 1;
 		audibleFire = 35;
 		dangerRadiusBulletClose = 8;
 		dangerRadiusHit = 12;
@@ -734,7 +730,21 @@ class CfgAmmo
 	};
 	class PSC_Bullet_556_FMJ: PSC_Bullet_556
 	{
-
+		airLock = 1;
+		hit = 12;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = 5;
+		typicalSpeed = 920;
+		airFriction = -0.0012;
+		waterFriction = -0.3;
+		caliber = 0.869565;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
 	};
 	class PSC_Bullet_556_AP: PSC_Bullet_556
 	{
@@ -748,6 +758,28 @@ class CfgAmmo
 	{
 
 	};
+	class PSC_Bullet_556_Tracer: PSC_Bullet_Base
+	{
+		airLock = 1;
+		hit = 9;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = 1;
+		typicalSpeed = 920;
+		airFriction = -0.0012;
+		waterFriction = -0.3;
+		caliber = 0.869565;
+		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
+		tracerScale = 1;
+		tracerStartTime = 0.05;
+		tracerEndTime = 1;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
+	};
 	class PSC_Laser_556: PSC_Laser_Base
 	{
 		airLock = 1;
@@ -756,7 +788,7 @@ class CfgAmmo
 		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d";
 		indirectHitRange = 0;
 		cost = 1;
-		typicalSpeed = 50000;
+		typicalSpeed = 1000;
 		airFriction = 0;
 		waterFriction = 0;
 		caliber = 0.869565;

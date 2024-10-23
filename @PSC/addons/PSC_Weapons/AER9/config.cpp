@@ -56,6 +56,10 @@ class CfgWeapons
         author =  "$STR_PSC_Author";
 		displayName = "Rifle Base";
 		scope = 0;
+		hiddenSelections[] = 
+		{
+			"camo"
+		};
 		magazines[] = 
 		{
 			"PSC_FusionCell_M"
@@ -66,7 +70,7 @@ class CfgWeapons
 		};
         magazineReloadSwitchPhase = 0.4;
         reloadAction = "PSC_GestureReloadAER9";
-        recoil = "recoil_mk20";
+        recoil = "";
         maxZeroing = 800;
 		selectionFireAnim = "zasleh";
         class WeaponSlotsInfo
@@ -119,8 +123,8 @@ class CfgWeapons
 			class SilencedSound: BaseSoundModeType{};
 			reloadTime = 0.07;
 			dispersion = 0.00116;
-			recoil = "recoil_single_mk20";
-			recoilProne = "recoil_single_prone_mk20";
+			recoil = "";
+			recoilProne = "";
 			minRange = 2;
 			minRangeProbab = 0.5;
 			midRange = 150;
@@ -136,8 +140,8 @@ class CfgWeapons
 			class SilencedSound: BaseSoundModeType{};
 			reloadTime = 0.07;
 			dispersion = 0.00116;
-			recoil = "recoil_auto_mk20";
-			recoilProne = "recoil_auto_prone_mk20";
+			recoil = "";
+			recoilProne = "";
 			minRange = 0;
 			minRangeProbab = 0.9;
 			midRange = 15;
@@ -147,9 +151,9 @@ class CfgWeapons
 			aiRateOfFire = 1e-06;
 		};
     };
-	class PSC_AER9_Base_W: PSC_Rifle_Base_W
+	class PSC_AER9_Base_W: PSC_AER9_W
 	{
-		displayName = "AER9 (Base)";
+		displayName = "$STR_PSC_AER9_W";
 		model = "PSC_Weapons\AER9\PSC_AER9.p3d";
 		scope = 2;
 		descriptionShort = "Fusion Powered Laser Rifle";
