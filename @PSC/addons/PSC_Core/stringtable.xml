@@ -66,5 +66,8 @@
         <Key ID = "STR_PSC_Fusion_Cell">
             <English>Fusion Cell</English>
         </Key>
+        <Key ID = "STR_PSC_AER9_W">
+            <English>AER-9</English>
+        </Key>
 </Project>
 

@@ -394,7 +394,7 @@ class CfgAmmo
 		hit = 8;
 		indirectHit = 0;
 		indirectHitRange = 0;
-		model = "PSC_Weapons\ammunition\models\laser.p3d";
+		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d";
 		caliber = 1;
 		brightness= 1000;
 		cartridge = "FxCartridge_556";
@@ -721,6 +721,96 @@ class CfgAmmo
 		airFriction = -0.0012;
 		waterFriction = -0.3;
 		caliber = 0.869565;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
+	};
+	class PSC_Bullet_556_FMJ: PSC_Bullet_556
+	{
+		airLock = 1;
+		hit = 6;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = 3;
+		typicalSpeed = 1020;
+		airFriction = -0.012;
+		waterFriction = -0.3;
+		caliber = 0.869565;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
+	};
+	class PSC_Bullet_556_AP: PSC_Bullet_556
+	{
+		airLock = 1;
+		hit = 12;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = 5;
+		typicalSpeed = 1020;
+		airFriction = -0.00012;
+		waterFriction = -0.3;
+		caliber = 0.869565;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
+	};
+	class PSC_Bullet_556_Match: PSC_Bullet_556
+	{
+		airLock = 1;
+		hit = 12;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = 8;
+		typicalSpeed = 1020;
+		airFriction = -0.00006;
+		waterFriction = -0.3;
+		caliber = 0.869565;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
+	};
+	class PSC_Bullet_556_Surplus: PSC_Bullet_556
+	{
+		airLock = 1;
+		hit = 6;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = .5;
+		typicalSpeed = 900;
+		airFriction = -0.5;
+		waterFriction = -0.3;
+		caliber = 0.869565;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
+	};
+	class PSC_Bullet_556_Tracer: PSC_Bullet_Base
+	{
+		airLock = 1;
+		hit = 9;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = 1;
+		typicalSpeed = 920;
+		airFriction = -0.0012;
+		waterFriction = -0.3;
+		caliber = 0.869565;
 		model = "\A3\Weapons_f\Data\bullettracer\tracer_yellow";
 		tracerScale = 1;
 		tracerStartTime = 0.05;
@@ -732,31 +822,15 @@ class CfgAmmo
 		suppressionRadiusHit = 8;
 		aiAmmoUsageFlags = 64;
 	};
-	class PSC_Bullet_556_FMJ: PSC_Bullet_556
-	{
-
-	};
-	class PSC_Bullet_556_AP: PSC_Bullet_556
-	{
-
-	};
-	class PSC_Bullet_556_Match: PSC_Bullet_556
-	{
-
-	};
-	class PSC_Bullet_556_Surplus: PSC_Bullet_556
-	{
-
-	};
 	class PSC_Laser_556: PSC_Laser_Base
 	{
 		airLock = 1;
 		hit = 9;
 		indirectHit = 0;
-		model = "PSC_Weapons\ammunition\models\laser.p3d";
+		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d";
 		indirectHitRange = 0;
 		cost = 1;
-		typicalSpeed = 50000;
+		typicalSpeed = 1000;
 		airFriction = 0;
 		waterFriction = 0;
 		caliber = 0.869565;
@@ -783,10 +857,11 @@ class CfgMagazines
 		scope=0;
 		displayName="Fusion Cell (Dev)";
 		ammo="PSC_Laser_Base";
-		//model = "PSC_Weapons\ammunition\models\FusionCell.p3d";
+		modelSpecial = "PSC_Weapons\ammunition\models\PSC_MicrofusionCell.p3d";
+		modelSpecialIsProxy = 1;
 		count=30;
         mass=10;
-		initspeed=50000;
+		initspeed=1000;
 		tracersEvery=1;
 		lastRoundsTracer=50;
 		descriptionShort="Standard Fusion Cell";
@@ -817,6 +892,10 @@ class CfgMagazines
 		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
 
+	class PSC_556_ServiceRifle_Tracer_M: PSC_556_Core_ServiceRifle_M
+	{
+
+	};
 
 	class PSC_FusionCell_M: PSC_FusionCellCore_M
 	{
@@ -835,6 +914,13 @@ class CfgMagazineWells
 		PSC_ServiceRifle_Magazines[] = 
 		{
 			"PSC_556_ServiceRifle_M"
+		};
+	};
+	class PSC_AER9_MW
+	{
+		PSC_AER9_Magazines[] = 
+		{
+			"PSC_FusionCell_M"
 		};
 	};
 };
