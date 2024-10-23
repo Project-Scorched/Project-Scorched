@@ -731,12 +731,12 @@ class CfgAmmo
 	class PSC_Bullet_556_FMJ: PSC_Bullet_556
 	{
 		airLock = 1;
-		hit = 12;
+		hit = 6;
 		indirectHit = 0;
 		indirectHitRange = 0;
-		cost = 5;
-		typicalSpeed = 920;
-		airFriction = -0.0012;
+		cost = 3;
+		typicalSpeed = 1020;
+		airFriction = -0.012;
 		waterFriction = -0.3;
 		caliber = 0.869565;
 		audibleFire = 35;
@@ -748,15 +748,57 @@ class CfgAmmo
 	};
 	class PSC_Bullet_556_AP: PSC_Bullet_556
 	{
-
+		airLock = 1;
+		hit = 12;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = 5;
+		typicalSpeed = 1020;
+		airFriction = -0.00012;
+		waterFriction = -0.3;
+		caliber = 0.869565;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
 	};
 	class PSC_Bullet_556_Match: PSC_Bullet_556
 	{
-
+		airLock = 1;
+		hit = 12;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = 8;
+		typicalSpeed = 1020;
+		airFriction = -0.00006;
+		waterFriction = -0.3;
+		caliber = 0.869565;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
 	};
 	class PSC_Bullet_556_Surplus: PSC_Bullet_556
 	{
-
+		airLock = 1;
+		hit = 6;
+		indirectHit = 0;
+		indirectHitRange = 0;
+		cost = .5;
+		typicalSpeed = 900;
+		airFriction = -0.5;
+		waterFriction = -0.3;
+		caliber = 0.869565;
+		audibleFire = 35;
+		dangerRadiusBulletClose = 8;
+		dangerRadiusHit = 12;
+		suppressionRadiusBulletClose = 6;
+		suppressionRadiusHit = 8;
+		aiAmmoUsageFlags = 64;
 	};
 	class PSC_Bullet_556_Tracer: PSC_Bullet_Base
 	{
@@ -850,6 +892,10 @@ class CfgMagazines
 		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
 
+	class PSC_556_ServiceRifle_Tracer_M: PSC_556_Core_ServiceRifle_M
+	{
+
+	};
 
 	class PSC_FusionCell_M: PSC_FusionCellCore_M
 	{
