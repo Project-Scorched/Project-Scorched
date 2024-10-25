@@ -173,6 +173,25 @@ class CfgWeapons
 
 };
 
+class CfgMovesBasic
+{
+	class DefaultDie;
+	class ManActions
+	{
+		PSC_GestureReloadAER9 = "PSC_GestureReloadAER9";
+	};
+	class Actions
+	{
+		class RifleBaseStandActions;
+		class RifleAdjustProneBaseActions;
+
+		class NoActions : ManActions 
+		{
+			PSC_GestureReloadAER9[] = { "PSC_GestureReloadAER9", "Gesture" };
+		};
+	};	
+};
+
 class CfgGesturesMale
 {
 	class Default;
