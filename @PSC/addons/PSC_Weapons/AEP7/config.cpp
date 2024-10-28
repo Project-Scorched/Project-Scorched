@@ -34,7 +34,10 @@ class CfgWeapons
         {
             ""
         };
-		magazineWell[] = {"Pistol_9x21"};
+		magazineWell[] = 
+		{
+			
+		};
 		reloadAction = "GestureReloadPistol";
 		recoil = "recoil_pistol_p07";
 		displayname = "$STR_A3_CfgWeapons_hgun_P070";
