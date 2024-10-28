@@ -173,6 +173,25 @@ class CfgWeapons
 
 };
 
+class CfgMovesBasic
+{
+	class DefaultDie;
+	class ManActions
+	{
+		PSC_GestureReloadAER9 = "PSC_GestureReloadAER9";
+	};
+	class Actions
+	{
+		class RifleBaseStandActions;
+		class RifleAdjustProneBaseActions;
+
+		class NoActions : ManActions 
+		{
+			PSC_GestureReloadAER9[] = { "PSC_GestureReloadAER9", "Gesture" };
+		};
+	};	
+};
+
 class CfgGesturesMale
 {
 	class Default;
@@ -181,7 +200,7 @@ class CfgGesturesMale
 	{
 		class PSC_GestureReloadAER9: Default 
 		{
-			file = "PSC_Weapons\ServiceRifle\data\animations\serviceriflereload.rtm";
+			file = "PSC_Weapons\AER9\data\animations\aer9reload.rtm";
 			speed = .3;
 			looped = false;
 			mask = "handsWeapon";
