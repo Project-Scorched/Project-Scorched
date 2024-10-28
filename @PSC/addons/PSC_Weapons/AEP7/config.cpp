@@ -15,7 +15,31 @@ class CfgPatches
         author = "$STR_PSC_Author";
 		addonRootClass = "PSC_Weapons"; // Subconfigs
 };
-
+class Mode_SemiAuto;
+class MuzzleSlot;
+class PointerSlot;
+class CowsSlot_Rail;
+class CowsSlot_Rail_Pistol;
+class CowsSlot_Pistol;
+class CowsSlot_MSBS65;
+class CowsSlot_Dovetail;
+class CowsSlot_Dovetail_RPG;
+class MuzzleSlot_45ACP;
+class MuzzleSlot_9mm;
+class MuzzleSlot_65;
+class MuzzleSlot_65MG;
+class MuzzleSlot_556;
+class MuzzleSlot_762;
+class MuzzleSlot_338;
+class MuzzleSlot_93;
+class MuzzleSlot_57;
+class MuzzleSlot_58;
+class MuzzleSlot_545R;
+class MuzzleSlot_762R;
+class UnderBarrelSlot_rail;
+class PointerSlot_Rail;
+class PointerSlot_Pistol;
+class PointerSlot_Launcher;
 class CfgWeapons
 {
     class Pistol;
@@ -23,26 +47,33 @@ class CfgWeapons
 	{
 		class WeaponSlotsInfo;
 	};
+	
     class PSC_Pistol_Base: Pistol_Base_F
     {
         author = "$STR_PSC_Author"
-		scope = 2;
-		model = "\PSC_Weapons\AEP7\PSC_AEP7.p3d";
+		scope = 0;
+		model = "PSC_Weapons\AEP7\PSC_AEP7.p3d";
 		//picture = "\A3\weapons_F\Pistols\P07\data\UI\gear_p07_x_ca.paa";
 		//UiPicture = "\A3\weapons_f\data\UI\icon_regular_CA.paa";
+		hiddenSelections[] = 
+		{
+			"camo"
+		}
 		magazines[] = 
         {
-            ""
+            "PSC_MicrofusionCell_M"
         };
 		magazineWell[] = 
 		{
-			
+			"PSC_AEP7_MW"
 		};
 		reloadAction = "GestureReloadPistol";
 		recoil = "recoil_pistol_p07";
-		displayname = "$STR_A3_CfgWeapons_hgun_P070";
-		hiddenSelections[] = {"camo"};
-		hiddenSelectionsTextures[] = {"\a3\weapons_f\pistols\p07\data\p07_co.paa"};
+		displayname = "Pistol Base";
+		hiddenSelectionsTextures[] = 
+		{
+			"PSC_Weapons\AEP7\data\AEP7_co.paa"
+		};
 		drySound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\P07\dry_P07",0.39810717,1,20};
 		reloadMagazineSound[] = {"A3\Sounds_F\arsenal\weapons\Pistols\P07\reload_P07",1.0,1,10};
 		modes[] = {"Single"};
@@ -103,4 +134,18 @@ class CfgWeapons
 			priority = 2;
 		};
     };
+	class PSC_AEP7_W: PSC_Pistol_Base
+	{
+		displayName = "$STR_PSC_AEP7_W";
+		scope = 0;
+		descriptionShort = "Fusion Powered Laser Pistol";
+		hiddenSelectionsTextures[] = 
+		{
+			"PSC_Weapons\AEP7\data\AEP7_co.paa"
+		};
+		hiddenSelectionsMaterials[] =
+		{
+			"PSC_Weapons\AEP7\data\AEP7.rvmat"
+		};
+	};	
 };
