@@ -931,7 +931,7 @@ class CfgMagazines
 		scope=0;
 		displayName="Fusion Cell (Dev)";
 		ammo="PSC_Laser_Base";
-		modelSpecial = "PSC_Weapons\ammunition\models\PSC_MicrofusionCell.p3d";
+		modelSpecial = "PSC_Weapons\ammunition\models\PSC_FusionCell.p3d";
 		modelSpecialIsProxy = 1;
 		count=30;
         mass=10;
