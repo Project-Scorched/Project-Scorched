@@ -20,6 +20,90 @@ class CfgPatches
     };
 };
 
+class CfgCloudlets
+{
+	class PSC_Laser_Red
+	{
+		class PSC_Laser_Red_Eff
+		{
+			simulation="particles";
+			type="PSC_LaserRed";
+			position[]={0,0,0};
+			intensity=0;
+			interval=1;
+			lifeTime=2;
+		};
+	};
+	class PSC_LaserImpact: Default //JLTS Config Laser
+	{
+		interval=0.00089999998;
+		circleRadius=0;
+		circleVelocity[]={0,0,0};
+		particleShape="\A3\data_f\ParticleEffects\Universal\Universal";
+		particleFSNtieth=16;
+		particleFSIndex=13;
+		particleFSFrameCount=2;
+		particleFSLoop=0;
+		angleVar=360;
+		animationName="";
+		particleType="Billboard";
+		timerPeriod=3;
+		lifeTime=1;
+		moveVelocity[]=
+		{
+			"(inDirX + surfNormalX * 2) * inSpeed / 500",
+			"(inDirY + surfNormalY * 2) * inSpeed / 500",
+			"(inDirZ + surfNormalZ * 2) * inSpeed / 500"
+		};
+		rotationVelocity=1;
+		weight=100;
+		volume=0.0099999998;
+		rubbing=0.30000001;
+		size[]={0.12,0};
+		sizeCoef=1;
+		color[]=
+		{
+			{255,0,0,-50}
+		};
+		colorCoef[]={1,1,1,1};
+		emissiveColor[]=
+		{
+			{32,8,0,1}
+		};
+		animationSpeed[]={1000};
+		animationSpeedCoef=1;
+		randomDirectionPeriod=0;
+		randomDirectionIntensity=0;
+		onTimerScript="";
+		beforeDestroyScript="";
+		blockAIVisibility=0;
+		bounceOnSurface=0.1;
+		bounceOnSurfaceVar=0.1;
+		lifeTimeVar=5;
+		position[]={0,0,0};
+		positionVar[]={0.0099999998,0.0099999998,0.0099999998};
+		moveVelocityVar[]={1,3,1};
+		rotationVelocityVar=0;
+		sizeVar=0;
+		colorVar[]={0.050000001,0.050000001,0.050000001,5};
+		randomDirectionPeriodVar=0;
+		randomDirectionIntensityVar=0;
+		destroyOnWaterSurface=1;
+	};
+};
+
+class PSC_LaserImpact
+{
+	class PSC_LaserImpact
+	{
+		simulation="particles";
+		type="PSC_LaserImpact";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=0.2;
+	};
+};
 class CfgLights
 {
 	class PSC_LaserRed
@@ -42,18 +126,7 @@ class CfgLights
 	};
 };
 
-class PSC_Laser_Red
-{
-	class PSC_Laser_Red_Eff
-	{
-		simulation="particles";
-		type="PSC_LaserRed";
-		position[]={0,0,0};
-		intensity=0;
-		interval=1;
-		lifeTime=2;
-	};
-};
+
 
 class CfgAmmo
 {
@@ -397,7 +470,7 @@ class CfgAmmo
 		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d";
 		caliber = 1;
 		brightness= 1000;
-		cartridge = "FxCartridge_556";
+		cartridge = "";
 		coefgravity=0;
 		cost = 1;
 		timeToLive = 1;
@@ -663,17 +736,17 @@ class CfgAmmo
 			Hit_Foliage_Palm = "ImpactLeavesPalm";
 			Hit_Foliage_Pine = "ImpactLeavesPine";
 			hitFoliage = "ImpactLeaves";
-			hitGlass = "ImpactGlass";
-			hitGlassArmored = "ImpactGlassThin";
-			hitWood = "ImpactWood";
-			hitHay = "ImpactHay";
-			hitMetal = "ImpactMetal";
-			hitMetalPlate = "ImpactMetal";
-			hitBuilding = "ImpactPlaster";
-			hitPlastic = "ImpactPlastic";
-			hitRubber = "ImpactRubber";
-			hitTyre = "ImpactTyre";
-			hitConcrete = "ImpactConcrete";
+			hitGlass = "PSC_LaserImpact";
+			hitGlassArmored = "PSC_LaserImpact";
+			hitWood = "PSC_LaserImpact";
+			hitHay = "PSC_LaserImpact";
+			hitMetal = "PSC_LaserImpact";
+			hitMetalPlate = "PSC_LaserImpact";
+			hitBuilding = "PSC_LaserImpact";
+			hitPlastic = "PSC_LaserImpact";
+			hitRubber = "PSC_LaserImpact";
+			hitTyre = "PSC_LaserImpact";
+			hitConcrete = "PSC_LaserImpact";
 			hitMan = "ImpactEffectsBlood";
 			hitGroundSoft = "ImpactEffectsSmall";
 			hitGroundRed = "ImpactEffectsRed";
@@ -800,7 +873,7 @@ class CfgAmmo
 		suppressionRadiusHit = 8;
 		aiAmmoUsageFlags = 64;
 	};
-	class PSC_Bullet_556_Tracer: PSC_Bullet_Base
+	class PSC_Bullet_556_Tracer: PSC_Bullet_556
 	{
 		airLock = 1;
 		hit = 9;
@@ -822,28 +895,27 @@ class CfgAmmo
 		suppressionRadiusHit = 8;
 		aiAmmoUsageFlags = 64;
 	};
-	class PSC_Laser_556: PSC_Laser_Base
+	class PSC_Laser_762: PSC_Laser_Base
 	{
-		airLock = 1;
-		hit = 9;
-		indirectHit = 0;
-		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d";
-		indirectHitRange = 0;
-		cost = 1;
-		typicalSpeed = 1000;
-		airFriction = 0;
-		waterFriction = 0;
-		caliber = 0.869565;
-		tracerScale = 1;
-		tracerStartTime = 0;
-		tracerEndTime = 2;
-		audibleFire = 35;
-		initTime=0;
-		dangerRadiusBulletClose = 8;
-		dangerRadiusHit = 12;
-		suppressionRadiusBulletClose = 6;
-		suppressionRadiusHit = 8;
-		aiAmmoUsageFlags = 64;
+		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d"; //NIARMS 7.62x51
+		airFriction = -0.00100899;
+        typicalSpeed = 908.4;
+        hit = 13.92;
+        tracerScale = 1.2; 
+        tracerStartTime = 0.073;  
+        tracerEndTime = 2.15957;  
+        caliber = 1.123;
+        deflecting = 22;
+        ACE_caliber = 7.823;
+        ACE_bulletLength = 28.956;
+        ACE_bulletMass = 9.4608;
+        ACE_ammoTempMuzzleVelocityShifts[] = { -26.55, -25.47, -22.85, -20.12, -16.98, -12.80, -7.64, -1.53, 5.96, 15.17, 26.19 };
+        ACE_ballisticCoefficients[] = { 0.2 };
+        ACE_velocityBoundaries[] = {};
+        ACE_standardAtmosphere = "ICAO";
+        ACE_dragModel = 7;
+        ACE_muzzleVelocities[] = { 700, 800, 820, 833, 845 };
+        ACE_barrelLengths[] = { 254.0, 406.4, 508.0, 609.6, 660.4 };
 	};
 	
 };
@@ -901,7 +973,7 @@ class CfgMagazines
 	{
 		author = "$STR_PSC_Author";
 		displayName = "$STR_PSC_Fusion_Cell";
-		ammo = "PSC_Laser_556";
+		ammo = "PSC_Laser_762";
 		scope = 2;
 		count = 50;
 	};
