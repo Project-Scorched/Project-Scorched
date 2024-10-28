@@ -22,18 +22,8 @@ class CfgPatches
 
 class CfgCloudlets
 {
-	class PSC_Laser_Red
-	{
-		class PSC_Laser_Red_Eff
-		{
-			simulation="particles";
-			type="PSC_LaserRed";
-			position[]={0,0,0};
-			intensity=0;
-			interval=1;
-			lifeTime=2;
-		};
-	};
+	
+	class Default;
 	class PSC_LaserImpact: Default //JLTS Config Laser
 	{
 		interval=0.00089999998;
@@ -104,6 +94,7 @@ class PSC_LaserImpact
 		lifeTime=0.2;
 	};
 };
+
 class CfgLights
 {
 	class PSC_LaserRed
@@ -126,7 +117,18 @@ class CfgLights
 	};
 };
 
-
+class PSC_Laser_Effect 
+{
+	class PSC_Laser_Red
+	{
+		simulation="light";
+		type="PSC_LaserRed";
+		position[]={0,0,0};
+		intensity=0;
+		interval=1;
+		lifeTime=6;
+	};
+};
 
 class CfgAmmo
 {
@@ -478,9 +480,9 @@ class CfgAmmo
 		tracerStartTime = -1;
 		muzzleEffect = "";
 		waterEffectOffset = 0.8;
-		//flaresize=5;
-		//effectflare="FlareShell";
-		effectFly = "PSC_Laser_Red";
+		flaresize=5;
+		effectflare="FlareShell";
+		effectFly = "PSC_Laser_Effect";
 		aiAmmoUsageFlags = "64 + 128 + 256";
 		soundImpactDefault1[] = {"A3\Sounds_F\weapons\Grenades\Grenade_Roll",2.5118864,1,200};
 		impactGroundSoft[] = {"soundImpactDefault1",1};
@@ -933,7 +935,7 @@ class CfgMagazines
 		modelSpecialIsProxy = 1;
 		count=30;
         mass=10;
-		initspeed=1000;
+		initspeed=500;
 		tracersEvery=1;
 		lastRoundsTracer=50;
 		descriptionShort="Standard Fusion Cell";
