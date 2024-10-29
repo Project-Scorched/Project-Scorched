@@ -1,5 +1,7 @@
 class CfgPatches
 {
+	class PSC_AEP7
+	{
      requiredAddons[] = 
         {
 			"A3_Weapons_F" //A3 Weapons Config.
@@ -14,6 +16,7 @@ class CfgPatches
         };
         author = "$STR_PSC_Author";
 		addonRootClass = "PSC_Weapons"; // Subconfigs
+	};
 };
 class Mode_SemiAuto;
 class MuzzleSlot;
@@ -50,7 +53,7 @@ class CfgWeapons
 	
     class PSC_Pistol_Base: Pistol_Base_F
     {
-        author = "$STR_PSC_Author"
+        author = "$STR_PSC_Author";
 		scope = 0;
 		model = "PSC_Weapons\AEP7\PSC_AEP7.p3d";
 		//picture = "\A3\weapons_F\Pistols\P07\data\UI\gear_p07_x_ca.paa";
@@ -58,7 +61,7 @@ class CfgWeapons
 		hiddenSelections[] = 
 		{
 			"camo"
-		}
+		};
 		magazines[] = 
         {
             "PSC_MicrofusionCell_M"
@@ -137,7 +140,7 @@ class CfgWeapons
 	class PSC_AEP7_W: PSC_Pistol_Base
 	{
 		displayName = "$STR_PSC_AEP7_W";
-		scope = 0;
+		scope = 2;
 		descriptionShort = "Fusion Powered Laser Pistol";
 		hiddenSelectionsTextures[] = 
 		{

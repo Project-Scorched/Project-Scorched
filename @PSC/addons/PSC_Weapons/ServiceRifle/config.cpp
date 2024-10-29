@@ -106,6 +106,7 @@ class CfgWeapons
 	class Rifle_Base_F: Rifle
 	{
 		class WeaponsSlotsInfo;
+		class AnimationSources;
 	};
 
     class PSC_Rifle_Base_W:	Rifle_Base_F
@@ -147,6 +148,14 @@ class CfgWeapons
 			//class PointerSlot : PointerSlot {};
 			//allowedSlots[] = { 901 }; // you simply cannot put this into your pants
         };
+		class AnimationSources
+		{
+			class ZaslehRot
+			{
+				source = "ammorandom";
+				//weapon = "PSC_ServiceRifle_Base_W";
+			};
+		};
         distanceZoomMin = 300;
         distanceZoomMax = 300;
         descriptionShort = "";
