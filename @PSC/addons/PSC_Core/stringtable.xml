@@ -53,6 +53,11 @@
             <English>NCR Trooper (Woodland)</English>
         </Key>
     </Package>
+    <Package name = "Vehicles_G">
+        <Key ID = "STR_PSC_Tank_Sherman_V">
+            <English>Wasteland Tank</English>
+        </Key>
+    </Package> 
     <Package name = "Weapons">
         <Key ID = "STR_PSC_556_ServiceRifle_M">
             <English>20rnd Service Rifle Mag (5.56)</English>
@@ -69,5 +74,6 @@
         <Key ID = "STR_PSC_AER9_W">
             <English>AER-9</English>
         </Key>
+    </Package>
 </Project>
 

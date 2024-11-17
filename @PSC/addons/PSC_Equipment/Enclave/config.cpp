@@ -1,6 +1,6 @@
 class CfgPatches
 {
-    class PSC_Enclave
+    class PSC_Enclave_Equipment
     {
         units[] = 
 		{

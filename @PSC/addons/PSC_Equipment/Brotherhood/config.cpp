@@ -1,6 +1,6 @@
 class CfgPatches
 {
-    class PSC_Brotherhood
+    class PSC_Brotherhood_Equipment
     {
         units[] = 
 		{
