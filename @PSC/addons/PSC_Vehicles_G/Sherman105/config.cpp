@@ -1,10 +1,9 @@
-#include "include.hpp"
+#include "includes.hpp"
 class CfgPatches
 {
-	class PSC_Sherman
+	class PSC_Newton
 	{
 		author = "Luca + Queen"; //luca did 90% of the work, I'm just fixing / editing his stuff
-		url = "";
 		requiredaddons[] = 
 		{
 			"A3_Soft_F",
@@ -14,11 +13,11 @@ class CfgPatches
 		requiredversion = 1.0;
 		units[] = 
 		{
-			"PSC_Sherman_V"
+			"PSC_Newton_VE"
 		};
 		weapons[] = {};
 		magazines[] = {};
-		addonRootClass = "PSC_Vehicles";
+		addonRootClass = "PSC_Vehicles_G";
 	};
 };
 
@@ -72,7 +71,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class PSC_Sherman_Commander_Turret
+	class PSC_Sherman_Commander_Turret;
 	
 	class cannon_105mm;
 	class PSC_Sherman_105_Cannon : cannon_105mm {
@@ -83,5 +82,6 @@ class CfgWeapons
 
 
 
-
+class CfgVehicles {
 #include "CfgVehicles.hpp"
+};

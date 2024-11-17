@@ -125,7 +125,7 @@ class Tank_F: Tank
 	};
 };
 
-class PSC_Sherman_Base_Ve: Tank_F
+class PSC_Newton_Base_VE: Tank_F
 {
 	scope = 1; 
 	scopeCurator = 1;
@@ -142,14 +142,14 @@ class PSC_Sherman_Base_Ve: Tank_F
 	hiddenSelectionsTextures[] = 
 	{
 		"\PSC_Vehicles_G\Sherman105\data\body_co.paa",
-		"\PSC_Vehicles_G\Sherman105\data\details_co.paa",
+		"\PSC_Vehicles_G\Sherman105\data\detail_co.paa",
 		"\PSC_Vehicles_G\Sherman105\data\turret_co.paa",
-		"\PSC_Vehicles_G\Sherman105\data\50cal_co.paa",
+		"\PSC_Vehicles_G\Sherman105\data\hmg_co.paa",
 		"\PSC_Vehicles_G\Sherman105\data\plow_1_co.paa",
 		"\PSC_Vehicles_G\Sherman105\data\plow_2_co.paa"
 	};
 
-	model = "\PSC_Vehicles_G\Sherman105\sherman.p3d";
+	model = "\PSC_Vehicles_G\Sherman105\PSC_Sherman105.p3d";
 //	picture	= "15thNCR_Tank\data\ui\pic_ca.paa";
 //	icon = "15thNCR_Tank\data\ui\map_icon_ca.paa";
 
@@ -650,23 +650,23 @@ class PSC_Sherman_Base_Ve: Tank_F
 	class Damage {
 		tex[] = {};
 		mat[] = {
-			"PSC_Vehicles_G\Sherman105\textures\body.rvmat",
+			"PSC_Vehicles_G\Sherman105\data\body.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_damage.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_destruct.rvmat",
 			
-			"15thNCR_Tank\data\textures\details.rvmat",
+			"PSC_Vehicles_G\Sherman105\data\detail.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_damage.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_destruct.rvmat",
 			
-			"15thNCR_Tank\data\textures\turret.rvmat",
+			"PSC_Vehicles_G\Sherman105\data\turret.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_damage.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_destruct.rvmat",
 			
-			"15thNCR_Tank\data\textures\50cal.rvmat",
+			"PSC_Vehicles_G\Sherman105\data\hmg.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_damage.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_destruct.rvmat",
 			
-			"15thNCR_Tank\data\textures\tracks.rvmat",
+			"PSC_Vehicles_G\Sherman105\data\tracks.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_damage.rvmat",
 			"A3\Air_F_Gamma\Plane_Fighter_03\Data\Plane_Fighter_03_body_1_destruct.rvmat"
 		};
@@ -825,13 +825,13 @@ class PSC_Sherman_Base_Ve: Tank_F
 	tf_isolatedAmount = 0.85;
 };
 
-class PSC_Sherman_Ve: PSC_Sherman_Base_Ve
+class PSC_Newton_VE: PSC_Newton_Base_VE
 {
 	scope = 2; 
 	scopeCurator = 2;
 	scopeArsenal = 2;
 	author = "Luca + Queen";
-	displayName = "M1 (105)";
+	displayName = "M1 Newton (105)";
 	faction	= "BLU_F";
 	crew = "B_Survivor_F";
 	side = 1;
