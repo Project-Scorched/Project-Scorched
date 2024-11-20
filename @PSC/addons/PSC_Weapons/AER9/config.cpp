@@ -43,7 +43,6 @@ class CfgSoundShaders
 		range = 1800;
 		rangeCurve[] = {{0,0},{50,0},{300,1},{1800,1}};
 		volume = 0.8;
-		samples[] = {{"PSC_Weapons\AER9\data\sounds\AER9_Shot_Far_1.wss",1},{"PSC_Weapons\AER9\data\sounds\AER9_Shot_Far_2.wss",1},{"PSC_Weapons\AER9\data\sounds\AER9_Shot_Far_3.wss",1}};
 	};
 };
 
