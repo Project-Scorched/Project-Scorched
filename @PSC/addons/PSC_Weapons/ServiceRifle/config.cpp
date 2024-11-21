@@ -237,6 +237,19 @@ class CfgWeapons
 			maxRangeProbab = 0.1;
 			aiRateOfFire = 1e-06;
 		};
+		class AnimationSources : AnimationSources
+		{
+			class recoil_source 
+			{
+				source = "reload";
+				weapon = "PSC_ServiceRifle_Base_W";
+			};
+			class ammoRandom_source
+			{
+				source = "ZaslehRot";
+				weapon = "PSC_ServiceRifle_Base_W"
+			};
+		};
     };
 
 	class PSC_ServiceRifle_Base_W: PSC_Rifle_Base_W

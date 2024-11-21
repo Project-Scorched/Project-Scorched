@@ -274,58 +274,71 @@ class PSC_Newton_Base_VE: Tank_F
 			{
 				class CommanderOptics: CommanderOptics
 				{
-					body = "ObsTurret";
-					gun = "ObsGun";
-					memoryPointGunnerOutOptics="commanderview";
-					memoryPointGunnerOptics="commanderview";
-					minElev=-8;
+					body="obsbturret";
+					gun="obsbgun";
+					animationSourceBody="obsbturret";
+					animationSourceGun="obsbgun";
+					stabilizedInAxes=3;
+					maxHorizontalRotSpeed=1.8;
+					maxVerticalRotSpeed=0.18000001;
+					soundServo[]=
+					{
+						"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
+						1,
+						1,
+						30
+					};
+					soundServoVertical[]=
+					{
+						"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
+						1,
+						1,
+						30
+					};
+					minElev=-10;
 					maxElev=45;
 					initElev=0;
 					minTurn=-360;
 					maxTurn=360;
 					initTurn=0;
-					minCamElev=-90;
-					maxCamElev=90;
-					memoryPointGun = "konec hlavne2";
-					gunBeg = "usti hlavne2";
-					gunEnd = "konec hlavne2";
-					weapons[]={};
-					magazines[]={};
-					discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000,1100,1200,1300,1400,1500,1600,1700,1800,1900,2000};
-					discreteDistanceInitIndex = 2;
-					soundServo[]=
+					memoryPointGun="usti hlavne3";
+					gunBeg="usti hlavne3";
+					gunEnd="konec hlavne3";
+					weapons[]=
 					{
-						"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",
-						0.17782794,
-						1,
-						10
+						"HMG_M2"
 					};
-					soundServoVertical[]=
+					magazines[]=
 					{
-						"A3\Sounds_F\vehicles\soft\noises\servo_turret_MRAP01",
-						0.17782794,
-						1,
-						10
+						"100Rnd_127x99_mag_Tracer_Yellow",
+						"100Rnd_127x99_mag_Tracer_Yellow",
+						"100Rnd_127x99_mag_Tracer_Yellow",
+						"100Rnd_127x99_mag_Tracer_Yellow",
+						"100Rnd_127x99_mag_Tracer_Yellow",
+						"100Rnd_127x99_mag_Tracer_Yellow",
+						"100Rnd_127x99_mag_Tracer_Yellow"
 					};
-					forceHideGunner=false;
-					gunnerAction = "Gunner_MBT_02_arty_F_out";
-					gunnerInAction = "Gunner_MBT_02_arty_F_in";
-					gunnerGetInAction="GetInLow";
-					gunnerGetOutAction="GetOutLow";
+					discreteDistance[]={400};
+					discreteDistanceInitIndex=0;
+					canUseScanners=0;
+					showCrewAim=0;
+					allowTabLock=0;
+					memoryPointGunnerOutOptics="commanderview";
+					memoryPointGunnerOptics="commanderview";
 					gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
 					gunnerOutOpticsModel="";
 					gunnerOpticsEffect[]={};
-					isPersonTurret=0;
-					outGunnerMayFire = false;
-					inGunnerMayFire = true;
-					personTurretAction="vehicle_turnout_1";
-					minOutElev=-45;
-					maxOutElev=65;
-					initOutElev=0;
-					minOutTurn=-90;
-					maxOutTurn=90;
-					initOutTurn=0;
+					gunnerHasFlares=1;
 					gunnerForceOptics=1;
+					LodTurnedOut=0;
+					gunnerAction = "Gunner_MBT_02_arty_F_out";
+					gunnerInAction = "Gunner_MBT_02_arty_F_in";
+					gunnerGetInAction="GetInHigh";
+					gunnerGetOutAction="GetOutHigh";
+					startEngine=0;
+					viewGunnerInExternal=1;
+					outGunnerMayFire=0;
+					inGunnerMayFire=1;
 					class ViewGunner: ViewGunner
 					{
 					};
@@ -342,8 +355,7 @@ class PSC_Newton_Base_VE: Tank_F
 						maxFov=0.6;
 						visionMode[]=
 						{
-							"Normal",
-							"NVG"
+							"Normal"
 						};
 					};
 					class OpticsIn {
@@ -377,8 +389,6 @@ class PSC_Newton_Base_VE: Tank_F
 					};
 					turretInfoType = "RscOptics_MBT_01_commander";
 					usePip=1;
-					showCrewAim=1;
-					startEngine=0;
 					class HitPoints
 					{
 						class HitComTurret
@@ -386,7 +396,7 @@ class PSC_Newton_Base_VE: Tank_F
 							armor=0.1;
 							material=-1;
 							name="commander_turret_hit";
-							visual="ObsTurret";
+							visual="ObsbTurret";
 							passThrough=0;
 							minimalHit=0.1;
 							explosionShielding=1;
@@ -398,7 +408,7 @@ class PSC_Newton_Base_VE: Tank_F
 							armor=0.1;
 							material=-1;
 							name="commander_gun_hit";
-							visual="ObsGun";
+							visual="obsbgun";
 							passThrough=0;
 							minimalHit=0.1;
 							explosionShielding=1;
@@ -406,10 +416,6 @@ class PSC_Newton_Base_VE: Tank_F
 							isGun=1;
 						};
 					};
-					stabilizedInAxes=3;
-					maxHorizontalRotSpeed = 3;
-					maxVerticalRotSpeed = 3;
-					viewGunnerInExternal=0;
 				};
 			};
 			
@@ -621,7 +627,7 @@ class PSC_Newton_Base_VE: Tank_F
 			
 			class HitPoints {};
 		};
-		class HMG: HullTurret
+		/* class HMG: HullTurret
 		{
 			body="obsbturret";
 			gun="camo_50cal";
@@ -635,6 +641,78 @@ class PSC_Newton_Base_VE: Tank_F
 			
 			memoryPointGun = "usti hlavne3";
 			selectionFireAnim = "zasleh3";
+		}; */
+		
+		class CargoTurret_01: CargoTurret
+		{
+			gunnerAction="passenger_bench_1";
+			gunnerGetInAction="GetInHigh";
+			gunnerGetOutAction="GetOutHigh";
+			weapons[]=
+			{
+				"FakeWeapon"
+			};
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_R1";
+			gunnerCompartments="Compartment2";
+			memoryPointGunnerOptics="";
+			canHideGunner=0;
+			outGunnerMayFire=0;
+			LODTurnedIn=0;
+			LODTurnedOut=0;
+			LodOpticsIn=0;
+			LodOpticsOut=0;
+			proxyIndex=1;
+			memoryPointsGetInGunner="pos cargo 1";
+			memoryPointsGetInGunnerDir="pos cargo 1 dir";
+			ejectDeadGunner=1;
+			hideWeaponsGunner=1;
+			class Hitpoints
+			{
+			};
+		};
+		class CargoTurret_02: CargoTurret_01
+		{
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_L1";
+			gunnerAction="passenger_bench_1";
+			proxyIndex=2;
+			memoryPointsGetInGunner="pos cargo 2";
+			memoryPointsGetInGunnerDir="pos cargo 2 dir";
+			class Hitpoints
+			{
+			};
+		};
+		class CargoTurret_03: CargoTurret_01
+		{
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_R2";
+			gunnerAction="passenger_bench_1";
+			proxyIndex=3;
+			memoryPointsGetInGunner="pos cargo 3";
+			memoryPointsGetInGunnerDir="pos cargo 3 dir";
+			class Hitpoints
+			{
+			};
+		};
+		class CargoTurret_04: CargoTurret_01
+		{
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_L2";
+			gunnerAction="passenger_bench_1";
+			proxyIndex=4;
+			memoryPointsGetInGunner="pos cargo 4";
+			memoryPointsGetInGunnerDir="pos cargo 4 dir";
+			class Hitpoints
+			{
+			};
+		};
+		class CargoTurret_05: CargoTurret_01
+		{
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_F";
+			gunnerAction="passenger_bench_1";
+			proxyIndex=5;
+			memoryPointsGetInGunner="pos cargo 5";
+			memoryPointsGetInGunnerDir="pos cargo 5 dir";
+			class Hitpoints
+			{
+			};
 		};
 
 	};
