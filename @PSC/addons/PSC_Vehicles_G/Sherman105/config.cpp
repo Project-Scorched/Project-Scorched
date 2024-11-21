@@ -71,6 +71,15 @@ class CfgWeapons
 			};
 		};
 	};
+	class PSC_Sherman_HMG : LMG_coax_ext {
+		class GunParticles {
+			class FirstEffect {
+				effectName = "MachineGun3";
+				positionName = "usti hlavne3";
+				directionName = "konec hlavne3";
+			};
+		};
+	};
 	class PSC_Sherman_Commander_Turret;
 	
 	class cannon_105mm;

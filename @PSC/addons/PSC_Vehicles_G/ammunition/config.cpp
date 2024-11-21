@@ -22,7 +22,7 @@ class CfgPatches
     };
 };
 
-class cfgMagazines {
+class CfgMagazines {
 	class 40Rnd_105mm_APFSDS_T_Red;
 	class PSC_12Rnd_105mm_APFSDS_Red: 40Rnd_105mm_APFSDS_T_Red {
 		displayname = "12Rnd 100mm APFSDS";

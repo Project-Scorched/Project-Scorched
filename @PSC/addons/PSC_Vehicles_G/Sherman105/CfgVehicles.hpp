@@ -149,7 +149,7 @@ class PSC_Newton_Base_VE: Tank_F
 		"\PSC_Vehicles_G\Sherman105\data\plow_2_co.paa"
 	};
 
-	model = "\PSC_Vehicles_G\Sherman105\PSC_Sherman105.p3d";
+	model = "\PSC_Vehicles_G\Sherman105\PSC_Newton105.p3d";
 //	picture	= "15thNCR_Tank\data\ui\pic_ca.paa";
 //	icon = "15thNCR_Tank\data\ui\map_icon_ca.paa";
 
@@ -621,8 +621,25 @@ class PSC_Newton_Base_VE: Tank_F
 			
 			class HitPoints {};
 		};
+		class HMG: HullTurret
+		{
+			body="obsbturret";
+			gun="camo_50cal";
+			gunBeg = "usti hlavne2";
+			gunEnd = "konec hlavne2";
+			animationSourceBody = "obsbturret";
+			animationSourceGun = "camo_50cal";
+			gunnerName = "Top Gunner";
+			weapons[] = {"PSC_Sherman_HMG"};
+			magazines[] = {"100Rnd_127x99_mag_Tracer_Yellow", "100Rnd_127x99_mag_Tracer_Yellow"};
+			
+			memoryPointGun = "usti hlavne3";
+			selectionFireAnim = "zasleh3";
+		};
+
 	};
 
+	
 
 	class AnimationSources : AnimationSources
 	{
