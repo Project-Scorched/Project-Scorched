@@ -901,7 +901,7 @@ class CfgAmmo
 	{
 		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d"; //NIARMS 7.62x51
 		airFriction = -0.00100899;
-        typicalSpeed = 908.4;
+        typicalSpeed = 700;
         hit = 13.92;
         tracerScale = 1.2; 
         tracerStartTime = 0.073;  
@@ -968,7 +968,58 @@ class CfgMagazines
 
 	class PSC_556_ServiceRifle_Tracer_M: PSC_556_Core_ServiceRifle_M
 	{
+		author = "$STR_PSC_Author";
+		scope = 2;
+		ammo = "PSC_Bullet_556_Tracer";
+		displayName = "$STR_PSC_556_ServiceRifle_M";
+		count = 20;
+		mass = 10;
+		tracersEvery = 1;
+		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
+	};
 
+	class PSC_556_ServiceRifle_Surplus_M: PSC_556_Core_ServiceRifle_M
+	{
+		author = "$STR_PSC_Author";
+		scope = 2;
+		displayName = "$STR_PSC_556_ServiceRifle_M";
+		ammo = "PSC_Bullet_556_Surplus";
+		count = 35;
+		mass = 10;
+		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
+	};
+
+	class PSC_556_ServiceRifle_Match_M: PSC_556_Core_ServiceRifle_M
+	{
+		author = "$STR_PSC_Author";
+		scope = 2;
+		displayName = "$STR_PSC_556_ServiceRifle_M";
+		ammo = "PSC_Bullet_556_Match";
+		count = 12;
+		mass = 10;
+		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
+	};
+	
+	class PSC_556_ServiceRifle_AP_M: PSC_556_Core_ServiceRifle_M
+	{
+		author = "$STR_PSC_Author";
+		scope = 2;
+		displayName = "$STR_PSC_556_ServiceRifle_M";
+		ammo = "PSC_Bullet_556_AP";
+		count = 15;
+		mass = 10;
+		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
+	};
+
+	class PSC_556_ServiceRifle_FMJ_M: PSC_556_Core_ServiceRifle_M
+	{
+		author = "$STR_PSC_Author";
+		scope = 2;
+		displayName = "$STR_PSC_556_ServiceRifle_M";
+		ammo = "PSC_Bullet_556_FMJ";
+		count = 15;
+		mass = 10;
+		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
 
 	class PSC_FusionCell_M: PSC_FusionCellCore_M
@@ -987,7 +1038,12 @@ class CfgMagazineWells
 	{
 		PSC_ServiceRifle_Magazines[] = 
 		{
-			"PSC_556_ServiceRifle_M"
+			"PSC_556_ServiceRifle_M",
+			"PSC_556_ServiceRifle_Tracer_M",
+			"PSC_556_ServiceRifle_Surplus_M",
+			"PSC_556_ServiceRifle_Match_M",
+			"PSC_556_ServiceRifle_AP_M",
+			"PSC_556_ServiceRifle_FMJ_M"
 		};
 	};
 	class PSC_AER9_MW

@@ -119,7 +119,12 @@ class CfgWeapons
 		};
 		magazines[] = 
 		{
-			"PSC_556_ServiceRifle_M"
+			"PSC_556_ServiceRifle_M",
+			"PSC_556_ServiceRifle_Tracer_M",
+			"PSC_556_ServiceRifle_Surplus_M",
+			"PSC_556_ServiceRifle_Match_M",
+			"PSC_556_ServiceRifle_AP_M",
+			"PSC_556_ServiceRifle_FMJ_M"
 		};
 		magazineWell[] =
 		{
