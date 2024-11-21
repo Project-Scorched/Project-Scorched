@@ -848,7 +848,7 @@ class PSC_Newton_VE: PSC_Newton_Base_VE
 	scopeCurator = 2;
 	scopeArsenal = 2;
 	author = "Luca + Queen";
-	displayName = "M1 Newton (105)";
+	displayName = "$STR_PSC_Newton_VE";
 	faction	= "BLU_F";
 	crew = "B_Survivor_F";
 	side = 1;

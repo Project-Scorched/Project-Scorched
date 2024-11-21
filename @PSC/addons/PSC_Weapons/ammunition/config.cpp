@@ -971,7 +971,7 @@ class CfgMagazines
 		author = "$STR_PSC_Author";
 		scope = 2;
 		ammo = "PSC_Bullet_556_Tracer";
-		displayName = "$STR_PSC_556_ServiceRifle_M";
+		displayName = "$STR_PSC_556_ServiceRifle_Tracer_M";
 		count = 20;
 		mass = 10;
 		tracersEvery = 1;
@@ -982,7 +982,7 @@ class CfgMagazines
 	{
 		author = "$STR_PSC_Author";
 		scope = 2;
-		displayName = "$STR_PSC_556_ServiceRifle_M";
+		displayName = "$STR_PSC_556_ServiceRifle_Surplus_M";
 		ammo = "PSC_Bullet_556_Surplus";
 		count = 35;
 		mass = 10;
@@ -993,7 +993,7 @@ class CfgMagazines
 	{
 		author = "$STR_PSC_Author";
 		scope = 2;
-		displayName = "$STR_PSC_556_ServiceRifle_M";
+		displayName = "$STR_PSC_556_ServiceRifle_Match_M";
 		ammo = "PSC_Bullet_556_Match";
 		count = 12;
 		mass = 10;
@@ -1004,7 +1004,7 @@ class CfgMagazines
 	{
 		author = "$STR_PSC_Author";
 		scope = 2;
-		displayName = "$STR_PSC_556_ServiceRifle_M";
+		displayName = "$STR_PSC_556_ServiceRifle_AP_M";
 		ammo = "PSC_Bullet_556_AP";
 		count = 15;
 		mass = 10;
@@ -1015,7 +1015,7 @@ class CfgMagazines
 	{
 		author = "$STR_PSC_Author";
 		scope = 2;
-		displayName = "$STR_PSC_556_ServiceRifle_M";
+		displayName = "$STR_PSC_556_ServiceRifle_FMJ_M";
 		ammo = "PSC_Bullet_556_FMJ";
 		count = 15;
 		mass = 10;
