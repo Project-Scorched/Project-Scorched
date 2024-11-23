@@ -50,6 +50,7 @@ class UnderBarrelSlot_rail;
 class PointerSlot_Rail;
 class PointerSlot_Pistol;
 class PointerSlot_Launcher;
+class AnimationSources;
 
 class CfgSoundShaders
 {
@@ -237,18 +238,10 @@ class CfgWeapons
 			maxRangeProbab = 0.1;
 			aiRateOfFire = 1e-06;
 		};
-		class AnimationSources : AnimationSources
+		
+		class AnimationSources: AnimationSources
 		{
-			class recoil_source 
-			{
-				source = "reload";
-				weapon = "PSC_ServiceRifle_Base_W";
-			};
-			class ammoRandom_source
-			{
-				source = "ZaslehRot";
-				weapon = "PSC_ServiceRifle_Base_W"
-			};
+			
 		};
     };
 
