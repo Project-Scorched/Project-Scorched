@@ -547,7 +547,7 @@ class PSC_Newton_Base_VE: Tank_F
 		class HullTurret: NewTurret
 		{
 			startEngine = false;
-			proxyIndex = 2;
+			proxyIndex = 1;
 			body="ObsATurret";
 			gun="ObsAGun";
 			gunBeg = "usti hlavne2";
@@ -661,7 +661,8 @@ class PSC_Newton_Base_VE: Tank_F
 			LODTurnedOut=0;
 			LodOpticsIn=0;
 			LodOpticsOut=0;
-			proxyIndex=1;
+			proxyType = "CPGunner";
+			proxyIndex=2;
 			memoryPointsGetInGunner="pos cargo 1";
 			memoryPointsGetInGunnerDir="pos cargo 1 dir";
 			ejectDeadGunner=1;
@@ -674,7 +675,7 @@ class PSC_Newton_Base_VE: Tank_F
 		{
 			gunnerName="$STR_A3_TURRETS_CARGOTURRET_L1";
 			gunnerAction="passenger_bench_1";
-			proxyIndex=2;
+			proxyIndex=3;
 			memoryPointsGetInGunner="pos cargo 2";
 			memoryPointsGetInGunnerDir="pos cargo 2 dir";
 			class Hitpoints
@@ -685,7 +686,7 @@ class PSC_Newton_Base_VE: Tank_F
 		{
 			gunnerName="$STR_A3_TURRETS_CARGOTURRET_R2";
 			gunnerAction="passenger_bench_1";
-			proxyIndex=3;
+			proxyIndex=4;
 			memoryPointsGetInGunner="pos cargo 3";
 			memoryPointsGetInGunnerDir="pos cargo 3 dir";
 			class Hitpoints
@@ -696,7 +697,7 @@ class PSC_Newton_Base_VE: Tank_F
 		{
 			gunnerName="$STR_A3_TURRETS_CARGOTURRET_L2";
 			gunnerAction="passenger_bench_1";
-			proxyIndex=4;
+			proxyIndex=5;
 			memoryPointsGetInGunner="pos cargo 4";
 			memoryPointsGetInGunnerDir="pos cargo 4 dir";
 			class Hitpoints
@@ -707,7 +708,7 @@ class PSC_Newton_Base_VE: Tank_F
 		{
 			gunnerName="$STR_A3_TURRETS_CARGOTURRET_F";
 			gunnerAction="passenger_bench_1";
-			proxyIndex=5;
+			proxyIndex=6;
 			memoryPointsGetInGunner="pos cargo 5";
 			memoryPointsGetInGunnerDir="pos cargo 5 dir";
 			class Hitpoints
