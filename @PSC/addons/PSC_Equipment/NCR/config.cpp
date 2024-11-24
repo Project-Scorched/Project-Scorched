@@ -324,14 +324,14 @@ class CfgVehicles
 		attendant = 0;							// Can this character heal soldiers?
 		//icon = "iconMan";				// If a character has a special role, a special icon shall be used.
 		//picture = "pictureMan";				// The same as above, but for the squad picture.
-		//backpack = "";		// Which backpack the character is wearing.
-		//weapons[] = { "arifle_MX_ACO_pointer_F", "hgun_P07_F", "Throw", "Put" };		// Which weapons the character has.
-		//respawnWeapons[] = { "arifle_MX_ACO_pointer_F", "hgun_P07_F", "Throw", "Put" };	// Which weapons the character respawns with.
+		backpack = "";		// Which backpack the character is wearing.
+		weapons[] = { "PSC_ServiceRifle_Base_W", ""};		// Which weapons the character has.
+		respawnWeapons[] = { "PSC_ServiceRifle_Base_W", ""};	// Which weapons the character respawns with.
 		//Items[] = { "FirstAidKit" };			// Which items the character has.
 		//RespawnItems[] = { "FirstAidKit" };		// Which items the character respawns with.
-		//magazines[] = { MAG_10(30Rnd_65x39_caseless_mag), MAG_3(16Rnd_9x21_Mag), "SmokeShell", "SmokeShellGreen", "Chemlight_green", "Chemlight_green", MAG_2(HandGrenade) };			// What ammunition the character has.
+		magazines[] = { };			// What ammunition the character has.
 		//respawnMagazines[] = { MAG_10(30Rnd_65x39_caseless_mag), MAG_3(16Rnd_9x21_Mag), "SmokeShell", "SmokeShellGreen", "Chemlight_green", "Chemlight_green", MAG_2(HandGrenade) };	// What ammunition the character respawns with.
-		//linkedItems[] = { "V_PlateCarrier1_rgr", "H_HelmetB", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "NVGoggles" };		// Which items the character has.
+		linkedItems[] = { "PSC_NCR_Trooper_Brown_V", "PSC_NCR_Trooper_Brown_H", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "NVGoggles" };		// Which items the character has.
 		//respawnLinkedItems[] = { "V_PlateCarrier1_rgr", "H_HelmetB", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "NVGoggles" };	// Which items the character respawns with.
     };
     class PSC_NCR_Trooper_Brown_UN: PSC_NCR_Trooper_Base_UN
