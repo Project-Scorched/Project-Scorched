@@ -715,6 +715,17 @@ class PSC_Newton_Base_VE: Tank_F
 			{
 			};
 		};
+		class CargoTurret_06: CargoTurret_01
+		{
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_F";
+			gunnerAction="passenger_bench_1";
+			proxyIndex=7;
+			memoryPointsGetInGunner="pos cargo 5";
+			memoryPointsGetInGunnerDir="pos cargo 5 dir";
+			class Hitpoints
+			{
+			};
+		};
 
 	};
 
