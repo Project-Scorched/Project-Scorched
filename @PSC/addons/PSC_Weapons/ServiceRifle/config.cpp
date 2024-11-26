@@ -106,7 +106,7 @@ class CfgWeapons
 	class Rifle;
 	class Rifle_Base_F: Rifle
 	{
-		class WeaponsSlotsInfo;
+		
 	};
 
     class PSC_Rifle_Base_W:	Rifle_Base_F
@@ -136,7 +136,7 @@ class CfgWeapons
         recoil = "PSC_Rifle_Base_Recoil";
         maxZeroing = 800;
 		selectionFireAnim = "zasleh";
-        class WeaponSlotsInfo
+/*         class WeaponSlotsInfo
         {
 			class MuzzleSlot : SlotInfo
 			{
@@ -152,7 +152,7 @@ class CfgWeapons
 			//class CowsSlot : CowsSlot {};
 			//class PointerSlot : PointerSlot {};
 			//allowedSlots[] = { 901 }; // you simply cannot put this into your pants
-        };
+        }; */
         distanceZoomMin = 300;
         distanceZoomMax = 300;
         descriptionShort = "";
@@ -237,11 +237,6 @@ class CfgWeapons
 			maxRange = 30;
 			maxRangeProbab = 0.1;
 			aiRateOfFire = 1e-06;
-		};
-		
-		class AnimationSources: AnimationSources
-		{
-			
 		};
     };
 
