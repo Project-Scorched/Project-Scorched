@@ -137,13 +137,14 @@ class PSC_Newton_Base_VE: Tank_F
 	crew = "I_Survivor_F";
 	hiddenSelections[] = 
 	{
-		"camo_body","camo_details","camo_turret","camo_50cal","camo_plow_1","camo_plow_2"
+		"camo_body","camo_details","camo_turret","camo_tracks", "camo_50cal","camo_plow_1","camo_plow_2"
 	};
 	hiddenSelectionsTextures[] = 
 	{
 		"\PSC_Vehicles_G\Sherman105\data\body_co.paa",
 		"\PSC_Vehicles_G\Sherman105\data\detail_co.paa",
 		"\PSC_Vehicles_G\Sherman105\data\turret_co.paa",
+		"\PSC_Vehicles_G\Sherman105\data\NCR\turret_co.paa",
 		"\PSC_Vehicles_G\Sherman105\data\hmg_co.paa",
 		"\PSC_Vehicles_G\Sherman105\data\plow_1_co.paa",
 		"\PSC_Vehicles_G\Sherman105\data\plow_2_co.paa"
@@ -779,20 +780,28 @@ class PSC_Newton_Base_VE: Tank_F
 		};
 	};
 
-	class TextureSources
+/* 	class TextureSources
 	{
-		class Sand
+		class NCR
 		{
-			displayName = "Sand";
-			author = "Moose";
-		//	textures[] = {"\15thNCR_Tank\data\textures\body_co.paa","\15thNCR_Tank\data\textures\details_co.paa","\15thNCR_Tank\data\textures\turret_co.paa","\15thNCR_Tank\data\textures\50cal_co.paa","\15thNCR_Tank\data\textures\tank_plow_1_co.paa","\15thNCR_Tank\data\textures\tank_plow_2_co.paa"};
+			displayName = "NCR";
+			author = "Queen";
+			textures[] = 
+			{
+				"\PSC_Vehicles_G\Sherman105\data\NCR\body_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\NCR\detail_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\NCR\turret_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\NCR\hmg_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\plow_1_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\plow_2_co.paa"
+			};
 			factions[] = {};
 		};
-	};
-	textureList[] =
+	}; */
+/* 	textureList[] =
 	{
-		"Sand", 1
-	};
+		"NCR", 1
+	}; */
 
 	#include "tank_sounds.hpp"
 	#include "tank_physx.hpp"
@@ -932,15 +941,38 @@ class PSC_Newton_Base_VE: Tank_F
 	tf_isolatedAmount = 0.85;
 };
 
-class PSC_Newton_VE: PSC_Newton_Base_VE
+class PSC_Newton105_VE: PSC_Newton_Base_VE
 {
 	scope = 2; 
 	scopeCurator = 2;
 	scopeArsenal = 2;
 	author = "Luca + Queen";
 	displayName = "$STR_PSC_Newton_VE";
-	faction	= "BLU_F";
+	faction	= "PSC_Wastelander";
 	crew = "B_Survivor_F";
 	side = 1;
 	editorpreview = "";
+};
+
+class PSC_Newton105_NCR_VE: PSC_Newton_Base_VE
+{
+	scope = 2; 
+	scopeCurator = 2;
+	scopeArsenal = 2;
+	author = "Luca + Queen";
+	displayName = "$STR_PSC_Newton_VE";
+	faction	= "PSC_NCR";
+	crew = "PSC_NCR_Trooper_Brown_UN";
+	side = 1;
+	editorpreview = "";
+	hiddenSelectionsTextures[] = 
+	{
+		"\PSC_Vehicles_G\Sherman105\data\NCR\body_co.paa",
+		"\PSC_Vehicles_G\Sherman105\data\NCR\detail_co.paa",
+		"\PSC_Vehicles_G\Sherman105\data\NCR\turret_co.paa",
+		"\PSC_Vehicles_G\Sherman105\data\NCR\tracks_co.paa",
+		"\PSC_Vehicles_G\Sherman105\data\NCR\hmg_co.paa",
+		"\PSC_Vehicles_G\Sherman105\data\plow_1_co.paa",
+		"\PSC_Vehicles_G\Sherman105\data\plow_2_co.paa"
+	};
 };

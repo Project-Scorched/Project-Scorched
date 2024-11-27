@@ -303,6 +303,8 @@ class CfgVehicles
     {
         author = "$STR_PSC_Author";
         displayName = "NCR Trooper (Base)";
+        faction = "PSC_NCR";
+        editorSubcatgory = "EdSubcat_Personnel";
         scope = 0;
         scopeCurator = 0;
         scopeArsenal = 0;
@@ -327,12 +329,12 @@ class CfgVehicles
 		backpack = "";		// Which backpack the character is wearing.
 		weapons[] = { "PSC_ServiceRifle_Base_W", ""};		// Which weapons the character has.
 		respawnWeapons[] = { "PSC_ServiceRifle_Base_W", ""};	// Which weapons the character respawns with.
-		//Items[] = { "FirstAidKit" };			// Which items the character has.
-		//RespawnItems[] = { "FirstAidKit" };		// Which items the character respawns with.
-		magazines[] = { };			// What ammunition the character has.
-		//respawnMagazines[] = { MAG_10(30Rnd_65x39_caseless_mag), MAG_3(16Rnd_9x21_Mag), "SmokeShell", "SmokeShellGreen", "Chemlight_green", "Chemlight_green", MAG_2(HandGrenade) };	// What ammunition the character respawns with.
-		linkedItems[] = { "PSC_NCR_Trooper_Brown_V", "PSC_NCR_Trooper_Brown_H", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "NVGoggles" };		// Which items the character has.
-		//respawnLinkedItems[] = { "V_PlateCarrier1_rgr", "H_HelmetB", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio", "NVGoggles" };	// Which items the character respawns with.
+		Items[] = { "FirstAidKit" };			// Which items the character has.
+		RespawnItems[] = { "FirstAidKit" };		// Which items the character respawns with.
+		magazines[] = {"PSC_556_ServiceRifle_M"};			// What ammunition the character has.
+		respawnMagazines[] = {"PSC_556_ServiceRifle_M"};	// What ammunition the character respawns with.
+		linkedItems[] = { "PSC_NCR_Trooper_Brown_V", "PSC_NCR_Trooper_Brown_H", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio" };		// Which items the character has.
+		respawnLinkedItems[] = { "PSC_NCR_Trooper_Brown_V", "PSC_NCR_Trooper_Brown_H", "ItemMap", "ItemCompass", "ItemWatch", "ItemRadio"};	// Which items the character respawns with.
     };
     class PSC_NCR_Trooper_Brown_UN: PSC_NCR_Trooper_Base_UN
     {
