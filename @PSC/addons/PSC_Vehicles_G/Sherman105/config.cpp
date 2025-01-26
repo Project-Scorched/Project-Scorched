@@ -13,7 +13,7 @@ class CfgPatches
 		requiredversion = 1.0;
 		units[] = 
 		{
-			"PSC_Newton_VE"
+			"PSC_Newton_VE" //Test
 		};
 		weapons[] = {};
 		magazines[] = {};
@@ -53,6 +53,7 @@ class GunParticles;
 class CfgWeapons
 {
 	class LMG_coax_ext;
+	class HMG_127;
 	class PSC_Sherman_Coax : LMG_coax_ext {
 		class GunParticles {
 			class FirstEffect {
@@ -71,7 +72,7 @@ class CfgWeapons
 			};
 		};
 	};
-	class PSC_Sherman_HMG : LMG_coax_ext {
+	class PSC_Sherman_HMG : HMG_127 {
 		class GunParticles {
 			class FirstEffect {
 				effectName = "MachineGun3";
