@@ -935,7 +935,7 @@ class PSC_Newton105_VE: PSC_Newton_Base_VE
 	scope = 2; 
 	scopeCurator = 2;
 	scopeArsenal = 2;
-	author = "Luca + Queen";
+	author = "$STR_PSC_Author"; // Team name
 	displayName = "$STR_PSC_Newton_VE";
 	faction	= "PSC_Wastelander";
 	crew = "B_Survivor_F";
@@ -948,7 +948,7 @@ class PSC_Newton105_NCR_VE: PSC_Newton_Base_VE
 	scope = 2; 
 	scopeCurator = 2;
 	scopeArsenal = 2;
-	author = "Luca + Queen";
+	author = "$STR_PSC_Author"; // Team name
 	displayName = "$STR_PSC_Newton_VE";
 	faction	= "PSC_NCR";
 	crew = "B_Survivor_F";

@@ -3,7 +3,7 @@ class CfgPatches
 {
 	class PSC_Newton
 	{
-		author = "Luca + Queen"; //luca did 90% of the work, I'm just fixing / editing his stuff
+		author = "$STR_PSC_Author"; // Team name
 		requiredaddons[] = 
 		{
 			"A3_Soft_F",
