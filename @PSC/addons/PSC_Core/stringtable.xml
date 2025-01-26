@@ -94,6 +94,14 @@
         <Key ID = "STR_PSC_Newton_VE">
             <English>M1 Newton (105)</English>
         </Key>
+        <Key ID = "STR_PSC_M115Centaur_VE">
+            <English> M115 Centaur </English>
+        </Key>
+    </Package>
+    <Package name = "Vehicles_A">
+        <Key ID = "STR_PSC_Vertibird01_VE">
+            <English> Prototype Vertibird Mk1 (XVBO1)</English>
+        </Key>
     </Package>
 </Project>
 

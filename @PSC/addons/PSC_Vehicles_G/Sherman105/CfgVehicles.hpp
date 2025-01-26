@@ -130,7 +130,7 @@ class PSC_Newton_Base_VE: Tank_F
 	scope = 1; 
 	scopeCurator = 1;
 	scopeArsenal = 1;
-	author = "Luca + Queen";
+	author = "Luca + Queen + Fish";
 	displayName = "M1 (105) (BASE)";
 	side = 1; //West
 	faction	= "BLU_F";
@@ -275,39 +275,39 @@ class PSC_Newton_Base_VE: Tank_F
 			{
 				class CommanderOptics: CommanderOptics
 				{
-					body="obsbturret";
-					gun="obsbgun";
-					animationSourceBody="obsbturret";
-					animationSourceGun="obsbgun";
+					body="com_t_base";
+					gun="com_t_gun";
+					animationSourceBody = "com_t_base";
+					animationSourceGun = "com_t_gun";
 					stabilizedInAxes=3;
 					maxHorizontalRotSpeed=1.8;
 					maxVerticalRotSpeed=0.18000001;
 					soundServo[]=
 					{
-						"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
+						"",
 						1,
 						1,
 						30
 					};
 					soundServoVertical[]=
 					{
-						"A3\Sounds_F\vehicles\armor\noises\servo_armor_comm",
+						"",
 						1,
 						1,
 						30
 					};
 					minElev=-10;
-					maxElev=45;
+					maxElev=25;
 					initElev=0;
-					minTurn=-360;
-					maxTurn=360;
+					minTurn=-45;
+					maxTurn=45;
 					initTurn=0;
 					memoryPointGun="usti hlavne3";
 					gunBeg="usti hlavne3";
 					gunEnd="konec hlavne3";
 					weapons[]=
 					{
-						"HMG_M2"
+						"PSC_Sherman_HMG"
 					};
 					magazines[]=
 					{
@@ -322,24 +322,28 @@ class PSC_Newton_Base_VE: Tank_F
 					discreteDistance[]={400};
 					discreteDistanceInitIndex=0;
 					canUseScanners=0;
-					showCrewAim=0;
+					showCrewAim=1;
 					allowTabLock=0;
-					memoryPointGunnerOutOptics="commanderview";
+					selectionFireAnim = "zasleh3";
+					memoryPointGunnerOutOptics="com_t_view";
 					memoryPointGunnerOptics="commanderview";
 					gunnerOpticsModel="\A3\weapons_f\reticle\Optics_Commander_02_F";
-					gunnerOutOpticsModel="";
+					gunnerOutOpticsModel="\A3\weapons_f\reticle\optics_empty.p3d";
 					gunnerOpticsEffect[]={};
 					gunnerHasFlares=1;
 					gunnerForceOptics=1;
 					LodTurnedOut=0;
-					gunnerAction = "Gunner_MBT_02_arty_F_out";
+					gunnerLeftHandAnimName = "otocHlaven";			/// what bone in model is the left hand connected to via IK (pilot has it set by default in parent class)
+					gunnerRightHandAnimName = "otocHlaven";
+					gunnerOutOpticsShowCursor = 1
+					gunnerAction = "gunner_standup01";
 					gunnerInAction = "Gunner_MBT_02_arty_F_in";
 					gunnerGetInAction="GetInHigh";
 					gunnerGetOutAction="GetOutHigh";
 					startEngine=0;
 					viewGunnerInExternal=1;
-					outGunnerMayFire=0;
-					inGunnerMayFire=1;
+					outGunnerMayFire=1;
+					inGunnerMayFire=0;
 					class ViewGunner: ViewGunner
 					{
 					};
@@ -362,11 +366,11 @@ class PSC_Newton_Base_VE: Tank_F
 					class OpticsIn {
 						class Wide: ViewOptics {
 							initAngleX=0;
-							minAngleX=-30;
-							maxAngleX=+30;
+							minAngleX=0;
+							maxAngleX=0;
 							initAngleY=0;
-							minAngleY=-100;
-							maxAngleY=+100;
+							minAngleY=0;
+							maxAngleY=0;
 							initFov=0.6;
 							minFov=0.6;
 							maxFov=0.6;
@@ -628,21 +632,6 @@ class PSC_Newton_Base_VE: Tank_F
 			
 			class HitPoints {};
 		};
-		/* class HMG: HullTurret
-		{
-			body="obsbturret";
-			gun="camo_50cal";
-			gunBeg = "usti hlavne2";
-			gunEnd = "konec hlavne2";
-			animationSourceBody = "obsbturret";
-			animationSourceGun = "camo_50cal";
-			gunnerName = "Top Gunner";
-			weapons[] = {"PSC_Sherman_HMG"};
-			magazines[] = {"100Rnd_127x99_mag_Tracer_Yellow", "100Rnd_127x99_mag_Tracer_Yellow"};
-			
-			memoryPointGun = "usti hlavne3";
-			selectionFireAnim = "zasleh3";
-		}; */
 		
 		class CargoTurret_01: CargoTurret
 		{
@@ -946,7 +935,7 @@ class PSC_Newton105_VE: PSC_Newton_Base_VE
 	scope = 2; 
 	scopeCurator = 2;
 	scopeArsenal = 2;
-	author = "Luca + Queen";
+	author = "$STR_PSC_Author"; // Team name
 	displayName = "$STR_PSC_Newton_VE";
 	faction	= "PSC_Wastelander";
 	crew = "B_Survivor_F";
@@ -959,20 +948,20 @@ class PSC_Newton105_NCR_VE: PSC_Newton_Base_VE
 	scope = 2; 
 	scopeCurator = 2;
 	scopeArsenal = 2;
-	author = "Luca + Queen";
+	author = "$STR_PSC_Author"; // Team name
 	displayName = "$STR_PSC_Newton_VE";
 	faction	= "PSC_NCR";
-	crew = "PSC_NCR_Trooper_Brown_UN";
+	crew = "B_Survivor_F";
 	side = 1;
 	editorpreview = "";
 	hiddenSelectionsTextures[] = 
 	{
-		"\PSC_Vehicles_G\Sherman105\data\NCR\body_co.paa",
-		"\PSC_Vehicles_G\Sherman105\data\NCR\detail_co.paa",
-		"\PSC_Vehicles_G\Sherman105\data\NCR\turret_co.paa",
-		"\PSC_Vehicles_G\Sherman105\data\NCR\tracks_co.paa",
-		"\PSC_Vehicles_G\Sherman105\data\NCR\hmg_co.paa",
-		"\PSC_Vehicles_G\Sherman105\data\plow_1_co.paa",
-		"\PSC_Vehicles_G\Sherman105\data\plow_2_co.paa"
+		"\PSC_Vehicles_G_t\Sherman105\data\NCR\body_co.paa",
+		"\PSC_Vehicles_G_t\Sherman105\data\NCR\detail_co.paa",
+		"\PSC_Vehicles_G_t\Sherman105\data\NCR\turret_co.paa",
+		"\PSC_Vehicles_G_t\Sherman105\data\NCR\tracks_co.paa",
+		"\PSC_Vehicles_G_t\Sherman105\data\NCR\hmg_co.paa",
+		"\PSC_Vehicles_G_t\Sherman105\data\plow_1_co.paa",
+		"\PSC_Vehicles_G_t\Sherman105\data\plow_2_co.paa"
 	};
 };
