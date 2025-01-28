@@ -13,7 +13,8 @@ class CfgPatches
 		requiredversion = 1.0;
 		units[] = 
 		{
-			"PSC_Newton_VE"
+			"PSC_Newton105_VE",
+			"PSC_Newton105_NCR_VE"
 		};
 		weapons[] = {};
 		magazines[] = {};
