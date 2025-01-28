@@ -686,7 +686,7 @@ class PSC_Newton_Base_VE: Tank_F
 		class CargoTurret_03: CargoTurret_01
 		{
 			gunnerName="$STR_A3_TURRETS_CARGOTURRET_R2";
-			gunnerAction="passenger_bench_1";
+			gunnerAction="passenger_bench_2";
 			proxyIndex=4;
 			memoryPointsGetInGunner="pos cargo 3";
 			memoryPointsGetInGunnerDir="pos cargo 3 dir";
@@ -697,7 +697,7 @@ class PSC_Newton_Base_VE: Tank_F
 		class CargoTurret_04: CargoTurret_01
 		{
 			gunnerName="$STR_A3_TURRETS_CARGOTURRET_L2";
-			gunnerAction="passenger_bench_1";
+			gunnerAction="passenger_bench_2";
 			proxyIndex=5;
 			memoryPointsGetInGunner="pos cargo 4";
 			memoryPointsGetInGunnerDir="pos cargo 4 dir";
@@ -719,7 +719,7 @@ class PSC_Newton_Base_VE: Tank_F
 		class CargoTurret_06: CargoTurret_01
 		{
 			gunnerName="$STR_A3_TURRETS_CARGOTURRET_F";
-			gunnerAction="passenger_bench_1";
+			gunnerAction="passenger_bench_2";
 			proxyIndex=7;
 			memoryPointsGetInGunner="pos cargo 5";
 			memoryPointsGetInGunnerDir="pos cargo 5 dir";
@@ -727,6 +727,51 @@ class PSC_Newton_Base_VE: Tank_F
 			{
 			};
 		};
+		class CargoTurret_07: CargoTurret_01
+		{
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_F";
+			gunnerAction="passenger_bench_3";
+			proxyIndex=8;
+			memoryPointsGetInGunner="pos cargo 5";
+			memoryPointsGetInGunnerDir="pos cargo 5 dir";
+			class Hitpoints
+			{
+			};
+		};
+		class CargoTurret_08: CargoTurret_01
+		{
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_F";
+			gunnerAction="passenger_bench_2";
+			proxyIndex=9;
+			memoryPointsGetInGunner="pos cargo 5";
+			memoryPointsGetInGunnerDir="pos cargo 5 dir";
+			class Hitpoints
+			{
+			};
+		};
+		class CargoTurret_09: CargoTurret_01
+		{
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_F";
+			gunnerAction="passenger_bench_1";
+			proxyIndex=10;
+			memoryPointsGetInGunner="pos cargo 5";
+			memoryPointsGetInGunnerDir="pos cargo 5 dir";
+			class Hitpoints
+			{
+			};
+		};
+		class CargoTurret_10: CargoTurret_01
+		{
+			gunnerName="$STR_A3_TURRETS_CARGOTURRET_F";
+			gunnerAction="passenger_bench_3";
+			proxyIndex=11;
+			memoryPointsGetInGunner="pos cargo 5";
+			memoryPointsGetInGunnerDir="pos cargo 5 dir";
+			class Hitpoints
+			{
+			};
+		};
+
 
 	};
 
