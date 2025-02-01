@@ -176,7 +176,7 @@ class CfgVehicles
 		damageResistance=0.030990001;
 		secondaryExplosion=100;
 		
-		canFloat=1;
+		canFloat = 0;
 		waterAngularDampingCoef=10;
 		waterResistanceCoef=0.5;
 		waterLeakiness=1.5;
