@@ -8,7 +8,7 @@ PixelShaderID="Super";
 VertexShaderID="Super";
 class Stage1
 {
-	texture="S_APC\mat\detail_nohq.paa";
+	texture="PSC_Vehicles_G\M115Centaur\data\textures\detail_nohq.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -45,7 +45,7 @@ class Stage3
 };
 class Stage4
 {
-	texture="S_APC\mat\detail_as.paa";
+	texture="PSC_Vehicles_G\M115Centaur\data\textures\detail_as.paa";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -57,7 +57,7 @@ class Stage4
 };
 class Stage5
 {
-	texture="S_APC\mat\detail_smdi.paa";
+	texture="PSC_Vehicles_G\M115Centaur\data\textures\detail_smdi.paa";
 	uvSource="tex";
 	class uvTransform
 	{

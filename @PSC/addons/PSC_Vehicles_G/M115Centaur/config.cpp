@@ -128,7 +128,7 @@ class CfgVehicles
 		picture = "\A3\Armor_F_Beta\APC_Wheeled_02\Data\UI\APC_Wheeled_02_RCWS_CA.paa";
 		unitInfoType = "RscUnitInfoTank";
 		hiddenSelections[] = {"camo","camo1","camo2","camo3"};
-		hiddenSelectionsTextures[] = {"PSC_Vehicles_G\data\textures\green\origin\additionally_co.paa","PSC_Vehicles_G\data\textures\green\origin\base_co.paa","PSC_Vehicles_G\data\textures\green\origin\detail_co.paa","PSC_Vehicles_G\data\textures\green\origin\inside_crate_co.paa"};
+		hiddenSelectionsTextures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\green\origin\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\green\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\green\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\green\origin\inside_crate_co.paa"};
 		editorSubcategory = "EdSubcat_APCs";
 		memoryPointTaskMarker = "TaskMarker_1_pos";
 		terrainCoef = 1.5;
@@ -550,8 +550,8 @@ class CfgVehicles
 
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000};
 				discreteDistanceInitIndex = 3;
-				soundServo[] = {"PSC_Vehicles_G\data\sounds\turret_turn_manual",4,1,30};
-				soundServoVertical[] = {"PSC_Vehicles_G\data\sounds\turret_turn_manual",4,1,30};
+				soundServo[] = {"PSC_Vehicles_G\M115Centaur\data\sounds\turret_turn_manual",4,1,30};
+				soundServoVertical[] = {"PSC_Vehicles_G\M115Centaur\data\sounds\turret_turn_manual",4,1,30};
 				memoryPointGunnerOptics = "Gun_left_gunnerview";
 				turretInfoType = "RscOptics_Offroad_01";
 				//gunnerDoor = "PoklopL_turret_2_door";
@@ -710,8 +710,8 @@ limitsArrayBottom[] = {{-12.5784, -33.9706}, {-24.4097, -14.7176}, {-27.0271, 13
 				magazines[] = {"100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red","100Rnd_127x99_mag_Tracer_Red"};
 				discreteDistance[] = {100,200,300,400,500,600,700,800,900,1000};
 				discreteDistanceInitIndex = 3;
-				soundServo[] = {"PSC_Vehicles_G\data\sounds\turret_turn_manual",4,1,30};
-				soundServoVertical[] = {"PSC_Vehicles_G\data\sounds\turret_turn_manual",4,1,30};
+				soundServo[] = {"PSC_Vehicles_G\M115Centaur\data\sounds\turret_turn_manual",4,1,30};
+				soundServoVertical[] = {"PSC_Vehicles_G\M115Centaur\data\sounds\turret_turn_manual",4,1,30};
 				memoryPointGunnerOptics = "Gun_right_gunnerview";
 				turretInfoType = "RscOptics_Offroad_01";
 				//gunnerDoor = "PoklopL_turret_2_door";
@@ -967,7 +967,7 @@ limitsArrayBottom[] = {{-26.4176, -44.9979}, {-25.8496, -14.6335}, {-19.6387, 14
 		class Damage
 		{
 			tex[] = {};
-			mat[] = {"PSC_Vehicles_G\data\textures\additionally.rvmat","PSC_Vehicles_G\data\textures\dam\additionally_dam.rvmat","PSC_Vehicles_G\data\textures\dam\additionally_d.rvmat","PSC_Vehicles_G\data\textures\base.rvmat","PSC_Vehicles_G\data\textures\dam\base_dam.rvmat","PSC_Vehicles_G\data\textures\dam\base_d.rvmat","PSC_Vehicles_G\data\textures\detail.rvmat","PSC_Vehicles_G\data\textures\dam\detail_dam.rvmat","PSC_Vehicles_G\data\textures\dam\detail_d.rvmat","PSC_Vehicles_G\data\textures\inside_crate.rvmat","PSC_Vehicles_G\data\textures\dam\inside_crate_dam.rvmat","PSC_Vehicles_G\data\textures\dam\inside_crate_d.rvmat"};
+			mat[] = {"PSC_Vehicles_G\M115Centaur\data\textures\additionally.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\dam\additionally_dam.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\dam\additionally_d.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\base.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\dam\base_dam.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\dam\base_d.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\detail.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\dam\detail_dam.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\dam\detail_d.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\inside_crate.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\dam\inside_crate_dam.rvmat","PSC_Vehicles_G\M115Centaur\data\textures\dam\inside_crate_d.rvmat"};
 		};
 		class TransportMagazines
 		{
@@ -1182,84 +1182,84 @@ displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.pa
 			{
 				displayName = "Green";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\green\origin\additionally_co.paa","PSC_Vehicles_G\data\textures\green\origin\base_co.paa","PSC_Vehicles_G\data\textures\green\origin\detail_co.paa","PSC_Vehicles_G\data\textures\green\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\green\origin\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\green\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\green\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\green\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class GreenStar
 			{
 				displayName = "Green Star";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\green\Star\additionally_co.paa","PSC_Vehicles_G\data\textures\green\origin\base_co.paa","PSC_Vehicles_G\data\textures\green\origin\detail_co.paa","PSC_Vehicles_G\data\textures\green\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\green\Star\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\green\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\green\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\green\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class Black
 			{
 				displayName = "Black";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\Black\origin\additionally_co.paa","PSC_Vehicles_G\data\textures\Black\origin\base_co.paa","PSC_Vehicles_G\data\textures\Black\origin\detail_co.paa","PSC_Vehicles_G\data\textures\Black\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\Black\origin\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Black\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Black\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Black\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class BlackStar
 			{
 				displayName = "Black Star";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\Black\Star\additionally_co.paa","PSC_Vehicles_G\data\textures\Black\origin\base_co.paa","PSC_Vehicles_G\data\textures\Black\origin\detail_co.paa","PSC_Vehicles_G\data\textures\Black\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\Black\Star\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Black\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Black\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Black\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class Blue
 			{
 				displayName = "Blue";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\Blue\origin\additionally_co.paa","PSC_Vehicles_G\data\textures\Blue\origin\base_co.paa","PSC_Vehicles_G\data\textures\Blue\origin\detail_co.paa","PSC_Vehicles_G\data\textures\Blue\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\Blue\origin\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Blue\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Blue\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Blue\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class BlueStar
 			{
 				displayName = "Blue Star";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\Blue\Star\additionally_co.paa","PSC_Vehicles_G\data\textures\Blue\origin\base_co.paa","PSC_Vehicles_G\data\textures\Blue\origin\detail_co.paa","PSC_Vehicles_G\data\textures\Blue\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\Blue\Star\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Blue\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Blue\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Blue\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class brown
 			{
 				displayName = "Brown";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\brown\origin\additionally_co.paa","PSC_Vehicles_G\data\textures\brown\origin\base_co.paa","PSC_Vehicles_G\data\textures\brown\origin\detail_co.paa","PSC_Vehicles_G\data\textures\brown\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\brown\origin\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\brown\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\brown\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\brown\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class brownStar
 			{
 				displayName = "Brown Star";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\brown\Star\additionally_co.paa","PSC_Vehicles_G\data\textures\brown\origin\base_co.paa","PSC_Vehicles_G\data\textures\brown\origin\detail_co.paa","PSC_Vehicles_G\data\textures\brown\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\brown\Star\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\brown\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\brown\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\brown\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class Grey
 			{
 				displayName = "Grey";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\Grey\origin\additionally_co.paa","PSC_Vehicles_G\data\textures\Grey\origin\base_co.paa","PSC_Vehicles_G\data\textures\Grey\origin\detail_co.paa","PSC_Vehicles_G\data\textures\Grey\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\Grey\origin\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Grey\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Grey\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Grey\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class GreyStar
 			{
 				displayName = "Grey Star";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\Grey\Star\additionally_co.paa","PSC_Vehicles_G\data\textures\Grey\origin\base_co.paa","PSC_Vehicles_G\data\textures\Grey\origin\detail_co.paa","PSC_Vehicles_G\data\textures\Grey\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\Grey\Star\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Grey\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Grey\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\Grey\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class White
 			{
 				displayName = "White";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\White\origin\additionally_co.paa","PSC_Vehicles_G\data\textures\White\origin\base_co.paa","PSC_Vehicles_G\data\textures\White\origin\detail_co.paa","PSC_Vehicles_G\data\textures\White\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\White\origin\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\White\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\White\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\White\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 			class WhiteStar
 			{
 				displayName = "White Star";
 				author = "S";
-				textures[] = {"PSC_Vehicles_G\data\textures\White\Star\additionally_co.paa","PSC_Vehicles_G\data\textures\White\origin\base_co.paa","PSC_Vehicles_G\data\textures\White\origin\detail_co.paa","PSC_Vehicles_G\data\textures\White\origin\inside_crate_co.paa"};
+				textures[] = {"PSC_Vehicles_G\M115Centaur\data\textures\White\Star\additionally_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\White\origin\base_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\White\origin\detail_co.paa","PSC_Vehicles_G\M115Centaur\data\textures\White\origin\inside_crate_co.paa"};
 				//factions[] = {"OPF_F"};
 			};
 		};
@@ -1299,14 +1299,14 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		class Crew;
 		class S_APC_driver_in: Crew
 		{
-			file = "PSC_Vehicles_G\data\anim\s_driver_in.rtm";
+			file = "PSC_Vehicles_G\M115Centaur\data\anims\s_driver_in.rtm";
 			interpolateTo[] = {"KIA_driver_tractor",1};
 			speed = 0.1;
 			boundingSphere = 2.0;
 		};
 		class s_left_gunner_in: Crew
 		{
-			file = "PSC_Vehicles_G\data\anim\s_left_gunner_in.rtm";
+			file = "PSC_Vehicles_G\M115Centaur\data\anims\s_left_gunner_in.rtm";
 			interpolateTo[] = {"KIA_driver_tractor",1};
 			speed = 0.1;
 			boundingSphere = 2.0;
@@ -1324,7 +1324,7 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 		class s_right_gunner_in: Crew
 		{
-			file = "\PSC_Vehicles_G\data\anim\s_right_gunner_in.rtm";
+			file = "\PSC_Vehicles_G\M115Centaur\data\anims\s_right_gunner_in.rtm";
 			interpolateTo[] = {"KIA_driver_tractor",1};
 			speed = 0.1;
 			boundingSphere = 2.0;
@@ -1340,14 +1340,14 @@ class CfgMovesMaleSdr: CfgMovesBasic
 		};
 		class s_driver_in: Crew
 		{
-			file = "\PSC_Vehicles_G\data\anim\s_driver_in.rtm";
+			file = "\PSC_Vehicles_G\M115Centaur\data\anims\s_driver_in.rtm";
 			interpolateTo[] = {"KIA_driver_tractor",1};
 			speed = 0.1;
 			boundingSphere = 2.0;
 		};
 		class s_driver_out: Crew
 		{
-			file = "\PSC_Vehicles_G\data\anim\s_driver_out.rtm";
+			file = "\PSC_Vehicles_G\M115Centaur\data\anims\s_driver_out.rtm";
 			speed = 0.75;
 			interpolateTo[] = {"KIA_driver_tractor",1};
 			boundingSphere = 1.0;

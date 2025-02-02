@@ -64,6 +64,11 @@ class CfgWeapons
 		};
 	};
 	class PSC_Sherman_Hull_MG : LMG_coax_ext {
+		displayName = "10mm Hull Machine Gun";
+		magazines[] = 
+		{
+			"PSC_10mm_Belt"
+		};
 		class GunParticles {
 			class FirstEffect {
 				effectName = "MachineGun2";

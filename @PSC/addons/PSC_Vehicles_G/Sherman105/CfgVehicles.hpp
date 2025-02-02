@@ -206,7 +206,7 @@ class PSC_Newton_Base_VE: Tank_F
 	{
 		class HitHull: HitHull
 		{
-			armor = 1.2;
+			armor = 5;
 			material = -1;
 			armorComponent = "hull";
 			name = "hull";
@@ -230,7 +230,7 @@ class PSC_Newton_Base_VE: Tank_F
 		};
 		class HitFuel: HitFuel
 		{
-			armor = 0.5;
+			armor = 1;
 			material = -1;
 			armorComponent = "palivo";
 			name = "palivo";
@@ -238,7 +238,7 @@ class PSC_Newton_Base_VE: Tank_F
 			passThrough = 0.1;
 			minimalHit = 0.1;
 			explosionShielding = 0.6;
-			radius = 0.3;
+			radius = 0.03;
 		};
 		class HitLTrack: HitLTrack
 		{
@@ -431,7 +431,7 @@ class PSC_Newton_Base_VE: Tank_F
 			gunBeg = "usti hlavne";
 			gunEnd = "konec hlavne";
 			weapons[] = {"PSC_Sherman_105_Cannon","PSC_Sherman_Coax"};
-			magazines[] = {"PSC_12Rnd_105mm_APFSDS_Red","PSC_12Rnd_105mm_HEAT_Red","PSC_16Rnd_105mm_HE_Red","1000Rnd_762x51_Belt_Yellow","1000Rnd_762x51_Belt_Yellow"};
+			magazines[] = {"PSC_12Rnd_105mm_APFSDS_Red","PSC_12Rnd_105mm_HEAT_Red","PSC_16Rnd_105mm_HE_Red","PSC_10mm_1000rnd_Belt","PSC_10mm_1000rnd_Belt", "PSC_10mm_1000rnd_Belt", "PSC_10mm_1000rnd_Belt", "PSC_10mm_1000rnd_Belt"};
 			
 			memoryPointGun = "usti hlavne1";
 			selectionFireAnim = "zasleh1";
@@ -561,7 +561,7 @@ class PSC_Newton_Base_VE: Tank_F
 			animationSourceGun = "ObsAGun";
 			gunnerName = "Radio Operator";
 			weapons[] = {"PSC_Sherman_Hull_MG"};
-			magazines[] = {"1000Rnd_762x51_Belt_Yellow", "1000Rnd_762x51_Belt_Yellow"};
+			magazines[] = {"PSC_10mm_1000rnd_Belt", "PSC_10mm_1000rnd_Belt","PSC_10mm_1000rnd_Belt","PSC_10mm_1000rnd_Belt"};
 			
 			memoryPointGun = "usti hlavne2";
 			selectionFireAnim = "zasleh2";
