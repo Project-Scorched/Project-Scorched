@@ -122,7 +122,7 @@ class CfgVehicles
 		weaponsGroup3 = "8 + 	16 + 	32";
 		weaponsGroup4 = "64 + 		128";
 		accuracy = 0.25;
-		displayName = "$STR_PSC_M115Centaur_VE";
+		displayName = "M115 Centaur"; //STR_PSC_M115Centaur_VE
 		model = "PSC_Vehicles_G\M115Centaur\M115Centaur.p3d";
 		icon = "\A3\Armor_F_Beta\APC_Wheeled_02\Data\UI\map_APC_Wheeled_02_rcws_ca.paa";
 		picture = "\A3\Armor_F_Beta\APC_Wheeled_02\Data\UI\APC_Wheeled_02_RCWS_CA.paa";

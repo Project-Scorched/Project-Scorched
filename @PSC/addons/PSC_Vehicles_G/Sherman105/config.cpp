@@ -55,6 +55,11 @@ class CfgWeapons
 	class LMG_coax_ext;
 	class HMG_127;
 	class PSC_Sherman_Coax : LMG_coax_ext {
+		displayName = "10mm Coaxial Machine Gun";
+		magazines[] = 
+		{
+			"PSC_10mm_1000rnd_Belt"
+		};
 		class GunParticles {
 			class FirstEffect {
 				effectName = "MachineGun1";
@@ -67,7 +72,7 @@ class CfgWeapons
 		displayName = "10mm Hull Machine Gun";
 		magazines[] = 
 		{
-			"PSC_10mm_Belt"
+			"PSC_10mm_1000rnd_Belt"
 		};
 		class GunParticles {
 			class FirstEffect {

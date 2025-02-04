@@ -350,8 +350,8 @@ class PSC_Newton_Base_VE: Tank_F
 					class ViewOptics: ViewOptics
 					{
 						initAngleX=0;
-						minAngleX=-30;
-						maxAngleX=30;
+						minAngleX=-180;
+						maxAngleX=180;
 						initAngleY=0;
 						minAngleY=-100;
 						maxAngleY=100;
@@ -412,7 +412,7 @@ class PSC_Newton_Base_VE: Tank_F
 						{
 							armor=0.1;
 							material=-1;
-							name="commander_gun_hit";
+							name="hit_com_gun_point";
 							visual="obsbgun";
 							passThrough=0;
 							minimalHit=0.1;
@@ -590,7 +590,7 @@ class PSC_Newton_Base_VE: Tank_F
 			discreteDistanceInitIndex=0;
 			turretInfoType="";
 			usePip=0;
-			minElev=0;
+			minElev=-5;
 			maxElev=15;
 			initElev=0;
 			minTurn=-22;

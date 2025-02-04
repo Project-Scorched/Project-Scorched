@@ -80,7 +80,7 @@ class CfgEditorSubcategories
      };
 	 class PSC_HMMWV_light_mashine_gun_Subcategories
      {
-          displayName = "Light mashine gun";
+          displayName = "Light machine gun";
      };
 	 class PSC_HMMWV_browning_Subcategories
      {
@@ -95,6 +95,52 @@ class CfgEditorSubcategories
           displayName = "Grenade launcher";
      };
 };
+
+class CfgWeapons 
+{
+	class HMG_M2;
+	class PSC_127_HMVMG_W: HMG_M2 
+	{
+		displayName = "12.7mm Heavy Machine Gun";
+		reloadTime= .5;
+		class GunParticles
+		{
+			class effect1
+			{
+				positionName = "muzzle_beg";
+				directionName = "muzzle_end";
+				effectName = "MachineGunCloud";
+			};
+			class effect2
+			{
+				positionName = "machinegun_eject_pos";
+				directionName = "machinegun_eject_dir";
+				effectName = "MachineGunCartridge1";
+			};
+		};
+	};
+	class LMG_03_F;
+	class PSC_556_HVMG_W: LMG_03_F
+	{
+		displayName = "5.56mm Light Machine Gun";
+		class GunParticles
+		{
+			class effect1
+			{
+				positionName = "muzzle_beg";
+				directionName = "muzzle_end";
+				effectName = "MachineGunCloud";
+			};
+			class effect2
+			{
+				positionName = "machinegun_eject_pos";
+				directionName = "machinegun_eject_dir";
+				effectName = "MachineGunCartridge1";
+			};
+		};
+	};
+};
+
 
 class CfgVehicles
 {
@@ -1102,7 +1148,7 @@ class CfgVehicles
 	class PSC_HMMWV_light_mashine_gun: PSC_HMMWV_base
 	{
 		forceInGarage=1;
-		displayName="HMMWV - Light mashine gun";
+		displayName="HMMWV - Light Machine Gun";
 		model = "\psc_vehicles_g\hmmwv\HMMWV_light_mashine_gun\PSC_HMMWV_light_mashine_gun.p3d";
 		author = "Project Scorched";
 		scope=2;
@@ -1130,14 +1176,14 @@ class CfgVehicles
 				animationSourceGun="mainGun";
 				weapons[]=
 				{
-					"MMG_02_vehicle"
+					"PSC_556_HVMG_W"
 				};
 				magazines[]=
 				{
-					"130Rnd_338_Mag",
-					"130Rnd_338_Mag",
-					"130Rnd_338_Mag",
-					"130Rnd_338_Mag"
+					"200Rnd_556x45_Box_F",
+					"200Rnd_556x45_Box_F",
+					"200Rnd_556x45_Box_F",
+					"200Rnd_556x45_Box_F"
 				};
 				minElev=-10;
 				maxElev=20;
@@ -1387,7 +1433,7 @@ class CfgVehicles
 				animationSourceGun="mainGun";
 				weapons[]=
 				{
-					"HMG_127_LSV_01"
+					"PSC_127_HMVMG_W"
 				};
 				magazines[]=
 				{
