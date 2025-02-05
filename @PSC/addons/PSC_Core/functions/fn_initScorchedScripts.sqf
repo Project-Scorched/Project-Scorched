@@ -1,0 +1,3 @@
+call PSC_fnc_cacheLaserWeapons;
+
+call PSC_fnc_checkForAddons;

@@ -211,6 +211,10 @@ class CfgWeapons
 			maxRangeProbab = 0.1;
 			aiRateOfFire = 1e-06;
 		};
+		class EventHandlers
+		{
+			fired = "call PSC_fnc_LaserSystem;";
+		};
     };
 	class PSC_AER9_Base_W: PSC_AER9_W
 	{

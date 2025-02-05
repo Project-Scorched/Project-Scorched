@@ -25,6 +25,20 @@ class CfgPatches
     };
 };
 
+class Extended_PreInit_EventHandlers {
+	class PSC_postInit {
+		// This will be executed once in 3DEN, main menu and before briefing has started for every mission
+		init = "call compile preprocessFileLineNumbers 'PSC_Core\XEH_PostInit.sqf'";
+	};
+};
+
+class Extended_PostInit_EventHandlers {
+	class PSC_preInit {
+		// This will be executed once for each mission, once the mission has started
+		init = "call compileScript ['\PSC_Core\XEH_preInit.sqf']";
+	};
+}; 
+
 class CfgMods
 {
 	class Mod_Base;
@@ -44,5 +58,19 @@ class CfgMods
 		hidePicture		= 0;						// Hide the extension menu
 		dlcColor[]		= { 255, 210, 0, 0.8};	// Color used for DLC stripes and backgrounds (RGBA) rgba(255, 210, 0, 0.8)
 		logoSmall		= "PSC_Core\Data\logo_ca.paa";		// Display in creative lists, next to the entities added by the mod
+	};
+};
+
+class CfgFunctions
+{
+	class PSC
+	{
+		class functions
+		{
+			class laserSystem
+			{
+				file = "PSC_Core\functions\fn_laserSystem.sqf";
+			};
+		};
 	};
 };

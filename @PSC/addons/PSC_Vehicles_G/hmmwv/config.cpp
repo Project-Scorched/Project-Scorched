@@ -101,7 +101,7 @@ class CfgWeapons
 	class HMG_M2;
 	class PSC_127_HMVMG_W: HMG_M2 
 	{
-		displayName = "12.7mm Heavy Machine Gun";
+		displayName = "Mounted 12.7mm Heavy Machine Gun";
 		reloadTime= .5;
 		class GunParticles
 		{
@@ -122,7 +122,7 @@ class CfgWeapons
 	class LMG_03_F;
 	class PSC_556_HVMG_W: LMG_03_F
 	{
-		displayName = "5.56mm Light Machine Gun";
+		displayName = "Mounted 5.56mm Light Machine Gun";
 		class GunParticles
 		{
 			class effect1
@@ -139,6 +139,13 @@ class CfgWeapons
 			};
 		};
 	};
+
+	class GMG_40mm;
+	class PSC_40mm_HMVGL_W: GMG_40mm
+	{
+		displayName = "Mounted 40mm Automatic Grenade Launcher";
+		reloadTime = 1.6;
+	};	
 };
 
 
@@ -1195,8 +1202,8 @@ class CfgVehicles
 				gunBeg="muzzle_2_beg";
 				gunEnd="muzzle_2_end";
 				memoryPointGunnerOptics="gunnerView";
-				memoryPointsGetInGunner="pos cargo";
-				memoryPointsGetInGunnerDir="pos cargo dir";
+				memoryPointsGetInGunner="pos cargo4";
+				memoryPointsGetInGunnerDir="pos cargo4 dir";
 				commanding=1;
 				primaryGunner=1;
 				optics=1;
@@ -1452,8 +1459,8 @@ class CfgVehicles
 				gunBeg="muzzle_beg";
 				gunEnd="muzzle_end";
 				memoryPointGunnerOptics="gunnerView";
-				memoryPointsGetInGunner="pos cargo";
-				memoryPointsGetInGunnerDir="pos cargo dir";
+				memoryPointsGetInGunner="pos cargo4";
+				memoryPointsGetInGunnerDir="pos cargo4 dir";
 				commanding=1;
 				primaryGunner=1;
 				optics=1;
@@ -1711,8 +1718,8 @@ class CfgVehicles
 				gunBeg="muzzle_beg";
 				gunEnd="muzzle_end";
 				memoryPointGunnerOptics="gunnerView";
-				memoryPointsGetInGunner="pos cargo";
-				memoryPointsGetInGunnerDir="pos cargo dir";
+				memoryPointsGetInGunner="pos cargo4";
+				memoryPointsGetInGunnerDir="pos cargo4 dir";
 				commanding=1;
 				primaryGunner=1;
 				optics=1;
@@ -1965,7 +1972,7 @@ class CfgVehicles
 				animationSourceGun="mainGun";
 				weapons[]=
 				{
-					"GMG_40mm"
+					"PSC_40mm_HMVGL_W"
 				};
 				magazines[]=
 				{
@@ -1990,8 +1997,8 @@ class CfgVehicles
 				gunBeg="usti hlavne";
 				gunEnd="konec hlavne";
 				memoryPointGunnerOptics="gunnerView";
-				memoryPointsGetInGunner="pos cargo";
-				memoryPointsGetInGunnerDir="pos cargo dir";
+				memoryPointsGetInGunner="pos cargo4";
+				memoryPointsGetInGunnerDir="pos cargo4 dir";
 				commanding=1;
 				primaryGunner=1;
 				optics=1;
