@@ -21,3 +21,33 @@ class CfgPatches
       fileName = "PSC_Factions"; 
   };
 };
+
+class CfgFactionClasses
+{
+    class PSC_NCR
+    {
+      displayName = "NCR";
+      author="Queen";
+      flag="\a3\Data_f\Flags\flag_nato_co.paa";
+      icon="";
+      priority=1;
+	};
+    class PSC_Wastelander
+    {
+      displayName = "Wastelander";
+      author="Queen";
+      flag="\a3\Data_f\Flags\flag_nato_co.paa";
+      icon="";
+      priority=1;
+	};
+};
+
+
+class CfgEditorCategories
+{
+  class PSC_EdCat_Wastelander
+  {
+    displayName = "Wastelander";
+  };
+};
+
