@@ -28,7 +28,7 @@ if !(_weaponArray # 0) exitWith{};
 private _ammoArray = PSC_LaserAmmoCache getOrDefault[_ammo, [false]];
 if !(_ammoArray # 0) exitWith{};
 
-private _dir = vectorDir _unit;
+private _dir = vectorDir _weapon;
 
 private _muzzlePosition = _weapon selectionPosition "usti hlavne";
 
