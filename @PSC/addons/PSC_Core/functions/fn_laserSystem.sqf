@@ -23,27 +23,20 @@
 
 params ["_unit", "_weapon", "_muzzle", "_mode", "_ammo", "_magazine", "_projectile"];
 
-private _weaponArray = PSC_LaserWeaponsCache getOrDefault[_weapon, [false]];
-if !(_weaponArray # 0) exitWith{};
-private _ammoArray = PSC_LaserAmmoCache getOrDefault[_ammo, [false]];
+private _ammoArray = PSC_LaserAmmoCache getOrDefault[_ammo,[false]]; //Gets initial check from laser ammo cache
 if !(_ammoArray # 0) exitWith{};
 
-private _dir = vectorDir _weapon;
+private _ammoData = _ammoArray # 1;
 
-private _muzzlePosition = _weapon selectionPosition "usti hlavne";
+_ammoData # 0 params ["_power","_onHit","_range"];
 
-private _laserStartPosition = _weapon modelToWorldWorld _muzzlePosition;
+private _dir = _unit weaponDirection _weapon;
 
-if (_muzzlePosition == [0, 0 ,0]) then
-{
-    systemChat format ['Failed to find Muzzle Position [time: %1]', time];
-    exitWith {};
-};
+private _laserStartPosition = getPosASL _projectile; //_unit modelToWorldWorld _muzzlePosition; //converts muzzle position to 3d space
 
-if (_laserStartPosition == [0, 0 ,0]) then
+if (_laserStartPosition isEqualTo [0, 0 ,0]) exitWith
 {
     systemChat format ['Failed to find Laser Start Position [time: %1]', time];
-    exitWith {};
 };
 
 private _coordinateX = _laserStartPosition # 0;
@@ -54,28 +47,28 @@ private _vectorX = _dir # 0;
 private _vectorY = _dir # 1;
 private _vectorZ = _dir # 2;
 
-private _weaponRange = _weaponArray#1;
+systemChat format ["CoordX: %1 [time: %2]", str _coordinateX, time];
+systemChat format ["vextorX: %1 [time: %2]", str _vectorX, time];
+systemChat format ["Range: %1 [time: %2]", str _range, time];
+private _laserEndPosition = [_coordinateX + (_range * _vectorX), _coordinateY + (_range * _vectorY), _coordinateZ + (_range * _vectorZ)]; //Calculates laser end position with distance vector
 
+systemChat format ["Laser Position: %1 [time: %2]", str _laserEndPosition, time];
 
-private _laserEndPosition = [_coordinateX + (_weaponRange * _vectorX), _coordinateY + (_weaponRange * _vectorY), _coordinateZ + (_weaponRange * _vectorZ)];
+private _intersectionData = lineIntersectsSurfaces [_laserStartPosition, _laserEndPosition, objNull, objNull, true, 1, "FIRE", "GEOM",true]; //draws line
 
-private _intersectionData = lineIntersectsSurfaces [_laserStartPosition, _laserEndPosition, objNull, objNull, true, 1, "FIRE", "GEOM"];
+drawLine3D [ASLToAGL _laserStartPosition, ASLToAGL _laserEndPosition, [255, 0, 0, 1]];
 
 private _realIntersectionPos = _intersectionData # 0;
 
 private _hitObject = _intersectionData # 2;
 
-if (_hitObject == objNull) then
-{
-    exitWith{};
-};
+if (_hitObject == objNull) exitWith {};
 
 private _intersectedHitpoints = _intersectionData # 4;
-private _isAceEnabled = PSC_confirmedAddons getOrDefault ["ace", false];
-if (isAceEnabled) then
+private _isAceEnabled = PSC_confirmedAddons getOrDefault ["ace", false]; //checks for ace 
+if (isAceEnabled) exitWith
 {
-    [_hitObject, _realIntersectionPos, _intersectedHitpoints] call PSC_fnc_laserAceDamageInteraction;
-    exitWith{};
+    [_hitObject, _unit, _ammo, _laserStartPosition, _realIntersectionPos, _intersectedHitpoints] call PSC_fnc_laserAceDamageInteraction;
 };
 
-[_hitObject, _realIntersectionPos, _intersectedHitpoints] call PSC_fnc_laserDamageInteraction;
+[_hitObject, _unit, _ammo, _laserStartPosition, _realIntersectionPos, _intersectedHitpoints] call PSC_fnc_laserDamageInteraction;

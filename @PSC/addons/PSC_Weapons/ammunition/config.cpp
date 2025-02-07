@@ -459,6 +459,10 @@ class CfgAmmo
 	};
 	class PSC_Laser_Base: BulletBase
 	{
+		PSC_LaserPower = 10;
+		PSC_IsLaserAmmo = 1;
+		PSC_LaserRange = 600;
+		PSC_LaserOnHit = "";
 		visibleFire = 3;
 		audibleFire = 40;
 		visibleFireTime = 2;
@@ -899,13 +903,10 @@ class CfgAmmo
 	};
 	class PSC_Laser_762: PSC_Laser_Base
 	{
-		model = "PSC_Weapons\ammunition\models\PSC_Laser.p3d"; //NIARMS 7.62x51
+		model = ""; //NIARMS 7.62x51
 		airFriction = -0.00100899;
-        typicalSpeed = 700;
-        hit = 13.92;
-        tracerScale = 1.2; 
-        tracerStartTime = 0.073;  
-        tracerEndTime = 2.15957;  
+        typicalSpeed = 0;
+        hit = 0;
         caliber = 1.123;
         deflecting = 22;
         ACE_caliber = 7.823;

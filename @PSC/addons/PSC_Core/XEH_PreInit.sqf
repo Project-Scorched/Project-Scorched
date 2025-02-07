@@ -1,1 +1,0 @@
-call PSC_fnc_initScorchedScripts;

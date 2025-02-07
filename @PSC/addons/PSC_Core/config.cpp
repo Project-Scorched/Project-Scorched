@@ -35,7 +35,7 @@ class Extended_PreInit_EventHandlers {
 class Extended_PostInit_EventHandlers {
 	class PSC_preInit {
 		// This will be executed once for each mission, once the mission has started
-		init = "call compileScript ['\PSC_Core\XEH_preInit.sqf']";
+		init = "call compileScript ['\PSC_Core\XEH_PreInit.sqf']";
 	};
 }; 
 

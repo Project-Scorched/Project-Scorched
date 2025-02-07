@@ -1,5 +1,5 @@
 /*
-	Author: Queen
+	Author: Jenna (I ain't write this shit, i just modified it)
 
 	Description:
 		Caches weapon data for laser system in hashmaps
@@ -14,48 +14,20 @@
 
 	Examples:
 		call PSC_fnc_cacheLaserWeapons;
-        meant for use in XEH_preInit, or just any init. 
+        meant for use in XEH_PostInit, or just any init. 
 */
-private _weapons = "true" configClasses (configFile >> "CfgWeapons");
+#define GET_NUMBER(config,default) (if (isNumber (config)) then {getNumber (config)} else {default})
+#define GET_TEXT(config,default) (if (typeName config == "STRING") then {getText (config)} else {default})
+
+// find all cfgweapons entries with knd_rampup_doesRampUp and cache them in a hashmap (hashmaps are much more performant than config lookups)
 private _ammo = "true" configClasses (configFile >> "CfgAmmo");
-
-private _laserWeapons;
-{
-    private _ID = getNumber (_x >> "CfgWeapons" >> "PSC_IsLaserWeapon")
-    if (_ID == 1) then
-    {
-        _laserWeapons pushBack _x;
-    };
-} forEach _weapons;
-
-private _laserAmmo;
-{
-    private _ID = getNumber (_x >> "CfgAmmo" >> "PSC_IsLaserAmmo");
-    
-    if (_ID == 1) then
-    {
-        _laserAmmo pushBack _x;
-    };
-} forEach _ammo;
-
-
-
-
-PSC_LaserWeaponsCache = createHashMap;
-
-{
-    private _weaponRange = getNumber (_x >> "CfgWeapons" >> "PSC_LaserWeaponRange")
-
-    private _arr = [true, _weaponRange]
-    PSC_LaserWeaponsCache set [_x, _arr]
-} forEach _laserWeapons;
-
-
+private _laserAmmo = _ammo select {(GET_NUMBER(_x >> "PSC_IsLaserAmmo",0)) == 1};
 PSC_LaserAmmoCache = createHashMap;
 {
-    private _damage = getNumber (_x >> "CfgAmmo" >> "PSC_LaserDamage");
-    private _onHit = getText (_x >> "CfgAmmo" >> "PSC_LaserOnHit");
-
-    private _arr = [true,_damage, _onHit];
-    PSC_LaserAmmoCache set [_x, _arr];
-} forEach _laserAmmo;
+    private _data = [];
+    private _damage = GET_NUMBER(_x >> "PSC_LaserPower",10);
+    private _onHit = GET_TEXT(_x >> "PSC_LaserOnHit","");
+    private _range = GET_NUMBER(_x >> "PSC_LaserRange",600);
+    _data = [configName _x,_damage,_onHit,_range];
+    PSC_LaserAmmoCache set [configName _x,[true,_data]];
+} foreach _laserAmmo;
