@@ -5,7 +5,15 @@ class CfgPatches
 {
 	class PSC_HMMWV
 	{
-		units[] = {"PSC_HMMWV_base"};
+		units[] = 
+		{
+			"PSC_HMMWV_base",
+			"PSC_HMMWV_Transport_Ve",
+			"PSC_HMMWV_556LightMG_Ve",
+			"PSC_HMMWV_127Browning_Ve",
+			"PSC_HMMV_65Minigun_Ve",
+			"PSC_HMMWV_40mmAGL_Ve"
+		};
 		weapons[] = {};
 		requiredVersion = 0.1;
 		requiredAddons[] = {"A3_Data_F"};
@@ -18,7 +26,7 @@ class CfgMovesBasic
 	class ManActions
 	{
 		PSC_HMMWV_driver="PSC_HMMWV_driver";
-		PSC_HMMWV_light_mashine_gun="PSC_HMMWV_light_mashine_gun";
+		PSC_HMMWV_light_machine_gun="HMMWV_light_machine_gun";
 		PSC_HMMWV_browning="PSC_HMMWV_browning";
 		PSC_HMMWV_minigun="PSC_HMMWV_minigun";
 		PSC_HMMWV_grenade_launcher="PSC_HMMWV_grenade_launcher";
@@ -36,10 +44,10 @@ class CfgMovesMaleSdr : CfgMovesBasic
 			file = "psc_vehicles_g\hmmwv\HMMWV_rtm\PSC_HMMWV_driver.rtm";
 			interpolateTo[] = {"PSC_HMMWV_driver", 1};
 		};
-		class PSC_HMMWV_light_mashine_gun : Crew
+		class HMMWV_light_machine_gun : Crew
 		{
-			file = "psc_vehicles_g\hmmwv\HMMWV_rtm\PSC_HMMWV_light_mashine_gun.rtm";
-			interpolateTo[] = {"PSC_HMMWV_light_mashine_gun", 1};
+			file = "psc_vehicles_g\hmmwv\HMMWV_rtm\PSC_HMMWV_light_machine_gun.rtm";
+			interpolateTo[] = {"HMMWV_light_machine_gun", 1};
 		};
 		class PSC_HMMWV_browning : Crew
 		{
@@ -64,37 +72,6 @@ class WeaponCloudsGun;
 class WeaponFireMGun;
 class WeaponCloudsMGun;
 
-class CfgEditorCategories
-{
-     class PSC_HMMWV_Categories
-     {
-		  displayName = "PSC - HMMWV";
-     };
-};
-
-class CfgEditorSubcategories
-{
-     class PSC_HMMWV_NO_Armor_Subcategories
-     {
-          displayName = "NO Armor";
-     };
-	 class PSC_HMMWV_light_mashine_gun_Subcategories
-     {
-          displayName = "Light machine gun";
-     };
-	 class PSC_HMMWV_browning_Subcategories
-     {
-          displayName = "Browning";
-     };
-	 class PSC_HMMWV_minigun_Subcategories
-     {
-          displayName = "Minigun";
-     };
-	 class PSC_HMMWV_grenade_launcher_Subcategories
-     {
-          displayName = "Grenade launcher";
-     };
-};
 
 class CfgWeapons 
 {
@@ -197,6 +174,10 @@ class CfgVehicles
 		model = "\psc_vehicles_g\hmmwv\HMMWV\PSC_HMMWV.p3d";
 		Icon = "\psc_vehicles_g\hmmwv\UI\Icon_PSC_HMMWV_CA";
 		picture	= "\psc_vehicles_g\hmmwv\UI\picture_PSC_HMMWV_ca";
+		editorCategory = "PSC_EdCat_Wastelander";
+		editorSubCatergory = "EdSubcat_Cars";
+		side=3;
+		faction	= "PSC_Wastelander";
 		
 		fuelExplosionPower = 1.4;
 		
@@ -618,7 +599,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class common_blue
@@ -637,7 +618,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class common_desert
@@ -656,7 +637,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class common_green
@@ -675,7 +656,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class common_grey
@@ -694,7 +675,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class common_white
@@ -713,7 +694,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			/*******************************************************/
@@ -733,7 +714,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class STAR_blue
@@ -752,7 +733,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class STAR_desert
@@ -771,7 +752,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class STAR_green
@@ -790,7 +771,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class STAR_grey
@@ -809,7 +790,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			class STAR_white
@@ -828,7 +809,7 @@ class CfgVehicles
 				};
 				factions[]=
 				{
-					"CIV_F"
+					"PSC_Wastelander"
 				};
 			};
 			/*******************************************************/
@@ -842,20 +823,18 @@ class CfgVehicles
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	
-	class PSC_HMMWV: PSC_HMMWV_base
+	class PSC_HMMWV_Transport_Ve: PSC_HMMWV_base
 	{
 		forceInGarage=1;
-		displayName="HMMWV";
+		displayName="GA-151 'Hummer' (Transport)";
 		author = "Project Scorched";
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal = 2;
-		side=3;
-		faction	= CIV_F;
+
 		crew="C_man_1";
 		
-		editorCategory = "PSC_HMMWV_Categories";
-		editorSubcategory = "PSC_HMMWV_NO_Armor_Subcategories";
+		
 		
 		class Reflectors
 		{
@@ -1146,21 +1125,16 @@ class CfgVehicles
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	
-	class PSC_HMMWV_light_mashine_gun: PSC_HMMWV_base
+	class PSC_HMMWV_556LightMG_Ve: PSC_HMMWV_base
 	{
 		forceInGarage=1;
-		displayName="HMMWV - Light Machine Gun";
-		model = "\psc_vehicles_g\hmmwv\HMMWV_light_mashine_gun\PSC_HMMWV_light_mashine_gun.p3d";
+		displayName="GA-151 'Hummer' (LMG)";
+		model = "\psc_vehicles_g\hmmwv\HMMWV_light_machine_gun\PSC_HMMWV_light_machine_gun.p3d";
 		author = "Project Scorched";
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal = 2;
-		side=3;
-		faction	= CIV_F;
 		crew="C_man_1";
-		
-		editorCategory = "PSC_HMMWV_Categories";
-		editorSubcategory = "PSC_HMMWV_light_mashine_gun_Subcategories";
 		
 		class Turrets: Turrets
 		{
@@ -1194,7 +1168,7 @@ class CfgVehicles
 					9.9999977e-007,
 					1
 				};
-				gunnerAction="PSC_HMMWV_light_mashine_gun";
+				gunnerAction="HMMWV_light_machine_gun";
 				gunnerCompartments="Compartment1";
 				ejectDeadGunner=0;
 				castGunnerShadow=1;
@@ -1403,21 +1377,17 @@ class CfgVehicles
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	
-	class PSC_HMMWV_browning: PSC_HMMWV_base
+	class PSC_HMMWV_127Browning_Ve: PSC_HMMWV_base
 	{
 		forceInGarage=1;
-		displayName="HMMWV - Browning";
+		displayName="GA-151 'Hummer' (M2)";
 		model = "\psc_vehicles_g\hmmwv\HMMWV_browning\PSC_HMMWV_browning.p3d";
 		author = "Project Scorched";
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal = 2;
-		side=3;
-		faction	= CIV_F;
 		crew="C_man_1";
 		
-		editorCategory = "PSC_HMMWV_Categories";
-		editorSubcategory = "PSC_HMMWV_browning_Subcategories";
 		
 		class Turrets: Turrets
 		{
@@ -1660,21 +1630,18 @@ class CfgVehicles
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	
-	class PSC_HMMWV_minigun: PSC_HMMWV_base
+	class PSC_HMMV_65Minigun_Ve: PSC_HMMWV_base
 	{
 		forceInGarage=1;
-		displayName="HMMWV - Minigun";
+		displayName="GA-151 'Hummer' (Minigun)";
 		model = "\psc_vehicles_g\hmmwv\HMMWV_minigun\PSC_HMMWV_minigun.p3d";
 		author = "Project Scorched";
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal = 2;
-		side=3;
-		faction	= CIV_F;
 		crew="C_man_1";
 		
-		editorCategory = "PSC_HMMWV_Categories";
-		editorSubcategory = "PSC_HMMWV_minigun_Subcategories";
+
 
 		#include "HMMWV_minigun\pip.hpp"
 		
@@ -1938,21 +1905,17 @@ class CfgVehicles
 	/////////////////////////////////////////////////////////
 	/////////////////////////////////////////////////////////
 	
-	class PSC_HMMWV_grenade_launcher: PSC_HMMWV_base
+	class PSC_HMMWV_40mmAGL_Ve: PSC_HMMWV_base
 	{
 		forceInGarage=1;
-		displayName="HMMWV - Grenade launcher";
+		displayName="GA-151 'Hummer' (AGL)";
 		model = "\psc_vehicles_g\hmmwv\HMMWV_grenade_launcher\PSC_HMMWV_grenade_launcher.p3d";
 		author = "Project Scorched";
 		scope=2;
 		scopeCurator=2;
 		scopeArsenal = 2;
-		side=3;
-		faction	= CIV_F;
 		crew="C_man_1";
 		
-		editorCategory = "PSC_HMMWV_Categories";
-		editorSubcategory = "PSC_HMMWV_grenade_launcher_Subcategories";
 
 		#include "HMMWV_grenade_launcher\pip.hpp"
 		
