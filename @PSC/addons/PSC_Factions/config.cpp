@@ -49,5 +49,9 @@ class CfgEditorCategories
   {
     displayName = "Wastelander";
   };
+  class PSC_EdCat_Vertibirds
+  {
+    displayName = "Vertibird's";
+  };
 };
 
