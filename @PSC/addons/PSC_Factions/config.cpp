@@ -49,9 +49,14 @@ class CfgEditorCategories
   {
     displayName = "Wastelander";
   };
-  class PSC_EdCat_Vertibirds
+  
+};
+
+class CfgEditorSubcategories
+{
+  class PSC_EdSubcat_Vertibird
   {
-    displayName = "Vertibird's";
+    displayName = "Vertibirds"
   };
 };
 

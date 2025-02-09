@@ -16,8 +16,8 @@ class CfgPatches
         };
         requiredVersion = 0.1;
         version = 0.1;
-        addonRootClass = "PSC_Vehicles_air";
+        addonRootClass = "PSC_Vehicles_A";
         author = "$STR_PSC_Author";
-        fileName = "PSC_Vehicles_air";
+        fileName = "PSC_Vehicles_A";
     };
 };

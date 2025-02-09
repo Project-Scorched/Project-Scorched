@@ -43,7 +43,7 @@ class CfgVehicles
 		displayName						= "(PSC) XVB-02";			// how is the plane displayed (named) in editor
 		model							= "\PSC_Vehicles_A\XVB02_Base\PSC_XVB02_Base.p3d";		// path to model of the plane
 		accuracy						= 0.2;												// how hard it is to distinguish the type of the vehicle (bigger number means harder)
-		editorSubcategory				= PSC_EdCat_Vertibirds;		// category in which we want to see this plane in editor
+		editorSubcategory				= "PSC_EdSubcat_Vertibird";		// category in which we want to see this plane in editor
 		memoryPointTaskMarker			= "TaskMarker_1_pos";	// The memory point defines the position where the task marked will be displayed if the task is attached to the particular object
 
 
@@ -52,7 +52,7 @@ class CfgVehicles
 		armorLights						= 0.1;					// level of protection for lights located on hull
 		epeImpulseDamageCoef			= 35;					// coeficient for physx damage
 		damageResistance				= 0.04;					// for AI if it is worth to be shoot at
-		destrType						= DestructWreck;		// how does the vehicle behave while destroyed, this one changes to the Wreck lod of the model
+		destrType						= "DestructWreck";		// how does the vehicle behave while destroyed, this one changes to the Wreck lod of the model
 		driverCanEject					= 0;					// needed for hiding engine "Eject" action if we want to use ejection seats instead
 		explosionShielding = 40;
 		waterLeakiness = 12;
@@ -100,7 +100,7 @@ class CfgVehicles
 		VTOLRollInfluence = 10.0;
 		slingLoadCargoMemoryPoints[]	= {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};	//array of memory points for slingloading hook position
 
-		driverAction					= pilot_Heli_Light_02;	// what is the standard pose for the pilot, defined as animation state
+		driverAction					= "pilot_Heli_Light_02";	// what is the standard pose for the pilot, defined as animation state
 		transportSoldier = 10;							/// how many cargo positions are available
 		cargoAction[] = { 								/// the same array as getIn/getOut actions for actions to switch to for cargo while inside the heli
 			passenger_apc_narrow_generic03,

@@ -6,5 +6,8 @@ class CfgPatches
 		weapons[]			 = {};
 		requiredVersion		 = 0.1;
 		requiredAddons[]	 = {""};
+		addonRootClass = "PSC_Vehicles_A";
+        author = "$STR_PSC_Author";
+        fileName = "PSC_Vehicles_A";
 	};
 };
