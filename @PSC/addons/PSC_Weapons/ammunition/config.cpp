@@ -951,7 +951,7 @@ class CfgMagazines
 		modelSpecial = "PSC_Weapons\ammunition\models\ServiceRifleMagazine.p3d";
 		modelSpecialIsProxy = 1; //req for proxy in mag well
 		count=20;
-        mass = 10;
+        mass = 3;
 		initspeed=920;
 		tracersEvery=0;
 		descriptionShort="20rnd Mag 5.56";
@@ -962,7 +962,7 @@ class CfgMagazines
 		scope = 2;
 		displayName = "$STR_PSC_556_ServiceRifle_M";
 		count = 20;
-		mass = 10;
+		mass = 3;
 		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
 
@@ -973,7 +973,7 @@ class CfgMagazines
 		ammo = "PSC_Bullet_556_Tracer";
 		displayName = "$STR_PSC_556_ServiceRifle_Tracer_M";
 		count = 20;
-		mass = 10;
+		mass = 3;
 		tracersEvery = 1;
 		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
@@ -985,7 +985,7 @@ class CfgMagazines
 		displayName = "$STR_PSC_556_ServiceRifle_Surplus_M";
 		ammo = "PSC_Bullet_556_Surplus";
 		count = 35;
-		mass = 10;
+		mass = 3;
 		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
 
@@ -996,7 +996,7 @@ class CfgMagazines
 		displayName = "$STR_PSC_556_ServiceRifle_Match_M";
 		ammo = "PSC_Bullet_556_Match";
 		count = 12;
-		mass = 10;
+		mass = 5;
 		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
 	
@@ -1007,7 +1007,7 @@ class CfgMagazines
 		displayName = "$STR_PSC_556_ServiceRifle_AP_M";
 		ammo = "PSC_Bullet_556_AP";
 		count = 15;
-		mass = 10;
+		mass = 5;
 		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
 
@@ -1018,7 +1018,7 @@ class CfgMagazines
 		displayName = "$STR_PSC_556_ServiceRifle_FMJ_M";
 		ammo = "PSC_Bullet_556_FMJ";
 		count = 15;
-		mass = 10;
+		mass = 5;
 		picture = "\PSC_Weapons\Ammunition\data\ServiceRifle\ServiceRifleMagazineIcon_ca.paa";
 	};
 
