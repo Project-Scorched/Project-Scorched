@@ -56,7 +56,7 @@ class CfgEditorSubcategories
 {
   class PSC_EdSubcat_Vertibird
   {
-    displayName = "Vertibirds"
+    displayName = "Vertibirds";
   };
 };
 

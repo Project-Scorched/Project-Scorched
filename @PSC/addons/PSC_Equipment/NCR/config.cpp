@@ -44,7 +44,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "PSC_NCR_Trooper_Base_UN";
-			containerClass = "Supply100";
+			containerClass = "Supply150";
 			mass = 40;
 		};
     };
@@ -58,7 +58,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "PSC_NCR_Trooper_Brown_UN";
-			containerClass = "Supply100";
+			containerClass = "Supply150";
 			mass = 40;
 		};
     };
@@ -72,7 +72,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "PSC_NCR_Trooper_Snow_UN";
-			containerClass = "Supply100";
+			containerClass = "Supply150";
 			mass = 40;
 		};
     };
@@ -86,7 +86,7 @@ class CfgWeapons
 		{
 			uniformModel = "-";
 			uniformClass = "PSC_NCR_Trooper_Woodland_UN";
-			containerClass = "Supply100";
+			containerClass = "Supply150";
 			mass = 40;
 		};
     };
@@ -119,14 +119,14 @@ class CfgWeapons
             { 
                 "camoVest" 
             };
-			containerClass = "Supply40";
+			containerClass = "Supply80";
 			mass = 15;
 			class HitpointsProtectionInfo 
 			{
 				class Chest
 				{
 						hitPointName = "HitChest";
-						armor = 16;
+						armor = 30;
 						passThrough = 0.3;
 				};
 			};
@@ -150,14 +150,14 @@ class CfgWeapons
             { 
                 "camoVest" 
             };
-			containerClass = "Supply40";
+			containerClass = "Supply80";
 			mass = 15;
 			class HitpointsProtectionInfo 
 			{
 				class Chest
 				{
 						hitPointName = "HitChest";
-						armor = 16;
+						armor = 30;
 						passThrough = 0.3;
 				};
 			};
@@ -181,14 +181,14 @@ class CfgWeapons
             { 
                 "camoVest" 
             };
-			containerClass = "Supply40";
+			containerClass = "Supply80";
 			mass = 15;
 			class HitpointsProtectionInfo 
 			{
 				class Chest
 				{
 						hitPointName = "HitChest";
-						armor = 16;
+						armor = 30;
 						passThrough = 0.3;
 				};
 			};
@@ -228,7 +228,7 @@ class CfgWeapons
 				class Head
 				{
 					hitPointName = "HitHead";
-					armor = 6;
+					armor = 15;
 					passThrough = 0.5;
 				};
 			};
@@ -259,7 +259,7 @@ class CfgWeapons
 				class Head
 				{
 					hitPointName = "HitHead";
-					armor = 6;
+					armor = 15;
 					passThrough = 0.5;
 				};
 			};
@@ -288,7 +288,7 @@ class CfgWeapons
 				class Head
 				{
 					hitPointName = "HitHead";
-					armor = 6;
+					armor = 15;
 					passThrough = 0.5;
 				};
 			};

@@ -173,7 +173,7 @@ class CfgVehicles
 				primaryGunner			= 1;
 				memoryPointsGetInGunner	= "pos_cargo_r";
 				memoryPointsGetInGunnerDir = "pos_cargo_r_dir";
-				selectionFireAnim = "flashR"
+				selectionFireAnim = "flashR";
 				weapons[]				= {""};
 				magazines[]				= {""};
 				memoryPointGunnerOptics	= "left_t_sight";

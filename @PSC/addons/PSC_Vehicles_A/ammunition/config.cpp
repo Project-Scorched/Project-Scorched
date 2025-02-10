@@ -5,7 +5,7 @@ class CfgPatches
 	{
 		author = "Fishinchips";
 		name = "Vertibird_Pylons_weapons";
-        requiredAddons[] = {};
+        requiredAddons[] = {"PSC_Core"};
         requiredVersion = 0.1;
 		units[] = {};
 		weapons[] = {"PS_Mininuke_PW1","PS_VB_autocannon_20mm","PS_VB_GMG_40mm"};
@@ -213,8 +213,8 @@ class CfgAmmo
     };
     class PSC_Mininuke_A: Bo_GBU12_LGB
     {
-        model = "\PSC_Vehicles_A\ammunition\PS_Vertibird_Mininuke.p3d";
-        proxyshape = "\PSC_Vehicles_A\ammunition\PS_Vertibird_Mininuke.p3d";
+        model = "\PSC_Vehicles_A\ammunition\PSC_Vertibird_Mininuke.p3d";
+        proxyshape = "\PSC_Vehicles_A\ammunition\PSC_Vertibird_Mininuke.p3d";
         hit = 5000;
         indirectHit = 2200;
         indirectHitRange = 24;
@@ -229,7 +229,7 @@ class CfgAmmo
         maxSpeed = 600;
         timeToLive = 120;
         initSpeed = 30;
-        soundFakeFall[] = {"\PSC_Vehicles_A\ammunition\Sounds\NUKEDrop.ogg",db+10, 1};
+        soundFakeFall[] = {"\PSC_Vehicles_A\ammunition\sounds\NUKEDrop.ogg",db+10, 1};
         soundHit[] = {"\PSC_Vehicles_A\ammunition\sounds\NUKE.ogg", 2.5118864, 1, 1500};
         soundSetExplosion[] = {"PSC_Mininuke_SoundSet"};
         CraterEffects = "BombCrater";
@@ -247,7 +247,7 @@ class CfgMagazines {
     class AnimationSources;
     class PS_VB_autocannon_mag_2000: VehicleMagazine {
         displayName = "VB Autocannon 2000 Rounds";
-        model = "PSC_Vehicles_A\ammunition\PS_Vertibird_20mm.p3d";
+        model = "PSC_Vehicles_A\ammunition\PSC_Vertibird_20mm.p3d";
         ammo = "PSC_20mm_AP";
         count = 2000;
         tracersEvery = 2;
@@ -262,7 +262,7 @@ class CfgMagazines {
     };
     class PS_VB_100Rnd_40mm_G: VehicleMagazine {
         displayName = "VB GrenadeLauncher 200 Rounds";
-        model = "PSC_Vehicles_A\ammunition\PS_Vertibird_40mm.p3d";
+        model = "PSC_Vehicles_A\ammunition\PSC_Vertibird_40mm.p3d";
         ammo = "G_40mm_HEDP";
         count = 200;
         tracersEvery = 1;
@@ -305,7 +305,7 @@ class CfgNonAIVehicles
     class ProxyWeapon;
     class Mininuke_Proxy: ProxyWeapon
     {
-        model = "\PSC_Vehicles_A\ammunition\PS_Vertibird_Mininuke.p3d";
+        model = "\PSC_Vehicles_A\ammunition\PSC_Vertibird_Mininuke.p3d";
         simulation = "maverickweapon";
     };
 };

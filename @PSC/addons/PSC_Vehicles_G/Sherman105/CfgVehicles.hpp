@@ -824,7 +824,7 @@ class PSC_Newton_Base_VE: Tank_F
 		};
 	};
 
-/* 	class TextureSources
+ 	class TextureSources
 	{
 		class NCR
 		{
@@ -839,13 +839,32 @@ class PSC_Newton_Base_VE: Tank_F
 				"\PSC_Vehicles_G\Sherman105\data\plow_1_co.paa",
 				"\PSC_Vehicles_G\Sherman105\data\plow_2_co.paa"
 			};
-			factions[] = {};
+			factions[] = 
+			{
+				"PSC_NCR"
+			};
 		};
-	}; */
-/* 	textureList[] =
+		class Base
+		{
+			displayName = "Green";
+			author = "Rez";
+			textures[] = 
+			{
+				"\PSC_Vehicles_G\Sherman105\data\body_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\detail_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\turret_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\hmg_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\plow_1_co.paa",
+				"\PSC_Vehicles_G\Sherman105\data\plow_2_co.paa"
+			};
+		};
+	}; 
+ 	textureList[] =
 	{
-		"NCR", 1
-	}; */
+		"NCR", 1,
+		"Base", 1
+		
+	}; 
 
 	#include "tank_sounds.hpp"
 	#include "tank_physx.hpp"

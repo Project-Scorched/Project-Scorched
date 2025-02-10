@@ -109,7 +109,7 @@ class CfgVehicles
 		author = "$STR_PSC_Author";
 		mapSize = 9.74;
 		typicalCargo[] = {"B_soldier_F"};
-		crew = "PSC_NCR_Trooper_Brown_UN";
+		crew = "I_Survivor_F";
 		scope = 2;
 		scopeCurator = 2;
 		LODDriverOpticsIn = 1000;
@@ -618,8 +618,8 @@ class CfgVehicles
 
 				class TurnIn
 				{
-limitsArrayTop[] = {{37.8651, -25.0657}, {32.7871, -22.4065}, {44.9772, 5.8695}, {44.9125, 45.0000}};
-limitsArrayBottom[] = {{-12.5784, -33.9706}, {-24.4097, -14.7176}, {-27.0271, 13.8784}, {-29.0748, 45.0000}};
+                limitsArrayTop[] = {{37.8651, -25.0657}, {32.7871, -22.4065}, {44.9772, 5.8695}, {44.9125, 45.0000}};
+                limitsArrayBottom[] = {{-12.5784, -33.9706}, {-24.4097, -14.7176}, {-27.0271, 13.8784}, {-29.0748, 45.0000}};
 				};
 
 				class ViewOptics: ViewOptics
@@ -641,7 +641,7 @@ limitsArrayBottom[] = {{-12.5784, -33.9706}, {-24.4097, -14.7176}, {-27.0271, 13
 					maxFov = 0.5;
 					initFov = 0.75;
 				};
-			class OpticsIn
+			    class OpticsIn
 				{
 					class Panel: ViewOptics
 					{
@@ -775,8 +775,8 @@ limitsArrayBottom[] = {{-12.5784, -33.9706}, {-24.4097, -14.7176}, {-27.0271, 13
 				gunnerOpticsModel = "\A3\Weapons_F\Reticle\Optics_Gunner_MBT_02_n_F.p3d";
 				class TurnIn
 				{
-limitsArrayTop[] = {{44.9875, -44.9205}, {44.9989, -36.5006}, {42.6578, 16.8795}, {4.0864, 38.2082}};
-limitsArrayBottom[] = {{-26.4176, -44.9979}, {-25.8496, -14.6335}, {-19.6387, 14.7040}, {-0.1342, 37.8988}};
+                limitsArrayTop[] = {{44.9875, -44.9205}, {44.9989, -36.5006}, {42.6578, 16.8795}, {4.0864, 38.2082}};
+                limitsArrayBottom[] = {{-26.4176, -44.9979}, {-25.8496, -14.6335}, {-19.6387, 14.7040}, {-0.1342, 37.8988}};
 				};
 				class ViewOptics: ViewOptics
 				{
@@ -868,7 +868,7 @@ limitsArrayBottom[] = {{-26.4176, -44.9979}, {-25.8496, -14.6335}, {-19.6387, 14
 			class muzzle_hide_cannon
 			{
 				source = "reload";
-				weapon = "S_cannon_102mm";
+				weapon = "S_HMG_127_APC_L";
 			};
 			class Gun_left_muzzle_hide
 			{
