@@ -28,7 +28,7 @@ if !(_ammoArray # 0) exitWith{};
 
 private _ammoData = _ammoArray # 1;
 
-_ammoData # 0 params ["_power","_onHit","_range"];
+private _range = _ammoData # 2;
 
 private _dir = _unit weaponDirection _weapon;
 
@@ -50,6 +50,7 @@ private _vectorZ = _dir # 2;
 systemChat format ["CoordX: %1 [time: %2]", str _coordinateX, time];
 systemChat format ["vextorX: %1 [time: %2]", str _vectorX, time];
 systemChat format ["Range: %1 [time: %2]", str _range, time];
+
 private _laserEndPosition = [_coordinateX + (_range * _vectorX), _coordinateY + (_range * _vectorY), _coordinateZ + (_range * _vectorZ)]; //Calculates laser end position with distance vector
 
 systemChat format ["Laser Position: %1 [time: %2]", str _laserEndPosition, time];
