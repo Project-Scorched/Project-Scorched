@@ -28,7 +28,7 @@ if !(_ammoArray # 0) exitWith{};
 
 private _ammoData = _ammoArray # 1;
 
-private _range = _ammoData # 2;
+private _range = 600;
 
 private _dir = _unit weaponDirection _weapon;
 
@@ -57,19 +57,19 @@ systemChat format ["Laser Position: %1 [time: %2]", str _laserEndPosition, time]
 
 private _intersectionData = lineIntersectsSurfaces [_laserStartPosition, _laserEndPosition, objNull, objNull, true, 1, "FIRE", "GEOM",true]; //draws line
 
-drawLine3D [ASLToAGL _laserStartPosition, ASLToAGL _laserEndPosition, [255, 0, 0, 1]];
+drawLine3D [ASLToAGL _laserStartPosition, ASLToAGL _laserEndPosition, [255, 0, 0, 1], 200];
 
 private _realIntersectionPos = _intersectionData # 0;
 
-private _hitObject = _intersectionData # 2;
+//private _hitObject = _intersectionData # 2;
 
-if (_hitObject == objNull) exitWith {};
+//if (_hitObject == objNull) exitWith {};
 
 private _intersectedHitpoints = _intersectionData # 4;
 private _isAceEnabled = PSC_confirmedAddons getOrDefault ["ace", false]; //checks for ace 
 if (isAceEnabled) exitWith
 {
-    [_hitObject, _unit, _ammo, _laserStartPosition, _realIntersectionPos, _intersectedHitpoints] call PSC_fnc_laserAceDamageInteraction;
+    //[_hitObject, _unit, _ammo, _laserStartPosition, _realIntersectionPos, _intersectedHitpoints] call PSC_fnc_laserAceDamageInteraction;
 };
 
-[_hitObject, _unit, _ammo, _laserStartPosition, _realIntersectionPos, _intersectedHitpoints] call PSC_fnc_laserDamageInteraction;
+//[_hitObject, _unit, _ammo, _laserStartPosition, _realIntersectionPos, _intersectedHitpoints] call PSC_fnc_laserDamageInteraction;

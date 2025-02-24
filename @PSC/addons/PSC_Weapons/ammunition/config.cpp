@@ -464,6 +464,7 @@ class CfgAmmo
 		PSC_LaserRange = 600;
 		PSC_LaserOnHit = "";
 		visibleFire = 3;
+		//simulation = "";
 		audibleFire = 40;
 		visibleFireTime = 2;
 		dangerRadiusBulletClose = 4;
