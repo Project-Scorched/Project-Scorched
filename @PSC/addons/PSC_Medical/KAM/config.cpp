@@ -22,3 +22,4 @@ class CfgPatches
         skipWhenMissingDependencies = 1;
     };
 };
+

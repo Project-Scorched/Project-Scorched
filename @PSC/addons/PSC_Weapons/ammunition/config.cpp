@@ -459,10 +459,8 @@ class CfgAmmo
 	};
 	class PSC_Laser_Base: BulletBase
 	{
-		PSC_LaserPower = 10;
 		PSC_IsLaserAmmo = 1;
 		PSC_LaserRange = 600;
-		PSC_LaserOnHit = "";
 		visibleFire = 3;
 		//simulation = "";
 		audibleFire = 40;
@@ -485,7 +483,7 @@ class CfgAmmo
 		tracerStartTime = -1;
 		muzzleEffect = "";
 		waterEffectOffset = 0.8;
-		flaresize=5;
+		flaresize=0;
 		effectflare="FlareShell";
 		effectFly = "PSC_Laser_Effect";
 		aiAmmoUsageFlags = "64 + 128 + 256";
