@@ -14,8 +14,6 @@ class CfgPatches
 		version	= PSC_VERSION;
 		requiredAddons[] = 
 		{ 						// Loads all of Arma + CBA
-           	  "cba_main",
-          	  "A3_Data_F_AoW_Loadorder",
 			  "PSC_Core"
     	};
 		addonRootClass = "PSC_Weapons"; // Subconfigs

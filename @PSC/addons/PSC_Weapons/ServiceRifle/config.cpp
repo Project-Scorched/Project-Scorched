@@ -330,3 +330,7 @@ class CfgGesturesMale
 	};
 
 };
+
+
+
+
