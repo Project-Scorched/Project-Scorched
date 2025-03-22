@@ -214,7 +214,7 @@ class CfgWeapons
 	class PSC_Wattz_Base_W: PSC_Wattz_W
 	{
 		displayName = "$STR_PSC_Wattz_W";
-		model = "PSC_Weapons\Wattz\model\PSC_Wattz.p3d";
+		model = "PSC_Weapons\Wattz\model\PSC_wattz.p3d";
 		scope = 2;
 		descriptionShort = "Fusion Powered Laser Rifle";
 		hiddenSelections[] = 
@@ -223,11 +223,11 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"PSC_Weapons\Wattz\data\Wattz2000_co.paa" // To Be Replaced By Wattz
+			"\PSC_Weapons\Wattz\data\Wattz2000_co.paa"
 		};
 		hiddenSelectionsMaterials[] = 
 		{
-			"PSC_Weapons\Wattz\data\Wattz2000.rvmat" // To Be Replaced By Wattz
+			"\PSC_Weapons\Wattz\data\Wattz2000.rvmat"
 		};
 	};
 
