@@ -214,7 +214,7 @@ class CfgWeapons
 	class PSC_Wattz_Base_W: PSC_Wattz_W
 	{
 		displayName = "$STR_PSC_Wattz_W";
-		model = "PSC_Weapons\Wattz\model\PSC_wattz.p3d";
+		model = "PSC_Weapons\Wattz\data\model\PSC_wattz.p3d";
 		scope = 2;
 		descriptionShort = "Fusion Powered Laser Rifle";
 		hiddenSelections[] = 
@@ -223,7 +223,7 @@ class CfgWeapons
 		};
 		hiddenSelectionsTextures[]=
 		{
-			"\PSC_Weapons\Wattz\data\Wattz2000_co.paa"
+			"\PSC_Weapons\Wattz\data\Wattz2000_ca.paa"
 		};
 		hiddenSelectionsMaterials[] = 
 		{
@@ -250,4 +250,37 @@ class CfgMovesBasic
 			PSC_GestureReloadWattz[] = { "PSC_GestureReloadWattz", "Gesture" };
 		};
 	};
+};
+
+class CfgGesturesMale
+{
+	class Default;
+	class GestureReloadBase;
+	class States
+	{
+		class PSC_GestureReloadWattz: Default 
+		{
+			file = "PSC_Weapons\Wattz\data\animations\Wattzreload.rtm";
+			speed = .3;
+			looped = false;
+			mask = "handsWeapon";
+			headBobStrength = 0.3;
+			headBobMode = 2;
+			rightHandIKBeg = true;
+			rightHandIKEnd = true;
+			rightHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
+			leftHandIKBeg = true;
+			leftHandIKEnd = true;
+			leftHandIKCurve[] = { 0, 1, (6/92), 0, (78/92), 0, (86/92), 1 };
+		};
+		class PSC_GestureReloadWattz_Context: PSC_GestureReloadWattz
+		{
+			mask = "NIA_handsWeapon_context_Toadie";
+		};
+	};
+	class BlendAnims // thank you niarms - bone context
+	{
+		NIA_handsWeapon_context_Toadie[] = { "head",1,"neck1",1,"neck",1,"weapon",1,"LeftShoulder",1,"LeftArm",1,"LeftArmRoll",1,"LeftForeArm",1,"LeftForeArmRoll",1,"LeftHand",1,"LeftHandRing",1,"LeftHandPinky1",1,"LeftHandPinky2",1,"LeftHandPinky3",1,"LeftHandRing1",1,"LeftHandRing2",1,"LeftHandRing3",1,"LeftHandMiddle1",1,"LeftHandMiddle2",1,"LeftHandMiddle3",1,"LeftHandIndex1",1,"LeftHandIndex2",1,"LeftHandIndex3",1,"LeftHandThumb1",1,"LeftHandThumb2",1,"LeftHandThumb3",1,"RightShoulder",1,"RightArm",1,"RightArmRoll",1,"RightForeArm",1,"RightForeArmRoll",1,"RightHand",1,"RightHandRing",1,"RightHandPinky1",1,"RightHandPinky2",1,"RightHandPinky3",1,"RightHandRing1",1,"RightHandRing2",1,"RightHandRing3",1,"RightHandMiddle1",1,"RightHandMiddle2",1,"RightHandMiddle3",1,"RightHandIndex1",1,"RightHandIndex2",1,"RightHandIndex3",1,"RightHandThumb1",1,"RightHandThumb2",1,"RightHandThumb3",1,"Spine",0.1,"Spine1",0.3,"Spine2",0.5,"Spine3",1 };
+	};
+
 };
