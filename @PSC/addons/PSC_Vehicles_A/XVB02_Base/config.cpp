@@ -71,7 +71,7 @@ class CfgVehicles
 		stallWarningTreshold = 0.2;
 		wheelSteeringSensitivity = 0.8;
 		airBrake = 1;
-		airBrakeFrictionCoef = 8;
+		airBrakeFrictionCoef = 32;
 		flaps = 1;
 		flapsFrictionCoef = 2.5;
 		angleOfIndicence = "3*3.1415/180";
@@ -124,9 +124,9 @@ class CfgVehicles
 		viewDriverShadowDiff			= 0.5;					//diffuse light attenuation
 		viewDriverShadowAmb				= 0.5;					//ambient light attenuation
 
-		radarTargetSize					= 0.8;
-		visualTargetSize				= 0.8;
-		irTargetSize					= 0.8;
+		radarTargetSize					= 1.0;
+		visualTargetSize				= 1.2;
+		irTargetSize					= 2.0;
 
 		driverLeftHandAnimName			= "throttle_pilot";		// conecting throttle animation to left hand of pilot
 
