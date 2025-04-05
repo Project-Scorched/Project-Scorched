@@ -80,8 +80,360 @@ class CfgCloudlets
 		randomDirectionIntensityVar=0;
 		destroyOnWaterSurface=1;
 	};
-};
+	class Default;
+	class PulseEffectGreen: Default
+		{
+			interval=1e-006;
+			circleRadius=0;
+			circleVelocity[]={0,0,0};
+			angleVar=1;
+			particleFSLoop=0;
+			particleShape="\A3\data_f\ParticleEffects\Universal\Universal";
+			particleFSNtieth=16;
+			particleFSIndex=12;
+			particleFSFrameCount=8;
+			animationName="";
+			particleType="Billboard";
+			timerPeriod=1;
+			lifeTime=2;
+			moveVelocity[]={0,0,0};
+			rotationVelocity=1;
+			weight=1.01;
+			volume=0.80000001;
+			rubbing=0.5;
+			size[]=
+			{
+				0.1,
+				"0.0.8"
+			};
+			sizeCoef=1;
+			color[]=
+			{
+			{0.0627, 0.7804, 0.0, 0.18000002},
+			{0.0627, 0.7804, 0.0, 0.059999996},
+			{0.0627, 0.7804, 0.0, 0}
+			};
+			colorCoef[]={1.2,1.2,1.2,1.2};
+			animationSpeed[]={1};
+			animationSpeedCoef=1;
+			randomDirectionPeriod=0.1;
+			randomDirectionIntensity=0.1;
+			onTimerScript="";
+			beforeDestroyScript="";
+			blockAIVisibility=0;
+			lifeTimeVar=0.80000001;
+			positionVar[]={0,0,0};
+			MoveVelocityVar[]={0,0,0};
+			rotationVelocityVar=1;
+			sizeVar=0;
+			colorVar[]={0,0,0,0};
+			randomDirectionPeriodVar=0;
+			randomDirectionIntensityVar=0;
+			emissiveColor[]=
+			{
+				{1000, 3100, 0, 0},
+				{0, 0, 0, 0}
+			};
+			ignoreWind="true";
+		};
+	};
+	
+	class ObjectDestructionFire1Small;
+	class WBK_Volkite_FireOnGround: ObjectDestructionFire1Small
+	{
+		particleShape="\A3\data_f\cl_exp";
+		particleType="Billboard";
+		particleFSLoop=1;
+		particleFSNtieth=1;
+		particleFSIndex=0;
+		particleFSFrameCount=1;
+		size[]={0.69999999,0.1};
+		sizeVar=0.5;
+		lifeTime=1.25;
+		interval=0.0049999999;
+		color[]=
+		{
+			{1,0,0,1},
+			{1,0,0,1},
+			{1,0,0,1}
+		};
+		emissiveColor[]=
+		{
+			{255,0,0,255},
+			{1,0,0,1}
+		};
+		ignoreWind="true";
+	};
+	class WBK_Volkite_FireOnGroundGreen: ObjectDestructionFire1Small
+	{
+	particleShape="\A3\data_f\cl_exp";
+	particleType="Billboard";
+	particleFSLoop=1;
+	particleFSNtieth=1;
+	particleFSIndex=0;
+	particleFSFrameCount=1;
+	size[]={0.69999999,0.1};
+	sizeVar=0.5;
+	lifeTime=1.25;
+	interval=0.0049999999;
+	color[]=
+	{
+		{0.196, 0.803, 0.196, 1},
+		{0.196, 0.803, 0.196, 1},
+		{0.196, 0.803, 0.196, 1}
+	};
+	emissiveColor[]=
+	{
+		{50,205,50,255},
+		{0.196, 0.803, 0.196, 1}
+	};
+	ignoreWind="true";
+	};
+	class AirFireSparks;
+	class WBK_Volkite_FlyingEffect: AirFireSparks
+	{
+		lifeTime=0.60000002;
+		interval=0.001;
+		color[]=
+		{
+			{1,0,0,1},
+			{1,0,0,1},
+			{1,0,0,1}
+		};
+		emissiveColor[]=
+		{
+			{255,0,0,255},
+			{1,0,0,1}
+		};
+		weight=1.09;
+		volume=0.80000001;
+		rubbing=0.5;
+		ignoreWind="true";
+	};
+	class WBK_Volkite_FlyingEffectGreen: AirFireSparks
+	{
+	lifeTime=0.60000002;
+	interval=0.001;
+	color[]=
+	{
+		{0.196, 0.803, 0.196, 1},
+		{0.196, 0.803, 0.196, 1},
+		{0.196, 0.803, 0.196, 1}
+	};
+	emissiveColor[]=
+	{
+		{50,205,50,255},
+		{0.196, 0.803, 0.196, 1}
+	};
+	weight=1.09;
+	volume=0.80000001;
+	rubbing=0.5;
+	ignoreWind="true";
+	};
+	class WBK_Volkite_FlyingEffectS
+	{
+	class VolkiteLightS
+	{
+		simulation="light";
+		type="WBK_VolkiteCharge_Light";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=-1;
+	};
+	class WBK_Volkite_FlyingEffect
+	{
+		simulation="particles";
+		type="WBK_Volkite_FlyingEffect";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=0.5;
+	};
+	};
+	class WBK_Volkite_FlyingEffectSGreen
+	{
+	class VolkiteLightS
+	{
+		simulation="light";
+		type="WBK_VolkiteCharge_LightGreen";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=-1;
+	};
+	class WBK_Volkite_FlyingEffectGreen
+	{
+		simulation="particles";
+		type="WBK_Volkite_FlyingEffectGreen";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=0.5;
+	};
+	};
+	class WBK_Volkite_FireOnGroundS
+	{
+	class WBK_Volkite_FireOnGround
+	{
+		simulation="particles";
+		type="WBK_Volkite_FireOnGround";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=0.5;
+	};
+	class WBK_Volkite_SparksOnGround
+	{
+		simulation="particles";
+		type="WBK_Volkite_FlyingEffect";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=0.5;
+	};
+	};
+	class WBK_Volkite_FireOnGroundSGreen
+	{
+	class WBK_Volkite_FireOnGroundGreen
+	{
+		simulation="particles";
+		type="WBK_Volkite_FireOnGroundGreen";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=0.5;
+	};
+	class WBK_Volkite_SparksOnGroundGreen
+	{
+		simulation="particles";
+		type="WBK_Volkite_FlyingEffectGreen";
+		position[]={0,0,0};
+		intensity=1;
+		interval=1;
+		lifeTime=0.5;
+	};
+	};
+	
+	
 
+};
+class CfgLights
+	{
+		class pulseLight
+		{
+			diffuse[]={1,0,0};
+			color[]={1,0,0};
+			ambient[]={1,0.30000001,0};
+			brightness=2;
+			size=5;
+			intensity=80000;
+			drawLight=0;
+			blinking=0;
+			dayLight=0;
+			class Attenuation
+			{
+				start=0;
+				constant=0;
+				linear=0;
+				quadratic=2;
+				hardLimitStart=30;
+				hardLimitEnd=60;
+			};
+			position[]={0,0,0};
+		};
+		class CruiseMissileLight;
+		class WBK_VolkiteCharge_Light: CruiseMissileLight
+		{
+			intensity=2500;
+			flareSize=1;
+			color[]={1,0.1,0,1};
+			diffuse[]={1,0.1,0,1};
+			ambient[]={1,0.1,0,1};
+			dayLight=1;
+			useFlare=1;
+			flareMaxDistance=2500;
+			drawLight=1;
+		};
+		class pulseLightGreen
+		{
+			diffuse[]={0.196, 0.803, 0.196};
+			color[]={0.196, 0.803, 0.196};
+			ambient[]={0.196, 0.803, 0.196};
+			brightness=2;
+			size=5;
+			intensity=80000;
+			drawLight=0;
+			blinking=0;
+			dayLight=0;
+			class Attenuation
+			{
+				start=0;
+				constant=0;
+				linear=0;
+				quadratic=2;
+				hardLimitStart=30;
+				hardLimitEnd=60;
+			};
+			position[]={0,0,0};
+		};
+		class WBK_VolkiteCharge_LightGreen: CruiseMissileLight
+		{
+			intensity=2500;
+			flareSize=1;
+			color[]={0.196, 0.803, 0.196, 1};
+			diffuse[]={0.196, 0.803, 0.196, 1};
+			ambient[]={0.196, 0.803, 0.196, 1};
+			dayLight=1;
+			useFlare=1;
+			flareMaxDistance=2500;
+			drawLight=1;
+		};
+		};
+		class PulseEffectS
+		{
+		class LightS
+		{
+			simulation="light";
+			type="PulseLight";
+			position[]={0,0,0};
+			intensity=1;
+			interval=1;
+			lifeTime=-1;
+		};
+		class PulseEffect
+		{
+			simulation="particles";
+			type="PulseEffect";
+			position[]={0,0,0};
+			particleFSLoop=1;
+			intensity=100;
+			interval=100;
+			lifeTime=0.1;
+		};
+		};
+		class PulseEffectSGreen
+		{
+		class LightS
+		{
+			simulation="light";
+			type="pulseLightGreen";
+			position[]={0,0,0};
+			intensity=1;
+			interval=1;
+			lifeTime=-1;
+		};
+		class PulseEffectGreen
+		{
+			simulation="particles";
+			type="PulseEffectGreen";
+			position[]={0,0,0};
+			particleFSLoop=1;
+			intensity=100;
+			interval=100;
+			lifeTime=0.1;
+		};
+	};
 class PSC_LaserImpact
 {
 	class PSC_LaserImpact
