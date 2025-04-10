@@ -96,6 +96,7 @@ class CfgVehicles
 		draconicTorqueYCoef[] = {1.0,1.2,1.4,2.0,4.0,7.0,6.8,6.6,6.4,6.2,5.5,5.0,4.5,3.9,3.0,1.0};
 		vtol = 3;
 		VTOLYawInfluence = 20.0;
+		extCameraPosition[] = { 0, 2, 0 };
 		VTOLPitchInfluence = 10.0;
 		VTOLRollInfluence = 10.0;
 		slingLoadCargoMemoryPoints[]	= {"SlingLoadCargo1","SlingLoadCargo2","SlingLoadCargo3","SlingLoadCargo4"};	//array of memory points for slingloading hook position
@@ -586,7 +587,7 @@ class CfgVehicles
 	{
 		scope			= 2;				
 		scopeCurator	= 2;				
-		displayName		= "(NCR) XVB-02"; 
+		displayName		= "(NC) XVB-02"; 
 
 		side			= 1;					
 		faction			= PSC_NCR;				
@@ -594,6 +595,33 @@ class CfgVehicles
 
 		availableForSupportTypes[]	= {"CAS_Bombing"};
 		cost						= 3000000;
+	};
+
+	class PSC_XVB02_TEST: PSC_XVB_02_Base
+	{
+		scope = 2;
+		scopeCurator = 2;
+		displayName = "nowingsfuckyou";
+		side = 1;
+		faction = "PSC_NCR";
+		crew = "B_Fighter_Pilot_F";
+		hiddenSelections[] =
+		{
+			"camoBody",
+			"camoGlass",
+			"camoInterior",
+			"camoMisc",
+			"camoWings"
+		};
+		hiddenSelectionTextures[] = 
+		{
+			"\PSC_Vehicles_A\XVB02_Base\data\hull_co.paa",
+			"\PSC_Vehicles_A\XVB02_Base\data\glass_ca.paa",
+			"\PSC_Vehicles_A\XVB02_Base\data\interior_co.paa",
+			"\PSC_Vehicles_A\XVB02_Base\data\misc_co.paa",
+			""
+		};
+		
 	};
 
 	class PlaneWreck;
