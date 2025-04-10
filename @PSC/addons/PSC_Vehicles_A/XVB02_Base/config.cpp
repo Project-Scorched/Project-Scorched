@@ -163,7 +163,7 @@ class CfgVehicles
 				gunnerGetInAction		= "GetInMRAP_01";
 				gunnerGetOutAction		= "GetOutMRAP_01";
 				gunnerName				= "Copilot";
-				proxyIndex              = 2;	
+				proxyIndex              = 1;	
 				hideWeaponsGunner		= 0;
 				soundServo[]			= {"",0.01,1};
 				stabilizedInAxes 		= 3;
