@@ -1401,10 +1401,13 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
-					"100Rnd_127x99_mag_Tracer_Red",
-					"100Rnd_127x99_mag_Tracer_Red",
-					"100Rnd_127x99_mag_Tracer_Red",
-					"100Rnd_127x99_mag_Tracer_Red"
+					"200Rnd_127x99_mag_Tracer_Red",
+					"200Rnd_127x99_mag_Tracer_Red",
+					"200Rnd_127x99_mag_Tracer_Red",
+					"200Rnd_127x99_mag_Tracer_Red",
+					"200Rnd_127x99_mag_Tracer_Red",
+					"200Rnd_127x99_mag_Tracer_Red",
+					"200Rnd_127x99_mag_Tracer_Red"
 				};
 				minElev=-10;
 				maxElev=20;

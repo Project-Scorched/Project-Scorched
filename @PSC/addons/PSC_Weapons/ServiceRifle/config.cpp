@@ -96,8 +96,8 @@ class CfgRecoils
 	class PSC_Rifle_Base_Recoil
 	{
 		muzzleOuter[] = {0.3, 0.8, 0.4, 0.3};
-		kickBack[] = {0.02, 0.04};
-		temporary = 0.01;
+		kickBack[] = {0.2, 0.4};
+		temporary = 0.1;
 	};
 };
 
