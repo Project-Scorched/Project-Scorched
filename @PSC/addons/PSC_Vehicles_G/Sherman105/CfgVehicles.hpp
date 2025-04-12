@@ -336,7 +336,7 @@ class PSC_Newton_Base_VE: Tank_F
 					gunnerLeftHandAnimName = "otocHlaven";			/// what bone in model is the left hand connected to via IK (pilot has it set by default in parent class)
 					gunnerRightHandAnimName = "otocHlaven";
 					gunnerOutOpticsShowCursor = 1;
-					gunnerAction = "gunner_standup01";
+					gunnerAction = "PSC_HMMWV_browning";
 					gunnerInAction = "Gunner_MBT_02_arty_F_in";
 					gunnerGetInAction="GetInHigh";
 					gunnerGetOutAction="GetOutHigh";

@@ -47,6 +47,101 @@ class CfgWeapons
 			containerClass = "Supply150";
 			mass = 40;
 		};
+        class HitpointsProtectionInfo 
+        {
+            class HitPelvis
+			{
+				armor				=  10;
+				material			= -1;
+				name				= "pelvis";
+				passThrough			= 0.1;
+				radius				= 0.2;
+				explosionShielding	= 1;
+				visual				= "injury_body";
+				minimalHit			= 0.01;
+			};
+			class HitAbdomen : HitPelvis
+			{
+				armor				=  10;
+				material			= -1;
+				name				= "spine1";
+				passThrough			= 0.1;
+				radius				= 0.15;
+				explosionShielding	= 1;
+				visual				= "injury_body";
+				minimalHit			= 0.01;
+			};
+			class HitDiaphragm : HitAbdomen
+			{
+				armor				=  10;
+				material			= -1;
+				name				= "spine2";
+				passThrough			= 0.1;
+				radius				= 0.15;
+				explosionShielding	= 6;
+				visual				= "injury_body";
+				minimalHit			= 0.01;
+			};
+			class HitChest : HitDiaphragm
+			{
+				armor				=  10;
+				material			= -1;
+				name				= "spine3";
+				passThrough			= 0.1;
+				radius				= 0.15;
+				explosionShielding	= 6;
+				visual				= "injury_body";
+				minimalHit			= 0.01;
+			};
+			class HitBody : HitChest
+			{
+				armor				= 1000; // not supposed to take damage directly
+				material			= -1;
+				name				= "body";
+				passThrough			= 0.1;
+				radius				= 0.16;
+				explosionShielding	= 6;
+				visual				= "injury_body";
+				minimalHit			= 0.01;
+				depends				= "HitPelvis max HitAbdomen max HitDiaphragm max HitChest"; // depends work only for hit points defined in inheritance chain
+				// arbitrary example for different operator usage: = "(2* (HitPelvis + HitAbdomen) * HitDiaphragm) max HitChest";
+
+			};
+			class HitArms
+			{
+				armor				=  10;
+				material			= -1;
+				name				= "arms";
+				passThrough			= 1;
+				radius				= 0.1;
+				explosionShielding	= 1;
+				visual				= "injury_hands";
+				minimalHit			= 0.01;
+			};
+			class HitHands : HitArms
+			{
+				armor				=  10;
+				material			= -1;
+				name				= "hands";
+				passThrough			= 1;
+				radius				= 0.1;
+				explosionShielding	= 1;
+				visual				= "injury_hands";
+				minimalHit			= 0.01;
+				depends				= "HitArms";
+			};
+			class HitLegs
+			{
+				armor				=  10;
+				material			= -1;
+				name				= "legs";
+				passThrough			= 1;
+				radius				= 0.12;
+				explosionShielding	= 1;
+				visual				= "injury_legs";
+				minimalHit			= 0.01;
+			};
+        };
     };
     class PSC_NCR_Trooper_Brown_U: PSC_NCR_Trooper_Base_U
     {
@@ -126,7 +221,7 @@ class CfgWeapons
 				class Chest
 				{
 						hitPointName = "HitChest";
-						armor = 30;
+						armor = 60;
 						passThrough = 0.3;
 				};
 			};
@@ -228,7 +323,7 @@ class CfgWeapons
 				class Head
 				{
 					hitPointName = "HitHead";
-					armor = 15;
+					armor = 30;
 					passThrough = 0.5;
 				};
 			};

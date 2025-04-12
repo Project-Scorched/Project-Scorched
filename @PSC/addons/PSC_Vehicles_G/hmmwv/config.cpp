@@ -46,7 +46,7 @@ class CfgMovesMaleSdr : CfgMovesBasic
 		};
 		class HMMWV_light_machine_gun : Crew
 		{
-			file = "psc_vehicles_g\hmmwv\HMMWV_rtm\PSC_HMMWV_light_machine_gun.rtm";
+			file = "psc_vehicles_g\hmmwv\HMMWV_rtm\psc_hmmwv_light_machine_gun.rtm";
 			interpolateTo[] = {"HMMWV_light_machine_gun", 1};
 		};
 		class PSC_HMMWV_browning : Crew
@@ -1148,6 +1148,9 @@ class CfgVehicles
 				};
 				magazines[]=
 				{
+					"200Rnd_556x45_Box_F",
+					"200Rnd_556x45_Box_F",
+					"200Rnd_556x45_Box_F",
 					"200Rnd_556x45_Box_F",
 					"200Rnd_556x45_Box_F",
 					"200Rnd_556x45_Box_F",
