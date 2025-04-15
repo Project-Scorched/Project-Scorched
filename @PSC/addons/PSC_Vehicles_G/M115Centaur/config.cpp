@@ -197,7 +197,7 @@ class CfgVehicles
 		{
 			class HitHull: HitHull
 			{
-				armor = 1.4;
+				armor = 3;
 				material = -1;
 				armorComponent = "hit_hull";
 				name = "hit_hull_point";
@@ -209,7 +209,7 @@ class CfgVehicles
 			};
 			class HitEngine: HitEngine
 			{
-				armor = -150;
+				armor = 1;
 				material = -1;
 				armorComponent = "hit_engine";
 				name = "hit_engine_point";
@@ -273,7 +273,7 @@ class CfgVehicles
 			};
 			class HitFuel: HitFuel
 			{
-				armor = -80;
+				armor = 1;
 				material = -1;
 				armorComponent = "hit_fuel";
 				name = "hit_fuel_point";
@@ -285,8 +285,8 @@ class CfgVehicles
 			};
 			class HitModul: HitEngine
 			{
-				armor = -100;
-				material = -1;
+				armor = 1;
+				material = 1;
 				armorComponent = "hit_Modul";
 				name = "hit_Modul_point";
 				visual = "Modul_hit";
@@ -347,7 +347,7 @@ class CfgVehicles
 			};
 			class HitLFWheel: HitLFWheel
 			{
-				radius = 0.33;
+				radius = 1;
 				visual = "wheel_1_1_hide";
 				armorComponent = "wheel_1_1_hide";
 				armor = -250;
@@ -357,7 +357,7 @@ class CfgVehicles
 			};
 			class HitLF2Wheel: HitLF2Wheel
 			{
-				radius = 0.33;
+				radius = 1;
 				visual = "wheel_1_2_hide";
 				armorComponent = "wheel_1_2_hide";
 				armor = -250;
@@ -367,7 +367,7 @@ class CfgVehicles
 			};
 			class HitLMWheel: HitLMWheel
 			{
-				radius = 0.33;
+				radius = 1;
 				visual = "wheel_1_3_hide";
 				armorComponent = "wheel_1_3_hide";
 				armor = -250;
@@ -377,7 +377,7 @@ class CfgVehicles
 			};
 			class HitRFWheel: HitRFWheel
 			{
-				radius = 0.33;
+				radius = 1;
 				visual = "wheel_2_1_hide";
 				armorComponent = "wheel_2_1_hide";
 				armor = -250;
@@ -387,7 +387,7 @@ class CfgVehicles
 			};
 			class HitRF2Wheel: HitRF2Wheel
 			{
-				radius = 0.33;
+				radius = 1;
 				visual = "wheel_2_2_hide";
 				armorComponent = "wheel_2_2_hide";
 				armor = -250;
@@ -397,7 +397,7 @@ class CfgVehicles
 			};
 			class HitRMWheel: HitRMWheel
 			{
-				radius = 0.33;
+				radius = 1;
 				visual = "wheel_2_3_hide";
 				armorComponent = "wheel_2_3_hide";
 				armor = -250;
@@ -468,7 +468,7 @@ class CfgVehicles
 				{
 					class HitTurret
 					{
-						armor = -100;
+						armor = 1;
 						material = -1;
 						armorComponent = "hit_main_turret";
 						name = "hit_main_turret_point";
@@ -481,7 +481,7 @@ class CfgVehicles
 					};
 					class HitGun
 					{
-						armor = -100;
+						armor = 1;
 						material = -1;
 						armorComponent = "hit_main_gun";
 						name = "hit_main_gun_point";
@@ -676,7 +676,7 @@ class CfgVehicles
 				{
 					class HitTurret 
 					{
-						armor = -100;
+						armor = 1;
 						material = -1;
 						armorComponent = "hit_left_turret";
 						name = "hit_left_turret_point";
@@ -689,7 +689,7 @@ class CfgVehicles
 					};
 					class HitGun 
 					{				
-						armor = -100;
+						armor = 1;
 						material = -1;
 						armorComponent = "hit_left_gun";
 						name = "hit_left_gun_point";
@@ -831,7 +831,7 @@ class CfgVehicles
 				{
 					class HitTurret 
 					{
-						armor = -100;
+						armor = 1;
 						material = -1;
 						armorComponent = "hit_right_turret";
 						name = "hit_right_turret_point";
@@ -844,7 +844,7 @@ class CfgVehicles
 					};
 					class HitGun 
 					{				
-						armor = -100;
+						armor = 1;
 						material = -1;
 						armorComponent = "hit_right_gun";
 						name = "hit_right_gun_point";
@@ -1265,7 +1265,18 @@ displayNameDefault = "<img image='\A3\Ui_f\data\IGUI\Cfg\Actions\open_door_ca.pa
 		};
 		textureList[] = {"Green",1,"GreenStar",1,"Black",1,"BlackStar",1,"Blue",1,"BlueStar",1,"brown",1,"brownStar",1,"Grey",1,"GreyStar",1,"White",1,"WhiteStar",1};
 	};
+
+	class PSC_M115CentaurTransport_VE: PSC_M115Centaur_VE
+	{
+		displayName = "M115 Centaur Transport (Unarmed)";
+		model = "PSC_Vehicles_G\M115Centaur\PSC_M115CentaurTransport.p3d";
+		cargoProxyIndexes[] = {1,2,3,4,5,6, 7, 8, 9};
+		class Turrets{};
+	};
+
 };
+
+
 //};
 
 

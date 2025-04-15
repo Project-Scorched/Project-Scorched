@@ -95,6 +95,10 @@ class CfgWeapons
 				effectName = "MachineGunCartridge1";
 			};
 		};
+		magazines[] = 
+		{
+			"200Rnd_127x99_mag_Tracer_Red"
+		};
 	};
 	class LMG_03_F;
 	class PSC_556_HVMG_W: LMG_03_F
