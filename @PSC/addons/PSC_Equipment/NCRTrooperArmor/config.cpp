@@ -176,7 +176,7 @@ class CfgWeapons
 			mass = 40;
 		};
 	};
-	class PSC_NCR_TrooperFem_Desert_U: PSC_NCR_TrooperFem_Base__U
+	class PSC_NCR_TrooperFemSleeveless_Desert_U: PSC_NCR_TrooperFem_Base__U
 	{
 		displayName = "NCR Trooper Uniform Desert (Fem)";
 		scope = 2;
@@ -213,10 +213,7 @@ class CfgWeapons
 			"camoArmbandL",
 			"camoArmbandR"
         };
-        hiddenSelectionsMaterials[] = 
-        {
-            "PSC_Equipment\NCR\data\vests\NCRTrooperVest.rvmat"
-        };
+    
         class ItemInfo: VestItem
 		{
 			uniformModel = "\PSC_Equipment\NCR\models\PSC_NCRTrooperVest.p3d";
@@ -239,21 +236,173 @@ class CfgWeapons
     };
     class PSC_NCR_Trooper_Brown_V: PSC_NCR_Trooper_Base_V
     {
-        displayName = "$STR_PSC_NCR_Trooper_Brown_V";
+        displayName = "NCR Trooper Vest (Brown)";
         scope = 2;
         scopeArsenal = 2;
         scopeCurator = 2;
         picture = "\PSC_Equipment\NCR\data\icon\NCRVestBrownIcon_ca.paa";
-        hiddenSelectionsTextures[] = 
-        {
-            "PSC_Equipment\NCR\data\vests\brown\NCRTrooperVest_co.paa"
-        };
         class ItemInfo: VestItem
 		{
 			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Vest.p3d";
             hiddenSelections[] = 
             { 
-                "camoVest" 
+                "camoVest",
+				"",
+				"",
+				"",
+				""
+            };
+			containerClass = "Supply80";
+			mass = 15;
+			class HitpointsProtectionInfo 
+			{
+				class Chest
+				{
+						hitPointName = "HitChest";
+						armor = 30;
+						passThrough = 0.3;
+				};
+			};
+		};
+    };
+	class PSC_NCR_Trooper_BrownBandolier_V: PSC_NCR_Trooper_Base_V
+    {
+        displayName = "NCR Trooper Vest w/ Bandolier (Brown)";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        picture = "\PSC_Equipment\NCR\data\icon\NCRVestBrownIcon_ca.paa";
+        class ItemInfo: VestItem
+		{
+			uniformModel = "\PSC_Equipment\NCR\models\PSC_NCRTrooperVest.p3d";
+            hiddenSelections[] = 
+            { 
+                "camoVest",
+				"camoBandolier" 
+            };
+			containerClass = "Supply80";
+			mass = 15;
+			class HitpointsProtectionInfo 
+			{
+				class Chest
+				{
+						hitPointName = "HitChest";
+						armor = 30;
+						passThrough = 0.3;
+				};
+			};
+		};
+    };
+	class PSC_NCR_Trooper_BrownCape_V: PSC_NCR_Trooper_Base_V
+    {
+        displayName = "NCR Trooper Vest w/ Cape (Brown)";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        picture = "\PSC_Equipment\NCR\data\icon\NCRVestBrownIcon_ca.paa";
+        class ItemInfo: VestItem
+		{
+			uniformModel = "\PSC_Equipment\NCR\models\PSC_NCRTrooperVest.p3d";
+            hiddenSelections[] = 
+            { 
+                "camoVest",
+				"",
+				"camoCape",
+				"",
+				""
+            };
+			containerClass = "Supply80";
+			mass = 15;
+			class HitpointsProtectionInfo 
+			{
+				class Chest
+				{
+						hitPointName = "HitChest";
+						armor = 30;
+						passThrough = 0.3;
+				};
+			};
+		};
+    };
+	class PSC_NCR_Trooper_BrownArmbandL_V: PSC_NCR_Trooper_Base_V
+    {
+        displayName = "NCR MP Vest Left (Brown)";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        picture = "\PSC_Equipment\NCR\data\icon\NCRVestBrownIcon_ca.paa";
+        class ItemInfo: VestItem
+		{
+			uniformModel = "\PSC_Equipment\NCR\models\PSC_NCRTrooperVest.p3d";
+            hiddenSelections[] = 
+            { 
+                "camoVest",
+				"",
+				"",
+				"ArmbandL",
+				""
+            };
+			containerClass = "Supply80";
+			mass = 15;
+			class HitpointsProtectionInfo 
+			{
+				class Chest
+				{
+						hitPointName = "HitChest";
+						armor = 30;
+						passThrough = 0.3;
+				};
+			};
+		};
+    };
+	class PSC_NCR_Trooper_BrownArmbandL_V: PSC_NCR_Trooper_Base_V
+    {
+        displayName = "NCR MP Vest Right (Brown)";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        picture = "\PSC_Equipment\NCR\data\icon\NCRVestBrownIcon_ca.paa";
+        class ItemInfo: VestItem
+		{
+			uniformModel = "\PSC_Equipment\NCR\models\PSC_NCRTrooperVest.p3d";
+            hiddenSelections[] = 
+            { 
+                "camoVest",
+				"",
+				"",
+				"",
+				"ArmbandR"
+            };
+			containerClass = "Supply80";
+			mass = 15;
+			class HitpointsProtectionInfo 
+			{
+				class Chest
+				{
+						hitPointName = "HitChest";
+						armor = 30;
+						passThrough = 0.3;
+				};
+			};
+		};
+    };
+	class PSC_NCR_Trooper_BrownArmbandL_V: PSC_NCR_Trooper_Base_V
+    {
+        displayName = "NCR MP Vest Officer (Brown)";
+        scope = 2;
+        scopeArsenal = 2;
+        scopeCurator = 2;
+        picture = "\PSC_Equipment\NCR\data\icon\NCRVestBrownIcon_ca.paa";
+        class ItemInfo: VestItem
+		{
+			uniformModel = "\PSC_Equipment\NCR\models\PSC_NCRTrooperVest.p3d";
+            hiddenSelections[] = 
+            { 
+                "camoVest",
+				"",
+				"camoCape",
+				"",
+				"ArmbandR"
             };
 			containerClass = "Supply80";
 			mass = 15;
@@ -276,26 +425,21 @@ class CfgWeapons
         displayName = "NCR Trooper Helmet Base (DEV)";
         scope = 0;
         weaponPoolAvailable = 1;
-		model = "\PSC_Equipment\NCR\models\NCR_Trooper_Helmet.p3d";
+		model = "\PSC_Equipment\NCR\models\PSC_NCRTrooperHelmet.p3d";
         hiddenSelections[] = 
         {
             "camoHelmet",
-            "camoHelmetGlass"
-        };
-        hiddenSelectionsMaterials[] = 
-        {
-            "\PSC_Equipment\NCR\data\helmets\NCRTrooperHelmet.rvmat",
-            "\PSC_Equipment\NCR\data\helmets\NCRTrooperHelmetGlass.rvmat"
+            "camoGoggles"
         };
         class ItemInfo: HeadgearItem
 		{
 			mass = 40;
-			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Helmet.p3d";
+			uniformModel = "\PSC_Equipment\NCR\models\PSC_NCRTrooperHelmet.p3d";
 			modelSides[] = {1,2};
             hiddenSelections[] = 
             { 
                 "camoHelmet",
-                "camoHelmetGlass" 
+                "camoGoggles" 
             };
 			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3:_Soldier_Protection
 			{
@@ -314,19 +458,14 @@ class CfgWeapons
         displayName = "$STR_PSC_NCR_Trooper_Brown_H";
         scope = 2;
         picture = "\PSC_Equipment\NCR\data\icon\NCRHelmetBrownIcon_ca.paa";
-        hiddenSelectionsTextures[] = 
-        {
-            "\PSC_Equipment\NCR\data\helmets\brown\NCRTrooperHelmet_co.paa",
-            "\PSC_Equipment\NCR\data\helmets\brown\NCRTrooperHelmetGlass_ca.paa"
-        };
         class ItemInfo: HeadgearItem
 		{
 			mass = 40;
-			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Helmet.p3d";
+			uniformModel = "\PSC_Equipment\NCR\models\PSC_NCRTrooperHelmet.p3d";
 			hiddenSelections[] = 
             { 
                 "camoHelmet",
-                "camoHelmetGlass"
+                "camoGoggles"
             };
 			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3:_Soldier_Protection
 			{
@@ -358,8 +497,8 @@ class CfgVehicles
         camoflage = 1;
         sensivity = 1;
         threat[] = {1, 0.5, 0.5};
-        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
-        uniformClass = "PSC_NCR_Trooper_Base_U";
+        model = "\PSC_Equipment\NCR\models\PSC_NCR_Uniform_Male.p3d";
+        uniformClass = "PSC_NCR_TrooperMasc_Base_U";
         hiddenSelections[] = 
         { 
             "camoUniform",
@@ -383,44 +522,35 @@ class CfgVehicles
     };
     class PSC_NCR_Trooper_Brown_UN: PSC_NCR_Trooper_Base_UN
     {
-        uniformClass = "$STR_PSC_NCR_Trooper_Brown_UN";
+        displayName = "NCR Trooper";
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
-        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
-		hiddenSelectionsTextures[] = 
-        { 
-            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperUniform_CO.paa",
-            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperBelt_CO.paa",
-            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperGlovesBoots_CO.paa"
-        };
+        model = "\PSC_Equipment\NCR\models\PSC_NCR_Uniform_Male.p3d";
     }; 
-    class PSC_NCR_Trooper_Snow_UN: PSC_NCR_Trooper_Base_UN
+    class PSC_NCR_TrooperFem_Brown_UN: PSC_NCR_Trooper_Base_UN
     {
-        uniformClass = "$STR_PSC_NCR_Trooper_Snow_UN";
+        displayName = "NCR Trooper Female";
+		uniformClass = "PSC_NCR_TrooperFem_Base_U";
         scope = 2;
         scopeCurator = 2;
         scopeArsenal = 2;
-        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
-		hiddenSelectionsTextures[] = 
-        { 
-            "PSC_Equipment\NCR\data\uniforms\snow\NCRTrooperUniform_CO.paa",
-            "PSC_Equipment\NCR\data\uniforms\snow\NCRTrooperBelt_CO.paa",
-            "PSC_Equipment\NCR\data\uniforms\snow\NCRTrooperGlovesBoots_CO.paa"
-        };
-    }; 
-    class PSC_NCR_Trooper_Woodland_UN: PSC_NCR_Trooper_Base_UN
+        model = "\PSC_Equipment\NCR\models\PSC_NCR_Uniform_Female.p3d";
+    };
+	class PSC_NCR_TrooperSleeveless_Brown_UN: PSC_NCR_Trooper_Base_UN
     {
-        uniformClass = "$STR_PSC_NCR_Trooper_Woodland_UN";
-        scope = 2;
-        scopeCurator = 2;
-        scopeArsenal = 2;
-        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
-		hiddenSelectionsTextures[] = 
-        { 
-            "PSC_Equipment\NCR\data\uniforms\woodland\NCRTrooperUniform_CO.paa",
-            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperBelt_CO.paa",
-            "PSC_Equipment\NCR\data\uniforms\brown\NCRTrooperGlovesBoots_CO.paa"
-        };
+        displayName = "NCR Trooper Sleeveless";
+        scope = 0;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        model = "\PSC_Equipment\NCR\models\PSC_NCR_Uniform_Female.p3d";
+    };
+	class PSC_NCR_TrooperFem_Brown_UN: PSC_NCR_Trooper_Base_UN
+    {
+        displayName = "NCR Trooper Female Sleeveless";
+        scope = 0;
+        scopeCurator = 0;
+        scopeArsenal = 0;
+        model = "\PSC_Equipment\NCR\models\PSC_NCR_Uniform_Female.p3d";
     }; 
 };
