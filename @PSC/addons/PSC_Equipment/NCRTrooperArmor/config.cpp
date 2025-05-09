@@ -34,12 +34,12 @@ class CfgWeapons
 	class UniformItem;
     class Uniform_Base;
     // Unifprms
-    class PSC_NCR_Trooper_Base_U: Uniform_Base
+    class PSC_NCR_TrooperMasc_Base__U: Uniform_Base
     {
         author = "$STR_PSC_Author";
         displayName = "NCR Trooper Uniform Base (Dev)";
         scope = 0;
-        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
+        model = "\PSC_Equipment\NCR\models\PSC_NCR_Uniform_Male.p3d";
         class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
@@ -143,11 +143,16 @@ class CfgWeapons
 			};
         };
     };
-    class PSC_NCR_Trooper_Brown_U: PSC_NCR_Trooper_Base_U
+	class PSC_NCR_TrooperFem_Base__U: PSC_NCR_TrooperMasc_Base__U
+	{
+		displayName = "NCR Trooper Uniform Base Fem (Dev)";
+        scope = 0;
+        model = "\PSC_Equipment\NCR\models\PSC_NCR_Uniform_Male.p3d";
+	};
+    class PSC_NCR_TrooperMasc_Desert_U: PSC_NCR_TrooperMasc_Base__U
     {
-        displayName = "$STR_PSC_NCR_Trooper_Brown_U";
+        displayName = "NCR Trooper Uniform Desert (Masc)";
         scope = 2;
-        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
         picture = "\PSC_Equipment\NCR\data\icon\NCRUniformBrownIcon_ca.paa";
         class ItemInfo: UniformItem
 		{
@@ -157,34 +162,35 @@ class CfgWeapons
 			mass = 40;
 		};
     };
-    class PSC_NCR_Trooper_Snow_U: PSC_NCR_Trooper_Base_U
-    {
-        displayName = "$STR_PSC_NCR_Trooper_Snow_U";
-        scope = 2;
-        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
-        picture = "\PSC_Equipment\NCR\data\icon\NCRUniformSnowIcon_ca.paa";
+	class PSC_NCR_TrooperMascSleeveless_Desert_U: PSC_NCR_TrooperMasc_Base__U
+	{
+		displayName = "NCR Trooper Sleeveless Uniform Desert (Masc)";
+		scope = 2;
+		model = "PSC_Equipment\NCRTrooperArmor\uniform\PSC_NCR_Uniform_Male_Sleeveless.p3d";
+		picture = "\PSC_Equipment\NCR\data\icon\NCRUniformBrownIcon_ca.paa";
         class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "PSC_NCR_Trooper_Snow_UN";
+			uniformClass = "PSC_NCR_Trooper_Brown_UN";
 			containerClass = "Supply150";
 			mass = 40;
 		};
-    };
-    class PSC_NCR_Trooper_Woodland_U: PSC_NCR_Trooper_Base_U
-    {
-        displayName = "$STR_PSC_NCR_Trooper_Woodland_U";
-        scope = 2;
-        model = "\PSC_Equipment\NCR\models\NCR_Trooper_Uniform.p3d";
-        picture = "\PSC_Equipment\NCR\data\icon\NCRUniformWoodlandIcon_ca.paa";
+	};
+	class PSC_NCR_TrooperFem_Desert_U: PSC_NCR_TrooperFem_Base__U
+	{
+		displayName = "NCR Trooper Uniform Desert (Fem)";
+		scope = 2;
+		picture = "\PSC_Equipment\NCR\data\icon\NCRUniformBrownIcon_ca.paa";
         class ItemInfo: UniformItem
 		{
 			uniformModel = "-";
-			uniformClass = "PSC_NCR_Trooper_Woodland_UN";
+			uniformClass = "PSC_NCR_Trooper_Brown_UN";
 			containerClass = "Supply150";
 			mass = 40;
 		};
-    };
+	};
+
+	
     //Vests
     class ItemCore;
     class ItemInfo;
@@ -241,37 +247,6 @@ class CfgWeapons
         hiddenSelectionsTextures[] = 
         {
             "PSC_Equipment\NCR\data\vests\brown\NCRTrooperVest_co.paa"
-        };
-        class ItemInfo: VestItem
-		{
-			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Vest.p3d";
-            hiddenSelections[] = 
-            { 
-                "camoVest" 
-            };
-			containerClass = "Supply80";
-			mass = 15;
-			class HitpointsProtectionInfo 
-			{
-				class Chest
-				{
-						hitPointName = "HitChest";
-						armor = 30;
-						passThrough = 0.3;
-				};
-			};
-		};
-    };
-    class PSC_NCR_Trooper_Snow_V: PSC_NCR_Trooper_Base_V
-    {
-        displayName = "$STR_PSC_NCR_Trooper_Snow_V";
-        scope = 2;
-        scopeArsenal = 2;
-        scopeCurator = 2;
-        picture = "\PSC_Equipment\NCR\data\icon\NCRVestSnowIcon_ca.paa";
-        hiddenSelectionsTextures[] = 
-        {
-            "PSC_Equipment\NCR\data\vests\snow\NCRTrooperVest_CO.paa"
         };
         class ItemInfo: VestItem
 		{
@@ -352,35 +327,6 @@ class CfgWeapons
             { 
                 "camoHelmet",
                 "camoHelmetGlass"
-            };
-			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3:_Soldier_Protection
-			{
-				class Head
-				{
-					hitPointName = "HitHead";
-					armor = 15;
-					passThrough = 0.5;
-				};
-			};
-        };
-    };
-
-    class PSC_NCR_Trooper_Snow_H: PSC_NCR_Trooper_Base_H
-    {
-        displayName = "$STR_PSC_NCR_Trooper_Snow_H";
-        scope = 2;
-        picture = "\PSC_Equipment\NCR\data\icon\NCRHelmetSnowIcon_ca.paa";
-        hiddenSelectionsTextures[] = 
-        {
-            "\PSC_Equipment\NCR\data\helmets\snow\NCRTrooperHelmet_co.paa"
-        };
-        class ItemInfo: HeadgearItem
-		{
-			mass = 40;
-			uniformModel = "\PSC_Equipment\NCR\models\NCR_Trooper_Helmet.p3d";
-			hiddenSelections[] = 
-            { 
-                "camoHelmet"
             };
 			class HitpointsProtectionInfo // more info at: https://community.bistudio.com/wiki/Arma_3:_Soldier_Protection
 			{
